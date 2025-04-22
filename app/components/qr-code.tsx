@@ -2,7 +2,7 @@ import React from "react";
 
 const QRCode: React.FC = () => (
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
-    width="200" height="200" viewBox="0 0 2277 2277" enable-background="new 0 0 2277 2277" xmlSpace="preserve">
+    width="200" height="200" viewBox="0 0 2277 2277" enableBackground="new 0 0 2277 2277" xmlSpace="preserve">
     <rect x="0" y="0" width="2277" height="2277" fill="none" /><g transform="translate(138,138)"><g transform="translate(552,0) scale(0.69,0.69)"><g transform="" fill="black">
     <rect width="100" height="100"/>
     </g></g><g transform="translate(621,0) scale(0.69,0.69)"><g transform="" fill="black" >
