@@ -19,7 +19,7 @@ export default function BeforeAfter() {
                 <p className="text-base font-semibold text-slate-700">Before</p>
               </div>
               <h3 className="font-display mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-                 Manual note-taking that hinders productivity and clarity
+                 Manual note-taking
               </h3>
               <ul className="mt-6 space-y-3 text-base text-slate-600 sm:text-lg">
                 <li className="flex items-start gap-3">
@@ -108,7 +108,7 @@ export default function BeforeAfter() {
                 </svg>
               </div>
               <h3 className="font-display mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                An AI-powered app that transforms your meetings into insightful notes
+                AI-powered notes
               </h3>
               <ul className="mt-6 space-y-3 text-base text-white sm:text-lg">
                 <li className="flex items-start gap-3">
