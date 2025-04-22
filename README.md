@@ -1,12 +1,3 @@
-# Learning Next.js Series
-
-This repository contains the code for a YouTube video series dedicated to learning Next.js. Follow along as we learn together.
-
-## 🎥 Video Series
-
-1. [Building Beautiful Landing Pages with Next.js](https://www.youtube.com/watch?v=u8itgg8216k)
-2. [SEO Best Practices in Next.js. SEO Part 1](https://www.youtube.com/watch?v=_w5Jn2sAJXw)
-3. [Creating Unique Landing Pages for Different Keywords. SEO Part 2](https://www.youtube.com/watch?v=IMUGTOiyhWk)
 
 ## 🚀 Getting Started
 
