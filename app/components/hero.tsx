@@ -1,9 +1,11 @@
 import mockup from "../../public/mockup.png";
+import soundwave from "../../public/soundwave.png";
 import DownloadAppStore from "./download-appstore";
+import QRCode from "./qr-code";
 
 function Hero() {
   return (
-    <div>
+    <div className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${soundwave.src})` }}>
       <div className="mx-auto max-w-7xl px-8 py-12 pt-4 lg:px-12 lg:py-24">
         <div className="flex flex-col md:flex-row items-center justify-between gap-24 ">
           {/* Left column - Text content */}
@@ -25,8 +27,12 @@ function Hero() {
                 <p className="mt-6 text-base font-light leading-8 text-secondary-foreground text-slate-500 sm:text-lg">
                   Automatically transcribe and summarize any meeting, lecture or podcast.
                 </p>
-                <div className="mt-10 flex items-center justify-start gap-y-6">
+                <div className="mt-10 flex flex-row items-center justify-start gap-y-6 gap-12">
                 <DownloadAppStore/>
+                <div className=" flex-col items-center justify-center hidden md:flex">
+                  Scan to try for Free
+                <QRCode/>
+                </div>
                 </div>
               </div>
             </div>
