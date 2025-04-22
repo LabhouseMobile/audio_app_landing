@@ -1,31 +1,54 @@
+import mockup from "../../public/mockup.png";
 import DownloadAppStore from "./download-appstore";
 
 function Hero() {
   return (
     <div>
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-center px-8 py-12 pt-4 lg:px-12 lg:py-24">
-        <div className="mx-auto mb-8 max-w-2xl py-8 sm:py-8 lg:py-8">
-          <div className="hidden sm:flex sm:justify-center"></div>
-          <div className="mt-2 text-center">
-            <h1 className="text-4xl font-black tracking-tight text-slate-800 sm:text-6xl">
-              Get 
-            
-              <span className="relative mt-2 inline-block ml-2">
-            <span className="absolute inset-0 -rotate-1 transform bg-blue-600"></span>
-            <span className="relative z-10 px-2 py-2 text-white">
-              perfect notes
-            </span>
-          </span>
-          <br /> afetr every meeting
-            </h1>
-            <p className="mt-6 text-base font-light leading-8 text-secondary-foreground text-slate-500 sm:text-lg">
-              Automatically transcribe and summarize any meeting, lecture or podcast.
-            </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-y-6">
-            <DownloadAppStore/>
+      <div className="mx-auto max-w-7xl px-8 py-12 pt-4 lg:px-12 lg:py-24">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-24 ">
+          {/* Left column - Text content */}
+          <div className="flex-1 ">
+            <div className="mx-auto max-w-2xl py-8 sm:py-8 lg:py-8">
+              <div className="hidden sm:flex sm:justify-center"></div>
+              <div className="mt-2 text-left">
+                <h1 className="text-4xl font-black tracking-tight text-slate-800 sm:text-6xl">
+                  Get 
+                
+                  <span className="relative mt-2 inline-block ml-2">
+                <span className="absolute inset-0 -rotate-1 transform bg-blue-600"></span>
+                <span className="relative z-10 px-2 py-2 text-white">
+                  perfect notes
+                </span>
+              </span>
+              <br /> afetr every meeting
+                </h1>
+                <p className="mt-6 text-base font-light leading-8 text-secondary-foreground text-slate-500 sm:text-lg">
+                  Automatically transcribe and summarize any meeting, lecture or podcast.
+                </p>
+                <div className="mt-10 flex items-center justify-start gap-y-6">
+                <DownloadAppStore/>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right column - Image */}
+          <div className="flex-1 flex items-center justify-center h-[35rem]">
+            {/* Add your image here */}
+            <div className="relative w-full h-full lg:scale-125">
+            <img
+                  alt={`App Mock up`}
+                  loading="lazy"
+                  decoding="async"
+                  data-nimg="1"
+                  className={`w-full h-full object-contain`}
+                  style={{ color: "transparent" }}
+                  src={mockup.src}
+                />
             </div>
           </div>
         </div>
+        
         <HeroFooter />
         {/* <TestimonialsAvatars priority={true} /> */}
       </div>
