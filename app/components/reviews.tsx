@@ -1,4 +1,9 @@
 import Image, { StaticImageData } from "next/image";
+import reviewImg1 from "../../public/review_1.png";
+import reviewImg2 from "../../public/review_2.png";
+import reviewImg3 from "../../public/review_3.png";
+import reviewImg4 from "../../public/review_4.png";
+import reviewImg5 from "../../public/review_5.png";
 
 interface ReviewProps {
     name: string;
@@ -14,35 +19,35 @@ function Reviews() {
       name: "Alex Morgan",
       role: "Project Manager",
       title: "Meeting notes on autopilot",
-      image: "https://api.dicebear.com/6.x/avataaars/svg?seed=Alex",
+      image: reviewImg4,
       content: "Summary AI has transformed our team meetings. No more scrambling to take notes - we get perfect transcripts and action items automatically.",
     },
     {
       name: "Sarah Chen",
       role: "Graduate Student",
       title: "Perfect lecture notes",
-      image: "https://api.dicebear.com/6.x/avataaars/svg?seed=Sarah",
+      image: reviewImg1,
       content: "As a PhD student, I record all my lectures and Summary AI creates perfectly organized notes. It even highlights key concepts I might have missed!",
     },
     {
       name: "James Wilson",
       role: "Content Creator",
       title: "Podcast notes in seconds",
-      image: "https://api.dicebear.com/6.x/avataaars/svg?seed=James",
+      image: reviewImg3,
       content: "I upload my podcast recordings to Summary AI and get detailed show notes instantly. My audience loves the summaries I can now provide.",
     },
     {
       name: "Michelle Rodriguez",
       role: "Sales Director",
       title: "Calendar integration is magic",
-      image: "https://api.dicebear.com/6.x/avataaars/svg?seed=Michelle",
+      image: reviewImg2,
       content: "The calendar integration is a game-changer. Summary AI joins my calls automatically and everyone gets detailed notes in their inbox after - no effort required.",
     },
     {
       name: "David Kumar",
       role: "Executive Assistant",
       title: "Time-saving essential",
-      image: "https://api.dicebear.com/6.x/avataaars/svg?seed=David",
+      image: reviewImg5,
       content: "I manage a busy executive calendar. Summary AI joins every meeting and delivers concise summaries to all participants. It's like having an extra team member.",
     }
   ];
