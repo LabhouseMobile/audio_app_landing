@@ -20,7 +20,7 @@ function Hero() {
                   perfect notes
                 </span>
               </span>
-              <br /> afetr every meeting
+              <br /> after every meeting
                 </h1>
                 <p className="mt-6 text-base font-light leading-8 text-secondary-foreground text-slate-500 sm:text-lg">
                   Automatically transcribe and summarize any meeting, lecture or podcast.
