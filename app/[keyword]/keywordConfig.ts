@@ -1,5 +1,10 @@
 export type ComponentConfig = {
-  [key: string]: any;
+  [key: string]:
+    | string
+    | number
+    | boolean
+    | Array<string | Record<string, unknown>>
+    | Record<string, unknown>;
 };
 
 export type KeywordConfig = {
