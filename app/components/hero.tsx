@@ -1,5 +1,5 @@
 import mockup from "../../public/mockup.png";
-import soundwave from "../../public/soundwave.png";
+import soundwave from "../../public/soundwave-hq.jpg";
 import DownloadAppStore from "./download-appstore";
 import QRCode from "./qr-code";
 
