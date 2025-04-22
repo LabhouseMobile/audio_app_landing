@@ -7,10 +7,10 @@ export type KeywordConfig = {
 };
 
 const keywordConfigs: { [keyword: string]: KeywordConfig } = {
-  "ai-quiz-creation": {
+  "ai-summary-app": {
     Hero: {
-      title: "AI-Powered Quiz Creation",
-      subtitle: "Create engaging quizzes in minutes with AI assistance",
+      title: "AI-Powered Summary App",
+      subtitle: "Transcribe and summarize in minutes with AI assistance",
     },
     AccordionFeatures: {
       features: [

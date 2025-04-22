@@ -1,8 +1,8 @@
 const config = {
-  domainName: "quillminds.com",
-  appName: "QuillMinds",
+  domainName: "summaryai.app",
+  appName: "Summary AI",
   appDescription:
-    "QuillMinds is ai-powered lesson preparation tool for teachers.",
+    "Summary AI is an AI-powered tool that transcribes audio and summarizes text.",
 };
 
 export default config;

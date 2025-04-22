@@ -1,17 +1,12 @@
-import { Container } from "@/app/components/container";
-import Hero from "@/app/components/hero";
-import LogoClouds from "@/app/components/logo-clouds";
-import { Header } from "@/app/components/header";
 import BeforeAfter from "@/app/components/before-after";
-import AccordionFeatures from "@/app/components/accordion-features";
-import Pricing from "@/app/components/pricing";
+import { Container } from "@/app/components/container";
 import FAQ from "@/app/components/faq";
 import Footer from "@/app/components/footer";
-import CTA from "@/app/components/cta";
+import { Header } from "@/app/components/header";
+import Hero from "@/app/components/hero";
 import { getSEOTags } from "@/app/lib/seo";
-import { keywords } from "./keywords";
 import { redirect } from "next/navigation";
-import keywordConfigs from "./keywordConfig";
+import { keywords } from "./keywords";
 
 export const generateMetadata = ({
   params,
@@ -45,19 +40,14 @@ export default function KeywordPage({
     return redirect("/");
   }
   //Use the decoded keyword when needed
-  const decodedKeyword = decodeURIComponent(params.keyword).replace(/-/g, " ");
-  const config = keywordConfigs[params.keyword] || {};
+  // const config = keywordConfigs[params.keyword] || {};
 
   return (
     <Container>
       <Header />
-      <Hero config={config.Hero} />
-      <LogoClouds />
-      <AccordionFeatures config={config.AccordionFeatures} />
-      <BeforeAfter config={config.BeforeAfter} />
-      <Pricing config={config.Pricing} />
-      <FAQ config={config.FAQ} />
-      <CTA config={config.CTA} />
+      <Hero />
+      <BeforeAfter />
+      <FAQ />
       <Footer />
     </Container>
   );

@@ -1,4 +1,4 @@
-export default function BeforeAfter({ config }: { config?: any }) {
+export default function BeforeAfter() {
   return (
     <section>
       <div className="mx-auto max-w-5xl px-8 py-16 md:py-24">
@@ -19,7 +19,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                 <p className="text-base font-semibold text-slate-700">Before</p>
               </div>
               <h3 className="font-display mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-                Traditional teaching methods that limit effectiveness
+                 Manual note-taking that hinders productivity and clarity
               </h3>
               <ul className="mt-6 space-y-3 text-base text-slate-600 sm:text-lg">
                 <li className="flex items-start gap-3">
@@ -37,8 +37,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                   </div>
-                  One-size-fits-all approach fails to address individual student
-                  needs
+                  Time-consuming process of taking notes during meetings, lectures, or podcasts
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="shrink-0 py-1.5">
@@ -55,8 +54,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                   </div>
-                  Limited resources for personalized lesson planning and
-                  materials
+                  Important points often missed or forgotten
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="shrink-0 py-1.5">
@@ -73,7 +71,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                   </div>
-                  Time-consuming grading and assessment processes
+                  Inconsistent note quality across different sessions
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="shrink-0 py-1.5">
@@ -90,8 +88,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                   </div>
-                  Difficulty in tracking individual student progress and
-                  identifying areas for improvement
+                  Difficult to organize and retrieve relevant information later
                 </li>
               </ul>
             </div>
@@ -111,7 +108,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                 </svg>
               </div>
               <h3 className="font-display mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                An AI-powered teaching assistant that enhances education
+                An AI-powered app that transforms your meetings into insightful notes
               </h3>
               <ul className="mt-6 space-y-3 text-base text-white sm:text-lg">
                 <li className="flex items-start gap-3">
@@ -126,8 +123,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                       <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path>
                     </svg>
                   </div>
-                  Personalized learning experiences tailored to each
-                  student&apos;s needs
+                  Automatic transcription of spoken content into accurate text
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="shrink-0 py-1.5">
@@ -141,7 +137,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                       <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path>
                     </svg>
                   </div>
-                  AI-generated lesson plans and teaching materials
+                  Intelligent summarization that captures key insights and action items
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="shrink-0 py-1.5">
@@ -155,7 +151,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                       <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path>
                     </svg>
                   </div>
-                  Automated grading and instant feedback for students
+                  Consistent, high-quality notes every time
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="shrink-0 py-1.5">
@@ -169,8 +165,7 @@ export default function BeforeAfter({ config }: { config?: any }) {
                       <path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path>
                     </svg>
                   </div>
-                  Detailed progress tracking and data-driven insights for
-                  targeted interventions
+                  Easily searchable and organized notes for quick reference and sharing
                 </li>
               </ul>
             </div>

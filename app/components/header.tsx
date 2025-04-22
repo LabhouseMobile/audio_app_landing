@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import {
   Popover,
   PopoverButton,
@@ -8,10 +7,11 @@ import {
   PopoverPanel,
 } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
+import { Button } from "./button";
 import { Container } from "./container";
 import { NavLinks } from "./nav-links";
-import { Button } from "./button";
 import SVGLogo from "./svg-logo";
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
@@ -63,14 +63,14 @@ export function Header() {
           <div className="flex relative z-10 gap-16 justify-between items-center w-full">
             <Link href="/" className="flex gap-2 items-center font-semibold">
               <SVGLogo />
-              <span className="text-lg font-bold text-slate-800">
-                Quillminds
+              <span className=" text-2xl font-bold text-slate-800">
+                Summary AI
               </span>
             </Link>
             <div className="hidden justify-center items-center lg:flex lg:gap-10">
               <NavLinks />
-              <Button href="/sign-up" color="blue">
-                Get Started
+              <Button href="https://apps.apple.com/us/app/id6670175056" color="blue">
+                Download App
               </Button>
             </div>
           </div>
@@ -117,11 +117,7 @@ export function Header() {
                             <MobileNavLink href="/#features">
                               Features
                             </MobileNavLink>
-                            <MobileNavLink href="/#pricing">
-                              Pricing
-                            </MobileNavLink>
                             <MobileNavLink href="/#faq">FAQs</MobileNavLink>
-                            <MobileNavLink href="/blog">Blog</MobileNavLink>
                           </div>
                           <div className="flex flex-col gap-4 mt-8">
                             <Button href="/" outline>

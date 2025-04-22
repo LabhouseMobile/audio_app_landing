@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata = getSEOTags({
-  title: "QuillMinds",
-  description: "QuillMinds is ai-powered lesson preparation tool for teachers.",
+  title: "Summary AI",
+  description: "Summary AI is a cutting-edge AI Note Taker designed for iOS, offering seamless recording, transcription, and summarization of your audio content. You can record meetings and phone calls, import podcasts and YouTube videos, and much more.",
   canonicalUrlRelative: "/",
 });
 

@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRef, useState } from "react";
 
 export function NavLinks() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -11,10 +11,7 @@ export function NavLinks() {
   const pathname = usePathname();
 
   return [
-    ["Features", "/#features"],
-    ["Pricing", "/#pricing"],
     ["FAQs", "/#faq"],
-    ["Blog", "/blog"],
   ].map(([label, href], index) => (
     <Link
       key={label}

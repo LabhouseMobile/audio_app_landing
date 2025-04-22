@@ -1,7 +1,6 @@
-import { Button } from "./button";
-import TestimonialsAvatars from "./testimonials-avatars";
+import DownloadAppStore from "./download-appstore";
 
-function Hero({ config }: { config?: any }) {
+function Hero() {
   return (
     <div>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center px-8 py-12 pt-4 lg:px-12 lg:py-24">
@@ -9,20 +8,21 @@ function Hero({ config }: { config?: any }) {
           <div className="hidden sm:flex sm:justify-center"></div>
           <div className="mt-2 text-center">
             <h1 className="text-4xl font-black tracking-tight text-slate-800 sm:text-6xl">
-              Focus on teaching,
-              <br /> not endless preparation.
+              Get 
+            
+              <span className="relative mt-2 inline-block ml-2">
+            <span className="absolute inset-0 -rotate-1 transform bg-blue-600"></span>
+            <span className="relative z-10 px-2 py-2 text-white">
+              perfect notes
+            </span>
+          </span>
+          <br /> afetr every meeting
             </h1>
             <p className="mt-6 text-base font-light leading-8 text-secondary-foreground text-slate-500 sm:text-lg">
-              AI-Powered Lesson Planning Made Easy. For teachers at any level.
+              Automatically transcribe and summarize any meeting, lecture or podcast.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-y-6">
-              <Button
-                color="blue"
-                href={"/sign-up"}
-                className="h-12 w-64 rounded-md"
-              >
-                Get Started
-              </Button>
+            <DownloadAppStore/>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ const HeroFooter = () => {
         <path d="M674.667 1147.47C637.867 1153.6 596.4 1177.73 550 1219.6L542.8 1226.27L552.667 1229.33C558.133 1231.07 561.6 1232.67 560.4 1232.93C557.333 1233.73 555.867 1239.33 557.733 1243.33C559.867 1248 567.733 1251.47 582.8 1254.53C658.533 1269.87 711.867 1259.47 749.467 1222.13C758.667 1212.93 764.133 1204.8 764.667 1199.33C765.333 1193.73 764.667 1190.53 763.067 1191.47C761.467 1192.53 761.467 1192.4 768.267 1181.73C770.667 1177.87 772.667 1174.27 772.667 1173.47C772.667 1171.47 766.133 1167.33 753.067 1160.8C725.467 1146.93 701.6 1142.8 674.667 1147.47Z"></path>
       </svg>
       <div>
-        <p className="text-sm text-slate-500">3857 happy teachers</p>
+        <p className="text-sm text-slate-500">1M+ happy users</p>
 
         <div className="flex flex-row justify-center gap-0 pt-1">
           {[...Array(5)].map((_, index) => (

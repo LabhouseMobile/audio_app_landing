@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import TestimonialSingle from "./testimonial-single";
+import { useState } from "react";
 import feature1 from "../../public/feature_1.gif";
 import feature2 from "../../public/feature_2.png";
 import feature3 from "../../public/feature_3.gif";
+import TestimonialSingle from "./testimonial-single";
 
 const features = [
   {
@@ -155,7 +155,7 @@ const features = [
   },
 ];
 
-export default function AccordionFeatures({ config }: { config?: any }) {
+export default function AccordionFeatures() {
   const [activeFeature, setActiveFeature] = useState(1);
 
   return (
@@ -165,7 +165,7 @@ export default function AccordionFeatures({ config }: { config?: any }) {
     >
       <div className="px-8">
         <h2 className="mb-12 text-4xl font-extrabold tracking-tight text-slate-800 md:mb-24 lg:text-5xl">
-          AI-powered lesson preparation <br />
+          AI-powered notes <br />
           <span className="relative mt-2 inline-block">
             <span className="absolute inset-0 -rotate-1 transform bg-blue-600"></span>
             <span className="relative z-10 px-2 py-2 text-white">
