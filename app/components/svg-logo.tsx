@@ -23,20 +23,20 @@ const SVGLogo: React.FC = () => (
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_187_98" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear_187_98" x1="5" y1="5" x2="1025" y2="1025" gradientUnits="userSpaceOnUse">
-<stop offset="0.9999" stop-color="#1F75FE"/>
-<stop offset="1" stop-color="#7FB0FF"/>
+<stop offset="0.9999" stopColor="#1F75FE"/>
+<stop offset="1" stopColor="#7FB0FF"/>
 </linearGradient>
 <radialGradient id="paint1_radial_187_98" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512.5 512.5) rotate(90) scale(273.5)">
-<stop offset="0.74" stop-color="#00C4FF"/>
-<stop offset="1" stop-color="#0062FF"/>
+<stop offset="0.74" stopColor="#00C4FF"/>
+<stop offset="1" stopColor="#0062FF"/>
 </radialGradient>
 <radialGradient id="paint2_radial_187_98" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512.5 512.5) rotate(90) scale(396.5)">
-<stop offset="0.835" stop-color="#00C4FF"/>
-<stop offset="1" stop-color="#0062FF"/>
+<stop offset="0.835" stopColor="#00C4FF"/>
+<stop offset="1" stopColor="#0062FF"/>
 </radialGradient>
 <radialGradient id="paint3_radial_187_98" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512.5 512.5) rotate(90) scale(537.5)">
-<stop offset="0.755" stop-color="#00C4FF"/>
-<stop offset="1" stop-color="#0062FF"/>
+<stop offset="0.755" stopColor="#00C4FF"/>
+<stop offset="1" stopColor="#0062FF"/>
 </radialGradient>
 <clipPath id="clip0_187_98">
 <rect width="1024" height="1024" fill="white"/>
