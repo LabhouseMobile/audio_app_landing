@@ -7,7 +7,7 @@ interface HeroProps {
   qrType?: string;
 }
 
-function Hero({ qrType = "app" }: HeroProps) {
+function Hero({ qrType }: HeroProps) {
   const validTypes: QRCodeType[] = [
     "text",
     "pdf",
@@ -19,8 +19,8 @@ function Hero({ qrType = "app" }: HeroProps) {
   ];
   const validQrType: QRCodeType = validTypes.includes(qrType as QRCodeType)
     ? (qrType as QRCodeType)
-    : "app";
-
+    : "default";
+  console.log(validQrType);
   return (
     <div
       className="bg-cover bg-center bg-no-repeat"

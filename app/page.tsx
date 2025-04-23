@@ -15,9 +15,7 @@ export default function Home({
   searchParams?: { type?: string };
 }) {
   const params = searchParams || {};
-  const qrType = params.type || "app";
-
-  console.log("Type value:", qrType);
+  const qrType = params.type;
 
   return (
     <Container>

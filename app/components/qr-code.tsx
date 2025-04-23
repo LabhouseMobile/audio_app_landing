@@ -1,6 +1,14 @@
 import React from "react";
 
-export type QRCodeType = "text" | "pdf" | "app" | "auto" | "guests" | "self" | "chat";
+export type QRCodeType =
+  | "text"
+  | "pdf"
+  | "app"
+  | "auto"
+  | "guests"
+  | "self"
+  | "chat"
+  | "default";
 
 interface QRCodeProps {
   type: QRCodeType;
@@ -9,8 +17,8 @@ interface QRCodeProps {
 const QRCode: React.FC<QRCodeProps> = ({ type }) => {
   return (
     <div className="qr-code-container">
-      <img 
-        src={`/qr/qr-${type}-web.svg`} 
+      <img
+        src={`/qr/qr-${type}-web.svg`}
         alt={`QR code for ${type}`}
         width={200}
         height={200}
