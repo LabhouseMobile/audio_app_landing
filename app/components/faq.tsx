@@ -19,6 +19,14 @@ const faqData = [
     answer: "Summary AI leverages Whisper v3, an open source transcription model from OpenAI, to ensure high accuracy in transcriptions. However, the clarity of the recording can also impact accuracy.",
   },
   {
+    question: "Does Summary AI work in-person?",
+    answer: "Yes, you can record in-person conversations with Summary AI, as well as import past audio meetings to get notes, action items, a searchable transcript and more",
+  },
+  {
+    question: "What meeting platforms does Summary AI work with?",
+    answer: "Summary AI supports in-person meetings and all meeting platforms, including:\n- Zoom\n- Google Meet\n- Microsoft Teams\nSummary AI connects with Google Calendar and Microsoft Outlook Calendar to detect and automatically join your meetings.",
+  },
+  {
     question: "How can I customize my summaries?",
     answer: "Once Summary AI has transcribed and summarized your audio, you can easily adjust the summary's length or format within the app.",
   },
@@ -32,8 +40,10 @@ const faqData = [
   },
   {
     question: "Can I access Summary AI on multiple devices?",
-    answer: "Currently, Summary AI is available iOS (iPad and Mac with Apple Silicon)",
+    answer: "Currently, Summary AI is available on iOS (iPad and Mac with Apple Silicon)",
   },
+  
+  
 ];
 
 const FAQItem = ({
@@ -71,7 +81,7 @@ const FAQItem = ({
         }`}
       >
         <div className="pb-5 leading-relaxed text-slate-600">
-          {typeof answer === "string" ? <p>{answer}</p> : answer}
+          {typeof answer === "string" ? <p className="whitespace-pre-line">{answer}</p> : answer}
         </div>
       </div>
     </li>
