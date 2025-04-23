@@ -5,7 +5,7 @@ function HeaderBanner() {
         <div className="flex items-center justify-center">
           <div className="flex items-center gap-4 text-sm text-gray-600 font-bold text-center">
             <span className="mr-10">
-            #1 Transcription App 2025. We respect your privacy
+            #1 Transcription App 2025.
             </span>
             <span className="flex items-center justify-between">
             {[...Array(5)].map((_, index) => (
