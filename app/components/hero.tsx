@@ -1,9 +1,16 @@
 import mockup from "../../public/mockup.png";
 import soundwave from "../../public/soundwave-hq.jpg";
 import DownloadAppStore from "./download-appstore";
-import QRCode from "./qr-code";
+import QRCode, { QRCodeType } from "./qr-code";
 
-function Hero() {
+interface HeroProps {
+  qrType?: string;
+}
+
+function Hero({ qrType = "app" }: HeroProps) {
+  const validTypes: QRCodeType[] = ["text", "pdf", "app", "auto", "guests", "self", "chat"];
+  const validQrType: QRCodeType = validTypes.includes(qrType as QRCodeType) ? (qrType as QRCodeType) : "app";
+
   return (
     <div className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${soundwave.src})` }}>
       <div className="mx-auto max-w-7xl px-8 py-12 pt-4 lg:px-12 lg:py-24">
@@ -31,7 +38,7 @@ function Hero() {
                 <DownloadAppStore/>
                 <div className=" flex-col items-center justify-center hidden md:flex">
                   Scan to try for Free
-                <QRCode/>
+                <QRCode type={validQrType} />
                 </div>
                 </div>
               </div>
