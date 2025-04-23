@@ -1,6 +1,6 @@
-import BeforeAfter from "./components/before-after";
 import { Container } from "./components/container";
 import FAQ from "./components/faq";
+import Features from "./components/features";
 import Footer from "./components/footer";
 import { Header } from "./components/header";
 import HeaderBanner from "./components/header-banner";
@@ -9,14 +9,14 @@ import Reviews from "./components/reviews";
 import VideoQuote from "./components/video-quote";
 import { renderSchemaTags } from "./lib/seo";
 
-export default function Home({ 
-  searchParams = {} 
-}: { 
-  searchParams?: { type?: string } 
+export default function Home({
+  searchParams = {},
+}: {
+  searchParams?: { type?: string };
 }) {
   const params = searchParams || {};
   const qrType = params.type || "app";
-  
+
   console.log("Type value:", qrType);
 
   return (
@@ -25,7 +25,7 @@ export default function Home({
       <Header />
       <Hero qrType={qrType} />
       <Reviews />
-      <BeforeAfter />
+      <Features />
       <VideoQuote />
       <FAQ />
       <Footer />

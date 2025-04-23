@@ -8,11 +8,24 @@ interface HeroProps {
 }
 
 function Hero({ qrType = "app" }: HeroProps) {
-  const validTypes: QRCodeType[] = ["text", "pdf", "app", "auto", "guests", "self", "chat"];
-  const validQrType: QRCodeType = validTypes.includes(qrType as QRCodeType) ? (qrType as QRCodeType) : "app";
+  const validTypes: QRCodeType[] = [
+    "text",
+    "pdf",
+    "app",
+    "auto",
+    "guests",
+    "self",
+    "chat",
+  ];
+  const validQrType: QRCodeType = validTypes.includes(qrType as QRCodeType)
+    ? (qrType as QRCodeType)
+    : "app";
 
   return (
-    <div className="bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${soundwave.src})` }}>
+    <div
+      className="bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${soundwave.src})` }}
+    >
       <div className="mx-auto max-w-7xl px-8 py-12 pt-4 lg:px-12 lg:py-24">
         <div className="flex flex-col md:flex-row items-center justify-between gap-24 ">
           {/* Left column - Text content */}
@@ -21,47 +34,52 @@ function Hero({ qrType = "app" }: HeroProps) {
               <div className="hidden sm:flex sm:justify-center"></div>
               <div className="mt-2 text-left">
                 <h1 className="text-4xl font-black tracking-tight text-slate-800 sm:text-6xl">
-                  Get 
-                
+                  Get
                   <span className="relative mt-2 inline-block ml-2">
-                <span className="absolute inset-0 -rotate-1 transform bg-blue-600"></span>
-                <span className="relative z-10 px-2 py-2 text-white">
-                  perfect notes
-                </span>
-              </span>
-              <br /> after every meeting
+                    <span className="absolute inset-0 -rotate-1 transform bg-blue-600"></span>
+                    <span className="relative z-10 px-2 py-2 text-white">
+                      perfect notes
+                    </span>
+                  </span>
+                  <br /> after every meeting
                 </h1>
                 <p className="mt-6 text-base font-light leading-8 text-secondary-foreground text-slate-500 sm:text-lg">
-                  Automatically transcribe and summarize any meeting, lecture or podcast.
+                  Summary AI records meetings, lectures and podcasts and
+                  automatically transforms them into word-for-word transcripts
+                  and actionable notes.
+                  <br />
+                  <br />
+                  Be present in conversations while Summary AI takes care of the
+                  rest.
                 </p>
                 <div className="mt-10 flex flex-row items-center justify-start gap-y-6 gap-12">
-                <DownloadAppStore/>
-                <div className=" flex-col items-center justify-center hidden md:flex">
-                  Scan to try for Free
-                <QRCode type={validQrType} />
-                </div>
+                  <DownloadAppStore />
+                  <div className=" flex-col items-center justify-center hidden md:flex">
+                    Scan to try for Free
+                    <QRCode type={validQrType} />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Right column - Image */}
           <div className="flex-1 flex items-center justify-center h-[35rem]">
             {/* Add your image here */}
             <div className="relative w-full h-full lg:scale-125">
-            <img
-                  alt={`App Mock up`}
-                  loading="lazy"
-                  decoding="async"
-                  data-nimg="1"
-                  className={`w-full h-full object-contain`}
-                  style={{ color: "transparent" }}
-                  src={mockup.src}
-                />
+              <img
+                alt={`App Mock up`}
+                loading="lazy"
+                decoding="async"
+                data-nimg="1"
+                className={`w-full h-full object-contain`}
+                style={{ color: "transparent" }}
+                src={mockup.src}
+              />
             </div>
           </div>
         </div>
-        
+
         <HeroFooter />
         {/* <TestimonialsAvatars priority={true} /> */}
       </div>
