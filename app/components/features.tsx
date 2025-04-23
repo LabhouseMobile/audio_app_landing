@@ -131,13 +131,13 @@ export default function Features() {
               content="What was the budget mentioned by the client?"
               url="/feats/chat-you.webp"
               accentColor="#FFC5EF"
+              inverted
             />
             <ChatBubble
               name="Summary AI"
               content="Sara mentioned a budget of $150k for Q2"
               url="/feats/chat-bot.png"
               accentColor="#FFC5EF"
-              inverted
             />
           </div>
         }
