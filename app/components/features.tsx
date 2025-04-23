@@ -4,7 +4,7 @@ import ChatBubble from "./chat_bubble";
 
 export default function Features() {
   return (
-    <div className="flex flex-col gap-8 pb-16 pt-32">
+    <div className="flex flex-col gap-8 pb-16 pt-32" id="features">
       <h2 className="text-center text-4xl font-bold">Features</h2>
       <BiPanel
         accentColor="#B5FFD6"

@@ -11,6 +11,7 @@ export function NavLinks() {
   const pathname = usePathname();
 
   return [
+    ["Features", "/#features"],
     ["FAQs", "/#faq"],
   ].map(([label, href], index) => (
     <Link
