@@ -2,9 +2,9 @@
 
 import {
   Popover,
+  PopoverBackdrop,
   PopoverButton,
-  PopoverOverlay,
-  PopoverPanel,
+  PopoverPanel
 } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -93,7 +93,7 @@ export function Header() {
                   <AnimatePresence initial={false}>
                     {open && (
                       <>
-                        <PopoverOverlay
+                        <PopoverBackdrop
                           static
                           as={motion.div}
                           initial={{ opacity: 0 }}
@@ -111,19 +111,17 @@ export function Header() {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 px-6 pt-32 pb-6 rounded-b-2xl shadow-2xl origin-top bg-slate-50 shadow-slate-900/20"
+                          className="absolute inset-x-0 top-0 mt-24 z-0 p-6 rounded-2xl shadow-2xl origin-top bg-slate-50 shadow-slate-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="/#features">
-                              Features
-                            </MobileNavLink>
+                            <MobileNavLink href="/">Home</MobileNavLink>
                             <MobileNavLink href="/#faq">FAQs</MobileNavLink>
                           </div>
                           <div className="flex flex-col gap-4 mt-8">
-                            <Button href="/" outline>
-                              Log in
-                            </Button>
-                            <Button href="#">Get Started</Button>
+
+                            <Button href="https://apps.apple.com/us/app/id6670175056" color="blue" className="w-full">
+                Download App
+              </Button>
                           </div>
                         </PopoverPanel>
                       </>
