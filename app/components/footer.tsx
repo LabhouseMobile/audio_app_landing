@@ -46,17 +46,22 @@ export default function Footer() {
                 LEGAL
               </div>
               <div className="flex flex-col gap-2 justify-center items-center mb-10 text-sm text-slate-700 hover:text-slate-900 md:items-start">
-                <Link href="/tos" className="link link-hover">
+                <Link
+                  href="https://labhouse.io/terms-and-cond"
+                  className="link link-hover"
+                >
                   Terms of services
                 </Link>
-                <Link href="/privacy-policy" className="link link-hover">
+                <Link
+                  href="https://labhouse.io/privacy-policy-for-summary-ai/"
+                  className="link link-hover"
+                >
                   Privacy policy
                 </Link>
               </div>
             </div>
           </div>
         </div>
-       
       </div>
     </footer>
   );
