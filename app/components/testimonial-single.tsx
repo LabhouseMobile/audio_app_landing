@@ -10,7 +10,7 @@ export default function TestimonialSingle({
 }) {
   const image = testimonial.image;
   return (
-    <div className="mx-auto mt-16 max-w-md space-y-4 md:mt-24 md:space-y-6">
+    <div className="mx-auto max-w-md space-y-4 md:space-y-6">
       <div className="rating !flex justify-center">
         {[...Array(5)].map((_, i) => (
           <svg
@@ -33,13 +33,13 @@ export default function TestimonialSingle({
       </div>
       <div className="flex items-center justify-center gap-3 md:gap-4">
         <img
-          alt="Philipp Keller feedback for ZenVoice"
+          alt={testimonial.name}
           loading="lazy"
-          width="48"
-          height="48"
+          width="52"
+          height="52"
           decoding="async"
           data-nimg="1"
-          className="h-10 w-10 rounded-full object-cover md:h-12 md:w-12"
+          className="h-12 w-12 rounded-full object-cover md:h-20 md:w-20"
           style={{ color: "transparent" }}
           src={image}
         />
