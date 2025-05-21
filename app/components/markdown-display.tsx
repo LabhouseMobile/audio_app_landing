@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface MarkdownDisplayProps {
   filename: string;
@@ -18,6 +19,7 @@ export default async function MarkdownDisplay({
       <div className="bg-white rounded-lg p-6 md:p-8">
         <div className="prose prose-slate max-w-none">
           <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
             components={{
               h1: ({ ...props }) => (
                 <h1 className="text-3xl font-bold mt-8 mb-4" {...props} />
@@ -53,6 +55,33 @@ export default async function MarkdownDisplay({
               ),
               strong: ({ ...props }) => (
                 <strong className="font-bold" {...props} />
+              ),
+              // Table components
+              table: ({ ...props }) => (
+                <div className="overflow-x-auto my-8">
+                  <table
+                    className="min-w-full divide-y divide-gray-300 border"
+                    {...props}
+                  />
+                </div>
+              ),
+              thead: ({ ...props }) => (
+                <thead className="bg-gray-50" {...props} />
+              ),
+              tbody: ({ ...props }) => (
+                <tbody className="divide-y divide-gray-200" {...props} />
+              ),
+              tr: ({ ...props }) => (
+                <tr className="hover:bg-gray-50" {...props} />
+              ),
+              th: ({ ...props }) => (
+                <th
+                  className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider"
+                  {...props}
+                />
+              ),
+              td: ({ ...props }) => (
+                <td className="px-4 py-3 text-sm text-gray-900" {...props} />
               ),
             }}
           >
