@@ -26,6 +26,7 @@ export default function Features() {
               alt="Features"
               width={500}
               height={500}
+              unoptimized
             />
           </>
         }
