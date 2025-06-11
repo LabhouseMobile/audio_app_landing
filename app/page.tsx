@@ -1,4 +1,5 @@
 import { Container } from "./components/container";
+import DownloadSection from "./components/download";
 import FAQ from "./components/faq";
 import Features from "./components/features";
 import Footer from "./components/footer";
@@ -26,6 +27,7 @@ export default function Home({
       <Features />
       <VideoQuote />
       <FAQ />
+      <DownloadSection qrType={qrType} />
       <Footer />
       {renderSchemaTags()}
     </Container>

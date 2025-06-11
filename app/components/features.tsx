@@ -137,7 +137,7 @@ export default function Features() {
             <ChatBubble
               name="Summary AI"
               content="Sara mentioned a budget of $150k for Q2"
-              url="/feats/chat-bot.png"
+              url="/feats/chat-bot.webp"
               accentColor="#FFC5EF"
             />
           </div>

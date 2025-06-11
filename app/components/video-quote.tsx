@@ -20,8 +20,8 @@ function VideoQuote() {
                 name: "Jean",
                 schoolName: "Operations Manager",
                 content:
-                  "I have literally been using this app for less than five minutes and I’m in love! I recorded a short chat in English and then also one in French and it translated my conversation in French and also did the summary notes in French.",
-                image: "/review-6.png",
+                  "I have literally been using this app for less than five minutes and I'm in love! I recorded a short chat in English and then also one in French and it translated my conversation in French and also did the summary notes in French.",
+                image: "/review-6.webp",
               }}
             />
           </div>

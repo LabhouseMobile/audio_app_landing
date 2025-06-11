@@ -1,5 +1,5 @@
-import mockup from "../../public/mockup.png";
-import soundwave from "../../public/soundwave-hq.jpg";
+import mockup from "../../public/mockup.webp";
+import soundwave from "../../public/soundwave-hq.webp";
 import DownloadAppStore from "./download-appstore";
 import QRCode, { QRCodeType } from "./qr-code";
 
@@ -69,7 +69,7 @@ function Hero({ qrType }: HeroProps) {
             <div className="relative w-full h-full lg:scale-125">
               <img
                 alt={`App Mock up`}
-                loading="lazy"
+                fetchPriority="high"
                 decoding="async"
                 data-nimg="1"
                 className={`w-full h-full object-contain`}

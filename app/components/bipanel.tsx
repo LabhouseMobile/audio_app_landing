@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Button } from "./button";
 
 interface BiPanelProps {
   /**
@@ -56,6 +57,9 @@ export default function BiPanel({
         style={{ backgroundColor: leftBg }}
       >
         {leftColumn}
+        <Button color="blue" href="#download" className="w-1/2">
+          Get Started
+        </Button>
       </div>
       <div
         className={`w-full md:w-1/2 p-16 flex flex-col gap-8 items-center justify-center 
