@@ -111,9 +111,9 @@ If you are a California resident, California law affords you certain rights rega
 
 **7. Data Privacy Framework Principles**
 
-Labhouse complies with the EU-U.S. Data Privacy Framework  (EU-U.S. DPF), the UK Extension to the EU-U.S. DPF, and the Swiss-U.S. Data Privacy Framework (“Swiss-U.S. DPF”) as set forth by the U.S. Department of Commerce. Otter.ai has certified to the U.S. Department of Commerce that it adheres to the EU-U.S. DPF Principles with respect to the processing of personal data received from the European Union in reliance on the EU-U.S. DPF and from the United Kingdom (and Gibraltar) in reliance on the UK Extension to the EU-U.S. DPF. Otter.ai has certified to the U.S. Department of Commerce that it adheres to the Swiss-U.S. DPF Principles with respect to the processing of personal data received from Switzerland in reliance on the Swiss-U.S. DPF. If there is any conflict between the terms in this privacy policy and the EU-U.S. DPF Principles and/or the Swiss-U.S. DPF  Principles, the Principles shall govern. To learn more about the Data Privacy Framework  program, and to view our certification, please visit https://www.dataprivacyframework.gov/.
+Labhouse complies with the EU-U.S. Data Privacy Framework  (EU-U.S. DPF), the UK Extension to the EU-U.S. DPF, and the Swiss-U.S. Data Privacy Framework (“Swiss-U.S. DPF”) as set forth by the U.S. Department of Commerce. Summary AI has certified to the U.S. Department of Commerce that it adheres to the EU-U.S. DPF Principles with respect to the processing of personal data received from the European Union in reliance on the EU-U.S. DPF and from the United Kingdom (and Gibraltar) in reliance on the UK Extension to the EU-U.S. DPF. Summary AI has certified to the U.S. Department of Commerce that it adheres to the Swiss-U.S. DPF Principles with respect to the processing of personal data received from Switzerland in reliance on the Swiss-U.S. DPF. If there is any conflict between the terms in this privacy policy and the EU-U.S. DPF Principles and/or the Swiss-U.S. DPF  Principles, the Principles shall govern. To learn more about the Data Privacy Framework  program, and to view our certification, please visit https://www.dataprivacyframework.gov/.
 
-For more information on how we comply with the DPF Principles, please see **APPENDIX: Otter.ai Data Privacy Framework Principles Notice**.
+For more information on how we comply with the DPF Principles, please see **APPENDIX: Summary AI Data Privacy Framework Principles Notice**.
 
 ### **8. CHILDREN**
 
@@ -187,7 +187,7 @@ Summary AI commits to subject to the EU-U.S. DPF Principles, the UK Extension to
 
 **2. Data Integrity and Purpose Limitation.** Any Personal Information we receive may be processed by Summary AI for the purposes indicated in our Policy or as otherwise notified to you. We will not process Personal Information in a way that is incompatible with these purposes unless subsequently authorized by you.
 
-We take reasonable steps to limit the collection and usage of Personal Information to that which is relevant for the purposes for which it was collected, and to ensure that such Personal Information is reliable, accurate, complete and current. Individuals are encouraged to keep their Personal Information with Otter.ai up to date and may contact Summary AI as indicated below or in the Policy to request that their Personal Information be updated or corrected.
+We take reasonable steps to limit the collection and usage of Personal Information to that which is relevant for the purposes for which it was collected, and to ensure that such Personal Information is reliable, accurate, complete and current. Individuals are encouraged to keep their Personal Information with Summary AI up to date and may contact Summary AI as indicated below or in the Policy to request that their Personal Information be updated or corrected.
 
 We will adhere to the DPF Principles for as long as we retain the Personal Information collected under DPF Principles.
 

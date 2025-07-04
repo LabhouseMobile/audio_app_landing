@@ -148,7 +148,7 @@ EACH PROVISION OF THESE TERMS THAT PROVIDES FOR A LIMITATION OF LIABILITY, DISCL
 
 ### **16. Privacy and Information Security**
 
-**16.1 Privacy Policy**. You acknowledge and agree that except as described in these Terms, any User Content, data, recordings, and information you enter into or upload to the Service or that we collect in connection with the Service (“**Data**”) will be processed as described in the Summary AI [Privacy Policy](https://summaryai.app/privacy). Please read the [](https://otter.ai/privacy)[Privacy Policy](https://summaryai.app/privacy) carefully.
+**16.1 Privacy Policy**. You acknowledge and agree that except as described in these Terms, any User Content, data, recordings, and information you enter into or upload to the Service or that we collect in connection with the Service (“**Data**”) will be processed as described in the Summary AI [Privacy Policy](https://summaryai.app/privacy). Please read the [](https://summaryai.app/privacy)[Privacy Policy](https://summaryai.app/privacy) carefully.
 
 **16.2 Data Processing**. To the extent Data falls within the scope of the General Data Protection Regulation or the United Kingdom General Data Protection Regulation, the terms of the Data Processing Attachment in **Appendix 1** of these Terms (“**DPA**”) apply to the processing of any Customer Personal Data (as defined in the DPA). To the extent Data falls within the scope of any U.S. state privacy laws or their implementing regulations, the terms of the U.S. State Data Processing Agreement in Appendix 6 (“**U.S. State DPA**”) apply to the processing of any Personal Data (as defined in the U.S. State DPA).
 
