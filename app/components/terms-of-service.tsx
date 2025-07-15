@@ -1,5 +1,5 @@
-import MarkdownDisplay from "./markdown-display";
+import MarkdownReader from "./markdown-reader";
 
 export default async function TermsOfServiceSection() {
-  return <MarkdownDisplay filename="tos.md" />;
+  return <MarkdownReader filename="tos.md" />;
 }

@@ -1,5 +1,5 @@
-import MarkdownDisplay from "./markdown-display";
+import MarkdownReader from "./markdown-reader";
 
 export default async function PrivacySection() {
-  return <MarkdownDisplay filename="privacy.md" />;
+  return <MarkdownReader filename="privacy.md" />;
 }

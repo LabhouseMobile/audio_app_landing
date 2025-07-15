@@ -1,22 +1,20 @@
-import fs from "fs";
-import path from "path";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 interface MarkdownDisplayProps {
-  filename: string;
+  content: string;
+  containerClassName?: string;
+  wrapperClassName?: string;
 }
 
-export default async function MarkdownDisplay({
-  filename,
+export default function MarkdownDisplay({
+  content,
+  containerClassName = "max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8",
+  wrapperClassName = "bg-white rounded-lg p-6 md:p-8",
 }: MarkdownDisplayProps) {
-  // Read the markdown file on the server
-  const filePath = path.join(process.cwd(), "public", "markdown", filename);
-  const content = fs.readFileSync(filePath, "utf8");
-
   return (
-    <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <div className="bg-white rounded-lg p-6 md:p-8">
+    <div className={containerClassName}>
+      <div className={wrapperClassName}>
         <div className="prose prose-slate max-w-none">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}

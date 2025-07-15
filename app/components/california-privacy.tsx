@@ -1,5 +1,5 @@
-import MarkdownDisplay from "./markdown-display";
+import MarkdownReader from "./markdown-reader";
 
 export default async function CaliforniaPrivacySection() {
-  return <MarkdownDisplay filename="california-privacy-policy.md" />;
+  return <MarkdownReader filename="california-privacy-policy.md" />;
 }
