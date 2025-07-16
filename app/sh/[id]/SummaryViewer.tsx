@@ -31,11 +31,7 @@ export default function SummaryViewer({
           />
         ))}
       </div>
-      <MarkdownDisplay
-        content={summary.markdownText}
-        containerClassName=""
-        wrapperClassName=""
-      />
+      <MarkdownDisplay content={summary.markdownText} containerClassName="" />
     </>
   );
 }
