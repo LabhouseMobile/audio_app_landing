@@ -200,9 +200,6 @@ async function getRecordingData(id: string): Promise<RecordingData | null> {
     const recordingId = publicLinkDoc.data()?.recordingId;
     if (!userId || !recordingId) return null;
 
-    console.log("userId", userId);
-    console.log("recordingId", recordingId);
-
     const doc = await db
       .collection("users")
       .doc(userId)

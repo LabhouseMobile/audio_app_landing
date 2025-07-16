@@ -37,8 +37,6 @@ export default function ActionItemView({
       userId,
     };
 
-    console.log("Request body:", requestBody);
-
     const response = await fetch(`/api/toggle-action`, {
       method: "POST",
       headers: {

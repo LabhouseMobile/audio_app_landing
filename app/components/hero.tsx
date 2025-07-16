@@ -20,7 +20,7 @@ function Hero({ qrType }: HeroProps) {
   const validQrType: QRCodeType = validTypes.includes(qrType as QRCodeType)
     ? (qrType as QRCodeType)
     : "default";
-  console.log(validQrType);
+
   return (
     <div
       className="bg-cover bg-center bg-no-repeat"
