@@ -30,6 +30,15 @@ type Props = {
   params: { id: string };
 };
 
+type AudioFile = {
+  duration: number;
+  path: string;
+};
+
+type YoutubeFile = AudioFile & {
+  videoUrl: string;
+};
+
 type RecordingData = {
   userId: string;
   recordingId: string;
@@ -38,10 +47,8 @@ type RecordingData = {
   title: string;
   emoji: string;
   createdAt: string;
-  audioFile: {
-    duration: number;
-    path: string;
-  };
+  audioFile?: AudioFile;
+  youtubeFile?: YoutubeFile;
   transcript: Transcription;
 };
 
@@ -52,10 +59,67 @@ export async function generateMetadata({ params }: Props) {
 
   if (!data) return notFound();
 
-  const { summary, title, emoji } = data;
+  const { summary, title, emoji, createdAt, speakers } = data;
+
+  // Format the description to be more SEO-friendly
+  const description =
+    summary.markdownText.length > 160
+      ? summary.markdownText.substring(0, 157) + "..."
+      : summary.markdownText;
+
+  // Get speaker names for better context
+  const speakerNames = Object.values(speakers).join(", ");
+
   return {
     title: `${emoji} ${title}`,
-    description: summary.markdownText,
+    description: description,
+    keywords: [
+      title,
+      "audio recording",
+      "transcript",
+      "meeting notes",
+      "voice memo",
+      "speech to text",
+      "summary ai",
+      "summary ai note taker",
+      "summary ai note taker app",
+    ],
+    authors: [{ name: speakerNames }],
+    creator: "Summary AI",
+    publisher: "Summary AI",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL("https://summaryai.app"),
+    alternates: {
+      canonical: `/sh/${shareId}`,
+    },
+    openGraph: {
+      title: `${emoji} ${title}`,
+      description: description,
+      type: "article",
+      publishedTime: createdAt,
+      authors: [speakerNames],
+      images: [
+        {
+          url: "/logo.png", // Your app's logo or a default image
+          width: 1200,
+          height: 630,
+          alt: "Summary AI",
+        },
+      ],
+      siteName: "Summary AI Note Taker",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${emoji} ${title}`,
+      description: description,
+      images: ["/logo.png"], // Your app's logo or a default image
+      creator: "@Summary AI", // Replace with your Twitter handle
+      site: "@Summary AI Note Taker", // Replace with your Twitter handle
+    },
   };
 }
 
@@ -88,7 +152,9 @@ export default async function ViewPage({ params }: Props) {
               <p className="text-sm text-gray-500">
                 {formatDateWithDuration(
                   createdAt,
-                  data.audioFile.duration / 1000000
+                  (data.audioFile?.duration ||
+                    data.youtubeFile?.duration ||
+                    0) / 1000000
                 )}
               </p>
             </div>
