@@ -53,11 +53,17 @@ type RecordingData = {
 };
 
 export async function generateMetadata({ params }: Props) {
+  const startTime = Date.now();
+  console.log(`[PERF] generateMetadata started for shareId: ${params.id}`);
+
   const shareId = params.id;
 
   const data = await getRecordingData(shareId);
 
-  if (!data) return notFound();
+  if (!data) {
+    console.log(`[PERF] generateMetadata - no data found, returning notFound`);
+    return notFound();
+  }
 
   const { summary, title, emoji, createdAt, speakers } = data;
 
@@ -70,7 +76,7 @@ export async function generateMetadata({ params }: Props) {
   // Get speaker names for better context
   const speakerNames = Object.values(speakers).join(", ");
 
-  return {
+  const metadata = {
     title: `${emoji} ${title}`,
     description: description,
     keywords: [
@@ -121,15 +127,26 @@ export async function generateMetadata({ params }: Props) {
       site: "@Summary AI Note Taker", // Replace with your Twitter handle
     },
   };
+
+  const endTime = Date.now();
+  console.log(`[PERF] generateMetadata completed in ${endTime - startTime}ms`);
+
+  return metadata;
 }
 
 export default async function ViewPage({ params }: Props) {
+  const startTime = Date.now();
+  console.log(`[PERF] ViewPage started for shareId: ${params.id}`);
+
   const shareId = params.id;
 
   try {
     const data = await getRecordingData(shareId);
 
-    if (!data) return notFound();
+    if (!data) {
+      console.log(`[PERF] ViewPage - no data found, returning notFound`);
+      return notFound();
+    }
 
     const {
       summary,
@@ -140,6 +157,9 @@ export default async function ViewPage({ params }: Props) {
       userId,
       recordingId,
     } = data;
+
+    const endTime = Date.now();
+    console.log(`[PERF] ViewPage completed in ${endTime - startTime}ms`);
 
     return (
       <>
@@ -175,7 +195,13 @@ export default async function ViewPage({ params }: Props) {
 }
 
 async function getRecordingData(id: string): Promise<RecordingData | null> {
+  const startTime = Date.now();
+  console.log(`[PERF] getRecordingData started for id: ${id}`);
+
   if (!admin.apps.length) {
+    const initStartTime = Date.now();
+    console.log(`[PERF] Initializing Firebase admin app`);
+
     const projectId = process.env.FIREBASE_PROJECT_ID;
     const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
     const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n");
@@ -190,15 +216,41 @@ async function getRecordingData(id: string): Promise<RecordingData | null> {
         privateKey,
       }),
     });
+
+    const initEndTime = Date.now();
+    console.log(
+      `[PERF] Firebase admin app initialized in ${
+        initEndTime - initStartTime
+      }ms`
+    );
   }
 
   const db = admin.firestore();
 
   try {
+    const publicLinkStartTime = Date.now();
+    console.log(`[PERF] Fetching public_links document`);
+
     const publicLinkDoc = await db.collection("public_links").doc(id).get();
     const userId = publicLinkDoc.data()?.userId;
     const recordingId = publicLinkDoc.data()?.recordingId;
-    if (!userId || !recordingId) return null;
+
+    const publicLinkEndTime = Date.now();
+    console.log(
+      `[PERF] public_links document fetched in ${
+        publicLinkEndTime - publicLinkStartTime
+      }ms`
+    );
+
+    if (!userId || !recordingId) {
+      console.log(`[PERF] Missing userId or recordingId from public_links`);
+      return null;
+    }
+
+    const recordingStartTime = Date.now();
+    console.log(
+      `[PERF] Fetching recording document for userId: ${userId}, recordingId: ${recordingId}`
+    );
 
     const doc = await db
       .collection("users")
@@ -207,11 +259,35 @@ async function getRecordingData(id: string): Promise<RecordingData | null> {
       .doc(recordingId)
       .get();
 
-    if (!doc.exists) return null;
+    const recordingEndTime = Date.now();
+    console.log(
+      `[PERF] Recording document fetched in ${
+        recordingEndTime - recordingStartTime
+      }ms`
+    );
+
+    if (!doc.exists) {
+      console.log(`[PERF] Recording document does not exist`);
+      return null;
+    }
+
+    const transcriptStartTime = Date.now();
+    console.log(`[PERF] Fetching transcript`);
 
     const transcript = await transcriptService.get(userId, recordingId);
 
+    const transcriptEndTime = Date.now();
+    console.log(
+      `[PERF] Transcript fetched in ${
+        transcriptEndTime - transcriptStartTime
+      }ms`
+    );
+
     const data = doc.data();
+
+    const totalTime = Date.now() - startTime;
+    console.log(`[PERF] getRecordingData completed in ${totalTime}ms`);
+
     return {
       ...data,
       transcript,
