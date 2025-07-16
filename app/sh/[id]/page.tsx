@@ -61,14 +61,21 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function ViewPage({ params }: Props) {
   const shareId = params.id;
-  const userId = "tVweylWw8wOjIREiaJ8ej2jRbQ53";
 
   try {
     const data = await getRecordingData(shareId);
 
     if (!data) return notFound();
 
-    const { summary, title, emoji, createdAt, transcript } = data;
+    const {
+      summary,
+      title,
+      emoji,
+      createdAt,
+      transcript,
+      userId,
+      recordingId,
+    } = data;
 
     return (
       <>
@@ -89,7 +96,7 @@ export default async function ViewPage({ params }: Props) {
           <Tabs
             summary={summary}
             transcript={transcript}
-            recordingId={shareId}
+            recordingId={recordingId}
             userId={userId}
           />
         </main>
@@ -103,11 +110,18 @@ export default async function ViewPage({ params }: Props) {
 
 async function getRecordingData(id: string): Promise<RecordingData | null> {
   if (!admin.apps.length) {
+    const projectId = process.env.FIREBASE_PROJECT_ID;
+    const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
+    const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n");
+
+    if (!projectId || !clientEmail || !privateKey) {
+      throw new Error("Missing Firebase environment variables");
+    }
     admin.initializeApp({
       credential: admin.credential.cert({
-        projectId: process.env.FIREBASE_PROJECT_ID,
-        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-        privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+        projectId,
+        clientEmail,
+        privateKey,
       }),
     });
   }

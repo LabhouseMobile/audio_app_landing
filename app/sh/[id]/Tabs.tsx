@@ -24,7 +24,7 @@ export default function Tabs({
   const [activeTab, setActiveTab] = useState<Tab>("summary");
 
   return (
-    <div className="px-10">
+    <div className="px-6 md:px-10">
       <div className="inline-flex space-x-2 bg-[#F2F2F7] rounded-full p-1 mb-6 mt-6">
         {["summary", "transcript"].map((tab) => (
           <div
