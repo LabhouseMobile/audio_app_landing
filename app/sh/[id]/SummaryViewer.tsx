@@ -17,7 +17,7 @@ export default function SummaryViewer({
   userId,
   speakers,
 }: SummaryViewerProps) {
-  const { actionItems } = summary;
+  const actionItems = summary.actionItems ?? [];
   return (
     <>
       <div className="space-y-6 mt-6">
