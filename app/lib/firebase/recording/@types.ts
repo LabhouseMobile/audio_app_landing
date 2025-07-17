@@ -1,3 +1,5 @@
+import { Timestamp } from "firebase-admin/firestore";
+
 export interface TranscriptionSegment<T> {
   id: string;
   speaker: string;
@@ -31,4 +33,11 @@ export interface ActionItem {
   description: string;
   actor: string;
   isDone: boolean;
+}
+
+export interface PublicLink {
+  recordingId: string;
+  userId: string;
+  title: string;
+  createdAt: Timestamp;
 }

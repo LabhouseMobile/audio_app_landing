@@ -1,6 +1,10 @@
 import HeaderBanner from "@/app/components/header-banner";
 import admin from "@/app/lib/firebase/firebase-admin";
-import { Summary, Transcription } from "@/app/lib/firebase/recording/@types";
+import {
+  PublicLink,
+  Summary,
+  Transcription,
+} from "@/app/lib/firebase/recording/@types";
 import { transcriptService } from "@/app/lib/firebase/recording/transcript_service";
 import { notFound } from "next/navigation";
 import Tabs from "./Tabs";
@@ -57,28 +61,16 @@ export async function generateMetadata({ params }: Props) {
   console.log(`[PERF] generateMetadata started for shareId: ${params.id}`);
 
   const shareId = params.id;
+  const publicLink = await admin
+    .firestore()
+    .collection("public_links")
+    .doc(shareId)
+    .get();
 
-  const data = await getRecordingData(shareId);
-
-  if (!data) {
-    console.log(`[PERF] generateMetadata - no data found, returning notFound`);
-    return notFound();
-  }
-
-  const { summary, title, emoji, createdAt, speakers } = data;
-
-  // Format the description to be more SEO-friendly
-  const description =
-    summary.markdownText.length > 160
-      ? summary.markdownText.substring(0, 157) + "..."
-      : summary.markdownText;
-
-  // Get speaker names for better context
-  const speakerNames = Object.values(speakers).join(", ");
+  const { title, createdAt } = publicLink.data() as PublicLink;
 
   const metadata = {
-    title: `${emoji} ${title}`,
-    description: description,
+    title: title,
     keywords: [
       title,
       "audio recording",
@@ -90,7 +82,6 @@ export async function generateMetadata({ params }: Props) {
       "summary ai note taker",
       "summary ai note taker app",
     ],
-    authors: [{ name: speakerNames }],
     creator: "Summary AI",
     publisher: "Summary AI",
     formatDetection: {
@@ -103,16 +94,14 @@ export async function generateMetadata({ params }: Props) {
       canonical: `/sh/${shareId}`,
     },
     openGraph: {
-      title: `${emoji} ${title}`,
-      description: description,
+      title: title,
       type: "article",
-      publishedTime: createdAt,
-      authors: [speakerNames],
+      publishedTime: createdAt.toDate().toLocaleDateString(),
       images: [
         {
           url: "/logo.png", // Your app's logo or a default image
-          width: 1200,
-          height: 630,
+          width: 72,
+          height: 72,
           alt: "Summary AI",
         },
       ],
@@ -120,8 +109,7 @@ export async function generateMetadata({ params }: Props) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${emoji} ${title}`,
-      description: description,
+      title: title,
       images: ["/logo.png"], // Your app's logo or a default image
       creator: "@Summary AI", // Replace with your Twitter handle
       site: "@Summary AI Note Taker", // Replace with your Twitter handle
