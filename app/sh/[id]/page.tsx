@@ -99,7 +99,7 @@ export async function generateMetadata({ params }: Props) {
       publishedTime: createdAt.toDate().toLocaleDateString(),
       images: [
         {
-          url: "/og-logo.png", // Your app's logo or a default image
+          url: "/logo-512.png", // Your app's logo or a default image
           width: 1200,
           height: 630,
           alt: "Summary AI",
