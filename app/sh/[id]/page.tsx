@@ -1,4 +1,5 @@
 import HeaderBanner from "@/app/components/header-banner";
+import { MixpanelAnalyticsProvider } from "@/app/lib/analytics/mixpanel_service";
 import admin from "@/app/lib/firebase/firebase-admin";
 import {
   PublicLink,
@@ -134,6 +135,21 @@ export default async function ViewPage({ params }: Props) {
     if (!data) {
       console.log(`[PERF] ViewPage - no data found, returning notFound`);
       return notFound();
+    }
+
+    if (process.env.MIXPANEL_API_KEY) {
+      const mixpanelAnalyticsProvider = new MixpanelAnalyticsProvider(
+        process.env.MIXPANEL_API_KEY,
+        false,
+        "summaryPage",
+        data.userId
+      );
+      mixpanelAnalyticsProvider.summaryPage({
+        recordingId: data.recordingId,
+        userId: data.userId,
+        title: data.title,
+        shortId: shareId,
+      });
     }
 
     const {
