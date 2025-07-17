@@ -3,7 +3,17 @@ import Link from "next/link";
 import { Button } from "./button";
 import SVGLogo from "./svg-logo";
 
-function HeaderBanner({ includeCTA = false }: { includeCTA?: boolean }) {
+interface HeaderBannerProps {
+  includeCTA?: boolean;
+  buttonText?: string;
+  buttonUrl?: string;
+}
+
+function HeaderBanner({
+  includeCTA = false,
+  buttonText = "Download App",
+  buttonUrl = "https://apps.apple.com/us/app/id6670175056",
+}: HeaderBannerProps) {
   return (
     <div className="bg-[#E9F3FF] min-h-10">
       <div className="max-w-6xl mx-auto px-4 py-2">
@@ -52,11 +62,11 @@ function HeaderBanner({ includeCTA = false }: { includeCTA?: boolean }) {
           </div>
           {includeCTA && (
             <Button
-              href="https://apps.apple.com/us/app/id6670175056"
+              href={buttonUrl}
               color="blue"
               className="flex-shrink-0 whitespace-nowrap"
             >
-              Download App
+              {buttonText}
             </Button>
           )}
         </div>

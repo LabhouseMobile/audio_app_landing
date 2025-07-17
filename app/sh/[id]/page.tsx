@@ -151,7 +151,11 @@ export default async function ViewPage({ params }: Props) {
 
     return (
       <>
-        <HeaderBanner includeCTA={true} />
+        <HeaderBanner
+          includeCTA={true}
+          buttonText="Download for iPhone"
+          buttonUrl="https://link.summaryai.app/2sjc65"
+        />
         <main className="max-w-3xl mx-auto py-10 px-4">
           <div className="flex justify-between items-start gap-4">
             <h1 className="text-3xl font-bold">{emoji}</h1>
