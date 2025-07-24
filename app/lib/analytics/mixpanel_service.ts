@@ -87,7 +87,7 @@ export class MixpanelAnalyticsProvider {
     title: string;
     shortId: string;
   }) {
-    this._trackEvent("dev_web_summary_page_opened", {
+    this._trackEvent("dev_share_link_web_opened", {
       recordingId,
       userId,
       title,
