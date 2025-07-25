@@ -1,5 +1,8 @@
+"use client";
+
 import clsx from "clsx";
 import Link from "next/link";
+import { MixpanelBrowserAnalyticsProvider } from "../lib/analytics/mixpanel_browser_service";
 import { Button } from "./button";
 import SVGLogo from "./svg-logo";
 
@@ -65,6 +68,15 @@ function HeaderBanner({
               href={buttonUrl}
               color="blue"
               className="flex-shrink-0 whitespace-nowrap"
+              onClick={() => {
+                if (process.env.NEXT_PUBLIC_MIXPANEL_API_KEY) {
+                  const mixpanelAnalyticsProvider =
+                    new MixpanelBrowserAnalyticsProvider(
+                      process.env.NEXT_PUBLIC_MIXPANEL_API_KEY
+                    );
+                  mixpanelAnalyticsProvider.ctaButton("DownloadApp");
+                }
+              }}
             >
               {buttonText}
             </Button>

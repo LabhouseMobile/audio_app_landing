@@ -1,4 +1,7 @@
+"use client";
+
 import { ReactNode } from "react";
+import { MixpanelBrowserAnalyticsProvider } from "../lib/analytics/mixpanel_browser_service";
 import { Button } from "./button";
 
 interface BiPanelProps {
@@ -57,7 +60,20 @@ export default function BiPanel({
         style={{ backgroundColor: leftBg }}
       >
         {leftColumn}
-        <Button color="blue" href="#download" className="w-1/2">
+        <Button
+          color="blue"
+          href="#download"
+          className="w-1/2"
+          onClick={() => {
+            if (process.env.NEXT_PUBLIC_MIXPANEL_API_KEY) {
+              const mixpanelAnalyticsProvider =
+                new MixpanelBrowserAnalyticsProvider(
+                  process.env.NEXT_PUBLIC_MIXPANEL_API_KEY
+                );
+              mixpanelAnalyticsProvider.ctaButton("GetStarted");
+            }
+          }}
+        >
           Get Started
         </Button>
       </div>
