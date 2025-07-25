@@ -36,14 +36,14 @@ function HeaderBanner({
           )}
           <div
             className={clsx(
-              "md:flex items-center justify-center gap-4 text-sm text-gray-600 font-bold text-center flex-1 min-w-0",
+              "sm:flex items-center justify-center gap-4 text-sm text-gray-600 font-bold text-center flex-1 min-w-0",
               {
-                "hidden md:flex": includeCTA,
+                "hidden sm:flex": includeCTA,
               }
             )}
           >
             <span className="mr-10">#1 Transcription App 2025.</span>
-            <span className="flex items-center justify-between">
+            <span className="flex items-center justify-center">
               {[...Array(5)].map((_, index) => (
                 <span key={index}>
                   <svg
