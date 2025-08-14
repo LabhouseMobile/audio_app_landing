@@ -41,3 +41,8 @@ export interface PublicLink {
   title: string;
   createdAt: Timestamp;
 }
+
+export interface PdfFile {
+  duration: number;
+  pdfPath: string;
+}

@@ -2,6 +2,7 @@ import HeaderBanner from "@/app/components/header-banner";
 import { MixpanelAnalyticsProvider } from "@/app/lib/analytics/mixpanel_service";
 import admin from "@/app/lib/firebase/firebase-admin";
 import {
+  PdfFile,
   PublicLink,
   Summary,
   Transcription,
@@ -24,11 +25,15 @@ function formatDateWithDuration(
     hour12: true,
   });
 
+  const isEmptyDuration = durationSeconds === 0;
+
   const durationMinutes = Math.round(durationSeconds / 60);
   const durationText =
     durationMinutes === 1 ? "1 min" : `${durationMinutes} mins`;
 
-  return `${dayOfWeek}, ${month} ${day}, ${time} (${durationText})`;
+  return `${dayOfWeek}, ${month} ${day}, ${time} ${
+    isEmptyDuration ? "" : `(${durationText})`
+  }`;
 }
 
 type Props = {
@@ -54,6 +59,7 @@ type RecordingData = {
   createdAt: string;
   audioFile?: AudioFile;
   youtubeFile?: YoutubeFile;
+  pdfFile?: PdfFile;
   transcript: Transcription;
 };
 
@@ -160,6 +166,7 @@ export default async function ViewPage({ params }: Props) {
       transcript,
       userId,
       recordingId,
+      pdfFile,
     } = data;
 
     const endTime = Date.now();
@@ -172,7 +179,7 @@ export default async function ViewPage({ params }: Props) {
           buttonText="Download for iPhone"
           buttonUrl="https://link.summaryai.app/iatfqj"
         />
-        <main className="max-w-3xl mx-auto py-10 px-4">
+        <main className="max-w-3xl mx-auto py-10 px-4 overflow-x-hidden">
           <div className="flex justify-between items-start gap-4">
             <h1 className="text-3xl font-bold">{emoji}</h1>
             <div className="flex flex-col justify-start items-start gap-2 w-full">
@@ -192,6 +199,7 @@ export default async function ViewPage({ params }: Props) {
             transcript={transcript}
             recordingId={recordingId}
             userId={userId}
+            pdfFile={pdfFile}
           />
         </main>
       </>
@@ -215,15 +223,16 @@ async function getRecordingData(id: string): Promise<RecordingData | null> {
     const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n");
 
     if (!projectId || !clientEmail || !privateKey) {
-      throw new Error("Missing Firebase environment variables");
+      admin.initializeApp();
+    } else {
+      admin.initializeApp({
+        credential: admin.credential.cert({
+          projectId,
+          clientEmail,
+          privateKey,
+        }),
+      });
     }
-    admin.initializeApp({
-      credential: admin.credential.cert({
-        projectId,
-        clientEmail,
-        privateKey,
-      }),
-    });
 
     const initEndTime = Date.now();
     console.log(

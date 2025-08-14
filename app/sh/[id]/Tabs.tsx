@@ -1,18 +1,20 @@
 "use client";
 
-import { Summary, Transcription } from "@/app/lib/firebase/recording/@types";
+import { PdfFile, Summary, Transcription } from "@/app/lib/firebase/recording/@types";
 import clsx from "clsx";
 import { useState } from "react";
+import PdfViewer from "./PdfViewer";
 import SummaryViewer from "./SummaryViewer";
 import TranscriptViewer from "./TranscriptViewer";
 
-type Tab = "summary" | "transcript";
+type Tab = "summary" | "transcript" | "pdf";
 
 type Props = {
   summary: Summary;
   transcript: Transcription;
   recordingId: string;
   userId: string;
+  pdfFile?: PdfFile;
 };
 
 export default function Tabs({
@@ -20,42 +22,64 @@ export default function Tabs({
   transcript,
   recordingId,
   userId,
+  pdfFile,
 }: Props) {
   const [activeTab, setActiveTab] = useState<Tab>("summary");
+
+  const availableTabs: Tab[] = ["summary"];
+  if (pdfFile) {
+    availableTabs.push("pdf");
+  } else {
+    availableTabs.push("transcript");
+  }
+
+  const currentTab = availableTabs.includes(activeTab) ? activeTab : availableTabs[0];
+
+  const renderTabContent = () => {
+    switch (currentTab) {
+      case "summary":
+        return (
+          <SummaryViewer
+            summary={summary}
+            recordingId={recordingId}
+            userId={userId}
+            speakers={transcript.speakers}
+          />
+        );
+      case "transcript":
+        return <TranscriptViewer transcription={transcript} />;
+      case "pdf":
+        return pdfFile ? <PdfViewer pdfFile={pdfFile} /> : null;
+      default:
+        return null;
+    }
+  };
 
   return (
     <div className="px-6 md:px-10">
       <div className="inline-flex space-x-2 bg-[#F2F2F7] rounded-full p-1 mb-6 mt-6">
-        {["summary", "transcript"].map((tab) => (
+        {availableTabs.map((tab) => (
           <div
             key={tab}
             className={clsx("rounded-full", {
-              "bg-white": activeTab === tab,
+              "bg-white": currentTab === tab,
             })}
           >
             <button
               onClick={() => setActiveTab(tab as Tab)}
               className={`py-1 px-4 text-md font-medium  ${
-                activeTab === tab ? "text-blue-500" : "text-gray-500"
+                currentTab === tab ? "text-blue-500" : "text-gray-500"
               }`}
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              {tab === "pdf"
+                ? tab.toUpperCase()
+                : tab.charAt(0).toUpperCase() + tab.slice(1)}
             </button>
           </div>
         ))}
       </div>
 
-      {activeTab === "summary" && (
-        <SummaryViewer
-          summary={summary}
-          recordingId={recordingId}
-          userId={userId}
-          speakers={transcript.speakers}
-        />
-      )}
-      {activeTab === "transcript" && (
-        <TranscriptViewer transcription={transcript} />
-      )}
+      {renderTabContent()}
     </div>
   );
 }
