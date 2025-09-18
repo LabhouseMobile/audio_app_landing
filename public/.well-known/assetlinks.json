@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.labhouse.audioapp",
+      "sha256_cert_fingerprints": [
+        "cf:98:f4:cb:94:83:47:7f:ff:38:41:52:55:bd:ef:bf:df:e4:1b:87:5a:87:c0:33:9d:ba:f2:88:ff:70:00:01",
+        "2c:f2:6a:f0:d4:71:7d:b5:f1:5c:5d:bd:98:88:51:d9:af:33:8a:9a:dc:39:63:a0:d0:8a:66:77:be:3c:58:70"
+      ]
+    }
+  }
+]
