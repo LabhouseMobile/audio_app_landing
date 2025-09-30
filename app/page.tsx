@@ -10,24 +10,17 @@ import Reviews from "./components/reviews";
 import VideoQuote from "./components/video-quote";
 import { renderSchemaTags } from "./lib/seo";
 
-export default function Home({
-  searchParams = {},
-}: {
-  searchParams?: { type?: string };
-}) {
-  const params = searchParams || {};
-  const qrType = params.type;
-
+export default function Home() {
   return (
     <Container>
       <HeaderBanner />
       <Header />
-      <Hero qrType={qrType} />
+      <Hero />
       <Reviews />
       <Features />
       <VideoQuote />
       <FAQ />
-      <DownloadSection qrType={qrType} />
+      <DownloadSection />
       <Footer />
       {renderSchemaTags()}
     </Container>

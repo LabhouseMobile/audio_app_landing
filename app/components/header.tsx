@@ -69,10 +69,7 @@ export function Header() {
             </Link>
             <div className="hidden justify-center items-center lg:flex lg:gap-10">
               <NavLinks />
-              <Button
-                href="https://apps.apple.com/us/app/id6670175056"
-                color="blue"
-              >
+              <Button href="https://link.summaryai.app/1evp85" color="blue">
                 Download App
               </Button>
             </div>
@@ -125,7 +122,7 @@ export function Header() {
                           </div>
                           <div className="flex flex-col gap-4 mt-8">
                             <Button
-                              href="https://apps.apple.com/us/app/id6670175056"
+                              href="https://link.summaryai.app/1evp85"
                               color="blue"
                               className="w-full"
                             >

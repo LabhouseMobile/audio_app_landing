@@ -15,7 +15,7 @@ interface HeaderBannerProps {
 function HeaderBanner({
   includeCTA = false,
   buttonText = "Download App",
-  buttonUrl = "https://apps.apple.com/us/app/id6670175056",
+  buttonUrl = "https://link.summaryai.app/1evp85",
 }: HeaderBannerProps) {
   return (
     <div className="bg-[#E9F3FF] min-h-10">
