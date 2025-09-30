@@ -17,4 +17,8 @@ export class MixpanelBrowserAnalyticsProvider {
   }
 }
 
-type CTAButtonType = "DownloadOnTheAppstore" | "GetStarted" | "DownloadApp";
+type CTAButtonType =
+  | "DownloadOnTheAppstore"
+  | "GetStarted"
+  | "DownloadApp"
+  | "DownloadOnThePlaystore";

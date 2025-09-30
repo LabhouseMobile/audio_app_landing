@@ -1,26 +1,10 @@
 import mockup from "../../public/mockup.webp";
 import soundwave from "../../public/soundwave-hq.webp";
 import DownloadAppStore from "./download-appstore";
-import QRCode, { QRCodeType } from "./qr-code";
+import DownloadPlayStore from "./download-playstore";
+import QRCode from "./qr-code";
 
-interface HeroProps {
-  qrType?: string;
-}
-
-function Hero({ qrType }: HeroProps) {
-  const validTypes: QRCodeType[] = [
-    "text",
-    "pdf",
-    "app",
-    "auto",
-    "guests",
-    "self",
-    "chat",
-  ];
-  const validQrType: QRCodeType = validTypes.includes(qrType as QRCodeType)
-    ? (qrType as QRCodeType)
-    : "default";
-
+function Hero() {
   return (
     <div
       className="bg-cover bg-center bg-no-repeat"
@@ -53,10 +37,13 @@ function Hero({ qrType }: HeroProps) {
                   rest.
                 </p>
                 <div className="mt-10 flex flex-row items-center justify-start gap-y-6 gap-12">
-                  <DownloadAppStore />
+                  <div className="flex flex-row md:flex-col gap-4 md:gap-6">
+                    <DownloadAppStore />
+                    <DownloadPlayStore />
+                  </div>
                   <div className=" flex-col items-center justify-center hidden md:flex">
                     Scan to try for Free
-                    <QRCode type={validQrType} />
+                    <QRCode />
                   </div>
                 </div>
               </div>

@@ -1,23 +1,8 @@
 import DownloadAppStore from "./download-appstore";
-import QRCode, { QRCodeType } from "./qr-code";
+import DownloadPlayStore from "./download-playstore";
+import QRCode from "./qr-code";
 
-interface DownloadSectionProps {
-  qrType: string | undefined;
-}
-
-export default function DownloadSection({ qrType }: DownloadSectionProps) {
-  const validTypes: QRCodeType[] = [
-    "text",
-    "pdf",
-    "app",
-    "auto",
-    "guests",
-    "self",
-    "chat",
-  ];
-  const validQrType: QRCodeType = validTypes.includes(qrType as QRCodeType)
-    ? (qrType as QRCodeType)
-    : "default";
+export default function DownloadSection() {
   return (
     <div
       className="flex flex-col my-24 gap-12 items-center justify-center"
@@ -31,10 +16,13 @@ export default function DownloadSection({ qrType }: DownloadSectionProps) {
         </span>
       </h2>
       <div className="flex flex-col gap-12 md:flex-row items-center justify-center">
-        <DownloadAppStore />
+        <div className="flex flex-col gap-4 md:gap-6">
+          <DownloadAppStore />
+          <DownloadPlayStore />
+        </div>
         <div className=" flex-col items-center justify-center hidden md:flex">
           Scan to try for Free
-          <QRCode type={validQrType} />
+          <QRCode />
         </div>
       </div>
     </div>
