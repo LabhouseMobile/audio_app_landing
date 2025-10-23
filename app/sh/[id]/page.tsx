@@ -73,7 +73,10 @@ export async function generateMetadata({ params }: Props) {
     .collection("public_links")
     .doc(shareId)
     .get();
-
+  const data = publicLink.data() as PublicLink | undefined;
+  if (!data) {
+    return notFound();
+  }
   const { title, createdAt } = publicLink.data() as PublicLink;
 
   const metadata = {
