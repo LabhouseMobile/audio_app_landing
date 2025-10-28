@@ -54,7 +54,7 @@ export class MixpanelAnalyticsProvider {
     // If no valid distinct IDs, track with anonymous distinct_id
     if (this.distinctIds.length === 0) {
       console.log(
-        `Analytics: ${event} (anonymous)`,
+        `Analytics: ${event} (no users)`,
         "",
         this.functionName,
         params
