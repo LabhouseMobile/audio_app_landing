@@ -143,6 +143,17 @@ export default async function ViewPage({ params }: Props) {
 
     if (!data) {
       console.log(`[PERF] ViewPage - no data found, returning notFound`);
+      if (process.env.MIXPANEL_API_KEY) {
+        const mixpanelAnalyticsProvider = new MixpanelAnalyticsProvider(
+          process.env.MIXPANEL_API_KEY,
+          false,
+          "summaryPage"
+        );
+        mixpanelAnalyticsProvider.summaryPage({
+          shortId: shareId,
+          status: "failed_404",
+        });
+      }
       return notFound();
     }
 
@@ -158,6 +169,7 @@ export default async function ViewPage({ params }: Props) {
         userId: data.userId,
         title: data.title,
         shortId: shareId,
+        status: "success",
       });
     }
 
