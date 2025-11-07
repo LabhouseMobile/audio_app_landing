@@ -10,7 +10,7 @@ export default async function MarkdownReader({
   filename,
 }: MarkdownReaderProps) {
   // Read the markdown file on the server
-  const filePath = path.join(process.cwd(), "public", "markdown", filename);
+  const filePath = path.join(process.cwd(), "content", "markdown", filename);
   const content = fs.readFileSync(filePath, "utf8");
 
   return <MarkdownDisplay content={content} />;
