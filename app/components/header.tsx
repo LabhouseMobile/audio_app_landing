@@ -9,6 +9,7 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
+import { MixpanelBrowserAnalyticsProvider } from "../lib/analytics/mixpanel_browser_service";
 import { Button } from "./button";
 import { Container } from "./container";
 import { NavLinks } from "./nav-links";
@@ -113,6 +114,7 @@ export function Header() {
                           }}
                           className="absolute inset-x-0 top-0 mt-24 z-0 p-6 rounded-2xl shadow-2xl origin-top bg-slate-50 shadow-slate-900/20"
                         >
+                       
                           <div className="space-y-4">
                             <MobileNavLink href="/">Home</MobileNavLink>
                             <MobileNavLink href="/#features">
@@ -125,6 +127,15 @@ export function Header() {
                               href="https://link.summaryai.app/1evp85"
                               color="blue"
                               className="w-full"
+                              onClick={() => {
+                                if (process.env.NEXT_PUBLIC_MIXPANEL_API_KEY) {
+                                  const mixpanelAnalyticsProvider =
+                                    new MixpanelBrowserAnalyticsProvider(
+                                      process.env.NEXT_PUBLIC_MIXPANEL_API_KEY
+                                    );
+                                  mixpanelAnalyticsProvider.landingCTAButton();
+                                }
+                              }}
                             >
                               Download App
                             </Button>

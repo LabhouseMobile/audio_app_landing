@@ -51,7 +51,7 @@ export class MixpanelAnalyticsProvider {
   }
 
   _trackEvent(event: string, params: mixpanel.PropertyDict) {
-    // If no valid distinct IDs, just log but don't send
+    // If no valid distinct IDs, track with anonymous distinct_id
     if (this.distinctIds.length === 0) {
       console.log(
         `Analytics: ${event} (no users)`,
@@ -59,6 +59,13 @@ export class MixpanelAnalyticsProvider {
         this.functionName,
         params
       );
+
+      if (!this.isTest) {
+        this.mixpanelRef?.track(event, {
+          server: true,
+          ...params,
+        });
+      }
       return;
     }
 
@@ -81,17 +88,30 @@ export class MixpanelAnalyticsProvider {
     userId,
     title,
     shortId,
+    status,
   }: {
-    recordingId: string;
-    userId: string;
-    title: string;
+    recordingId?: string;
+    userId?: string;
+    title?: string;
     shortId: string;
+    status: string;
   }) {
-    this._trackEvent("dev_share_link_web_opened", {
-      recordingId,
-      userId,
-      title,
+    // Filter out undefined values before sending to Mixpanel
+    const properties: mixpanel.PropertyDict = {
       shortId,
-    });
+      status,
+    };
+
+    if (recordingId) {
+      properties.recordingId = recordingId;
+    }
+    if (userId) {
+      properties.userId = userId;
+    }
+    if (title) {
+      properties.title = title;
+    }
+
+    this._trackEvent("dev_share_link_web_opened", properties);
   }
 }

@@ -13,7 +13,11 @@ export class MixpanelBrowserAnalyticsProvider {
   }
 
   ctaButton(type: CTAButtonType) {
-    this._trackEvent("landing_page_CTA_clicked", { type });
+    this._trackEvent("share_link_web_CTA_clicked", { type });
+  }
+
+  landingCTAButton() {
+    this._trackEvent("landing_page_CTA_clicked", {});
   }
 }
 
