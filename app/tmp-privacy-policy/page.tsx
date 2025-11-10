@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
 import { Header } from "../components/header";
-import PrivacySection from "../components/tmp/privacy";
+import MarkdownReader from "../components/markdown-reader";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Summary AI",
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
     <Container>
       <Header />
       <main className="mt-12">
-        <PrivacySection />
+        <MarkdownReader filename="tmp/privacy.md" />
       </main>
       <Footer />
     </Container>

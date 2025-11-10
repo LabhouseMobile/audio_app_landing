@@ -10,7 +10,7 @@ As used in this Privacy Policy,
 
 1) “**SUMMARY AI**”, "**we**," "**our**" and "**us**" means **LABHOUSE MOBILE, SL.,** and its affiliates and/or subsidiaries.   
      
-   LABHOUSE MOBILE, S.L. (SUMMARY AI), with Tax ID number B04968699 is located at Plaça Pau Vila, 1, Ciutat Vella, 08039 Barcelona, Spain, and our contact email is [dpo@labhouse.io](mailto:dpo@labhouse.io)   
+   LABHOUSE MOBILE, S.L. (SUMMARY AI), with Tax ID number B04968699 is located at Plaça Pau Vila, 1, Ciutat Vella, 08003 Barcelona, Spain, and our contact email is [dpo@labhouse.io](mailto:dpo@labhouse.io)   
      
 2) “**Controller**” for the purposes of data protection laws, including the GDPR and other applicable data protection laws in European Union member states, as well as other relevant provisions: means SUMMARY AI.
 
@@ -84,7 +84,7 @@ We collect Personal Information for the purposes described above when you use ou
 
    
 
-   The standard Data Processing Agreement can be found on our website at \[*INLCUIR URL*\].
+   The standard Data Processing Agreement can be found on our website at [summaryai.app/dpa](https://summaryai.app/dpa).
 
 5. **WE KEEP YOUR PERSONAL INFORMATION FOR AS LONG AS IT IS NECESSARY TO DO SO TO FULFIL THE PURPOSES FOR WHICH IT WAS COLLECTED AS DESCRIBED ABOVE.**
 
@@ -118,11 +118,11 @@ We collect Personal Information for the purposes described above when you use ou
 | Customer Support (Intercom) | USA | Customer service and technical support | Device Info, User Info |
 | Subscription Processor (RevenueCat) | USA | Subscription Management | Device Info, User Id, User Email |
 | Payment Processors (Stripe) | USA | Processing of subscriptions | User Id, User Email |
-| Analytics (Appsflyer, Mixpanel, Google Analytics, Smartlook) | USA | User analytics | Device Info, User Info |
+| Analytics (Appsflyer, Mixpanel, Google Analytics, Smartlook) | USA, Czech Republic     | User analytics | Device Info, User Info |
 | Marketing Campaigns (MailChimp) | USA | Email marketing and account alerts | User email |
 | Internal Communications (Gmail, Slack) | USA | Internal Communications | User Info, Device Info |
 | Feedback (Tally) | Belgium | Usability Research / Feedback / Forms | User Info, Device Info |
-| Transcription Services (Gladia, Soniox, Replicate) | USA | Creation of transcripts | Audio Recording |
+| Transcription Services (Gladia, Soniox, Replicate) | USA, France | Creation of transcripts | Audio Recording |
 | Summary Services (Gemini, OpenAI) | USA | Creation of summaries | Transcripts |
 | Audio Recording (Recall) | USA | Record online meetings | Audio and video recording |
 
@@ -214,13 +214,13 @@ These measures ensure a level of protection consistent with that required by the
 
 8. **GIVE US YOUR FEEDBACK**
 
-   1. Our goal is to protect your privacy. To comment or help us improve, please contact us via email ([dpo@labhouse.io](mailto:dpo@labhouse.io)). You may also contact us via written letter at SUMMARY AI’s address (*Labhouse Mobile, SL., Plaça Pau Vila, 1, Ciutat Vella, 08039 Barcelona, Spain*). We may ask you to provide a copy of your proof of identity.
+   1. Our goal is to protect your privacy. To comment or help us improve, please contact us via email ([dpo@labhouse.io](mailto:dpo@labhouse.io)). You may also contact us via written letter at SUMMARY AI’s address (*Labhouse Mobile, SL., Plaça Pau Vila, 1, Ciutat Vella, 08003 Barcelona, Spain*). We may ask you to provide a copy of your proof of identity.
 
    2. If you consider that we are in breach of our obligations under data protection laws, you may lodge a complaint with the competent Data Protection Authority, which may be the supervisory authority in your country of residence, place of work or of an alleged infringement of data protection laws.
 
 9. **CHANGES TO THIS PRIVACY POLICY**
 
-   1. This privacy policy may be modified from time to time to comply with applicable laws or to conform to our current business practices. We will post any changes to this on our Platform and will endeavor to notify you via your contact email. When notifying such changes to you, we will also explain what the likely impact of those changes on you will be, if any. We encourage you to revisit the Privacy Statement that is posted on our Platform from time to time to check for updates.
+   1. This privacy policy may be modified from time to time to comply with applicable laws or to conform to our current business practices. We will post any changes to this on our Platform and, where required by law, will notify you via your contact email. When notifying such changes to you, we will also explain what the likely impact of those changes on you will be, if any. We encourage you to revisit the Privacy Statement that is posted on our Platform from time to time to check for updates.
 
 10. **ADDITIONAL INFORMATION WE WANT YOU TO KNOW:**
 

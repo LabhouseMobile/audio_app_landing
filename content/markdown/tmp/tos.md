@@ -17,7 +17,7 @@
 
    
 
-2) **“SUMMARY AI**”, "**We**," and "**Us**" means **LABHOUSE MOBILE, S.L.** and its affiliates and/or subsidiaries. LABHOUSE MOBILE, S.L., is a company incorporated under Spanish law, with Tax ID Number (NIF) B04968699, registered in the Commercial Registry of Barcelona under Volume 47758, Folio 87, Section 8, Page B-561475.  
+2) **“SUMMARY AI**”, "**We**," and "**Us**" means **LABHOUSE MOBILE, S.L.** and its affiliates and/or subsidiaries. LABHOUSE MOBILE, S.L., is a company incorporated under Spanish law, with Tax ID Number (NIF) B04968699, located at Plaça Pau Vila, 1, Ciutat Vella, 08003 Barcelona, Spain, registered in the Commercial Registry of Barcelona under Volume 47758, Folio 87, Section 8, Page B-561475.  
      
 3) **“Platform”,** refers to our online platform, which is made available via our website and mobile application, through which You may access our Services.
 
@@ -51,7 +51,7 @@
 
       
 
-      4. When registering, You will be required to create a password. You are solely responsible for maintaining the confidentiality of Your account credentials and for all activities conducted under Your account. In the event that You have reason to believe that Your account has been compromised or is no longer secure, You must promptly notify us at **support@labhouse.io.**
+      4. When registering, You will be required to create a password or access through a third-party login supported by Us. You are solely responsible for maintaining the confidentiality of Your account credentials and for all activities conducted under Your account. In the event that You have reason to believe that Your account has been compromised or is no longer secure, You must promptly notify us at **support@labhouse.io.**
 
    
 
@@ -91,7 +91,7 @@
 
       1. **User Content and other materials**
 
-      Certain features of the Services may allow Users to upload or otherwise submit content to the Services, such as voice recordings, audio recordings, data, text, photographs, and other forms of works (“User Content”). The Services may also permit You to publish or make available such User Content within the Platform. To the extent that You choose to use the Services in connection with materials or information stored in Your Zoom, Dropbox, or other third-party accounts (collectively, “Third Party Accounts”), You hereby authorize Us to access and use such Third Party Accounts solely as necessary for the provision of the Services. As between You and Us, You retain all copyright and other proprietary rights that You may hold in the User Content that You post or upload to the Services.
+      Certain features of the Services may allow Users to upload or otherwise submit content to the Services, such as voice recordings, audio recordings, data, text, photographs, and other forms of works (“User Content”). The Services may also permit You to publish or make available such User Content within the Platform. To the extent that You choose to use the Services in connection with materials or information stored in Google Drive, or other third-party accounts (collectively, “Third Party Accounts”), You hereby authorize Us to access and use such Third Party Accounts solely as necessary for the provision of the Services. As between You and Us, You retain all copyright and other proprietary rights that You may hold in the User Content that You post or upload to the Services.
 
       2. **Voice Recordings**
 
@@ -151,7 +151,7 @@
 
    
 
-   6. **Subscription Billing Date**: The “Subscription Billing Date” is the date when You purchase Your first subscription to the Service. For more information on the “Subscription Fee”, please see our *\[URL pricing plans\]*. Your account will be charged automatically on the Subscription Billing Date all applicable fees and taxes for the next subscription period, which may be one month or one year depending on the selection You make on Your account (such period, the “**Initial Subscription Period**”). The term of each Subscription Service will automatically renew for a period equal to the Initial Subscription Period or one (1) year periods, whichever is less, unless otherwise identified in an applicable Order Form (each, a “**Renewal Term**”) unless a party provides the other party written notice thirty (30) days in advance of the expiry of the Subscription Service or then-current Renewal Term, as applicable, of its desire to amend the duration of the Renewal Term, modify number of Users or terminate the Order Form. Customer is responsible and will pay Us all Subscription Fees under an Order Form for the entire Subscription Term and any applicable Renewal Term. 
+   6. **Subscription Billing Date**: The “Subscription Billing Date” is the date when You purchase Your first subscription to the Service. For more information on the “Subscription Fee”, please see our Pricing Plans in our website or mobile application. Your account will be charged automatically on the Subscription Billing Date all applicable fees and taxes for the next subscription period, which may be one month or one year depending on the selection You make on Your account (such period, the “**Initial Subscription Period**”). The term of each Subscription Service will automatically renew for a period equal to the Initial Subscription Period or one (1) year periods, whichever is less, unless otherwise identified in an applicable Order Form (each, a “**Renewal Term**”) unless a party provides the other party written notice thirty (30) days in advance of the expiry of the Subscription Service or then-current Renewal Term, as applicable, of its desire to amend the duration of the Renewal Term, modify number of Users or terminate the Order Form. Customer is responsible and will pay Us all Subscription Fees under an Order Form for the entire Subscription Term and any applicable Renewal Term. 
 
    
 
@@ -211,7 +211,7 @@
 
    
 
-   3. If the data you collect when using our Services contains Personal Information from third parties, you will be considered the personal data “Controller”, and you will need to obtain the prior consent of the data subjects when the applicable regulations require such consent. In such cases, We will act as “Data Processor”, according to our \[Data Processing Agreement (DPA) \[*add URL\]*.
+   3. If the data you collect when using our Services contains Personal Information from third parties, you will be considered the personal data “Controller”, and you will need to obtain the prior consent of the data subjects when the applicable regulations require such consent. In such cases, We will act as “Data Processor”, according to our [Data Processing Agreement (DPA)](https://summaryai.app/dpa).
 
    
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
 import { Header } from "../components/header";
-import TermsOfServiceSection from "../components/tmp/tos";
+import MarkdownReader from "../components/markdown-reader";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Summary AI",
@@ -19,7 +19,7 @@ export default function TermsOfServicePage() {
     <Container>
       <Header />
       <main className="mt-12">
-        <TermsOfServiceSection />
+        <MarkdownReader filename="tmp/tos.md" />
       </main>
       <Footer />
     </Container>

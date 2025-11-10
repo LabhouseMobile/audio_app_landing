@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
 import { Header } from "../components/header";
-import DataProcessingSection from "../components/tmp/data-processing";
+import MarkdownReader from "../components/markdown-reader";
 
 export const metadata: Metadata = {
   title: "Data Processing | Summary AI",
@@ -19,7 +19,7 @@ export default function DataProcessingPage() {
     <Container>
       <Header />
       <main className="mt-12">
-        <DataProcessingSection />
+        <MarkdownReader filename="tmp/dpa.md" />
       </main>
       <Footer />
     </Container>

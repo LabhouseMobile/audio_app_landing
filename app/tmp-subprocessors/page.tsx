@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "../components/container";
 import Footer from "../components/footer";
 import { Header } from "../components/header";
-import SubprocessorsSection from "../components/tmp/subprocessors";
+import MarkdownReader from "../components/markdown-reader";
 
 export const metadata: Metadata = {
   title: "Subprocessors | Summary AI",
@@ -19,7 +19,7 @@ export default function SubprocessorsPage() {
     <Container>
       <Header />
       <main className="mt-12">
-        <SubprocessorsSection />
+        <MarkdownReader filename="tmp/subprocessors.md" />
       </main>
       <Footer />
     </Container>

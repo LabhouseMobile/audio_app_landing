@@ -31,7 +31,7 @@ As a Data Processor, SUMMARY AI agrees to:
 
    6. Take commercially reasonable steps to require (i) persons employed by it and (ii) other persons engaged to perform on SUMMARY AI’s behalf to be subject to a duty of confidentiality with respect to the Personal Data and to comply with the data protection obligations applicable to SUMMARY AI under the Agreement and this DPA.
 
-   7. Engage the subprocessors available at *\[\*include URL*\] to process Customer Data (each a “**Subprocessor**,” and the list at the foregoing URL, the “**Subprocessor List**”) to help SUMMARY AI satisfy its obligations in accordance with this DPA or to delegate all or part of the processing activities to such Subprocessors. Customer hereby consents to the use of such Subprocessors. In the event that SUMMARY AI seeks to use additional Subprocessors and update the Subprocessor List, SUMMARY AI will provide notice of such additional Subprocessors to you (which may be via email, a posting or notification on an online portal for our services or other reasonable means). In the event that you do not wish to consent to the use of such additional Subprocessor, you may notify SUMMARY AI that you do not consent within fifteen (15) days on reasonable grounds relating to the protection of Customer Data by following the instructions set forth in the Subprocessor List or contacting **dpo@labhouse.io**[.](mailto:privacy@openai.com) In such case, SUMMARY AI shall have the right to cure the objection through one of the following options: (i) SUMMARY AI will cancel its plans to use the Subprocessor with regards to processing Customer Data or will offer an alternative to provide its Services or services without such Subprocessor; (ii) SUMMARY AI will take the corrective steps requested by you in your objection notice and proceed to use the Subprocessor; (iii) SUMMARY AI may cease to provide, or you may agree not to use whether temporarily or permanently, the particular aspect or feature of the SUMMARY AI Services or services that would involve the use of such Subprocessor; or (iv) you may cease providing Customer Data to SUMMARY AI for processing. If none of the above options are commercially feasible, in SUMMARY AI’s reasonable judgment, and the objection(s) have not been resolved to the satisfaction of the parties within thirty (30) days of SUMMARY AI’s receipt of your objection notice, then either party may terminate any subscriptions, order forms or usage regarding the Services or SUMMARY AI services for cause and in such case, you will be refunded any pre-paid fees for the applicable subscriptions, order forms or usage to the extent they cover periods or terms following the date of such termination. Such termination right is your sole and exclusive remedy if you object to any new Subprocessor. SUMMARY AI shall enter into contractual arrangements with each Subprocessor binding them to provide the same level of data protection and information security to that provided for herein.
+   7. Engage the subprocessors available at [*summaryai.app/subprocessors*](https://summaryai.app/subprocessors) to process Customer Data (each a “**Subprocessor**,” and the list at the foregoing URL, the “**Subprocessor List**”) to help SUMMARY AI satisfy its obligations in accordance with this DPA or to delegate all or part of the processing activities to such Subprocessors. Customer hereby consents to the use of such Subprocessors. In the event that SUMMARY AI seeks to use additional Subprocessors and update the Subprocessor List, SUMMARY AI will provide notice of such additional Subprocessors to you (which may be via email, a posting or notification on an online portal for our services or other reasonable means). In the event that you do not wish to consent to the use of such additional Subprocessor, you may notify SUMMARY AI that you do not consent within fifteen (15) days on reasonable grounds relating to the protection of Customer Data by following the instructions set forth in the Subprocessor List or contacting **dpo@labhouse.io**[.](mailto:privacy@openai.com) In such case, SUMMARY AI shall have the right to cure the objection through one of the following options: (i) SUMMARY AI will cancel its plans to use the Subprocessor with regards to processing Customer Data or will offer an alternative to provide its Services or services without such Subprocessor; (ii) SUMMARY AI will take the corrective steps requested by you in your objection notice and proceed to use the Subprocessor; (iii) SUMMARY AI may cease to provide, or you may agree not to use whether temporarily or permanently, the particular aspect or feature of the SUMMARY AI Services or services that would involve the use of such Subprocessor; or (iv) you may cease providing Customer Data to SUMMARY AI for processing. If none of the above options are commercially feasible, in SUMMARY AI’s reasonable judgment, and the objection(s) have not been resolved to the satisfaction of the parties within thirty (30) days of SUMMARY AI’s receipt of your objection notice, then either party may terminate any subscriptions, order forms or usage regarding the Services or SUMMARY AI services for cause and in such case, you will be refunded any pre-paid fees for the applicable subscriptions, order forms or usage to the extent they cover periods or terms following the date of such termination. Such termination right is your sole and exclusive remedy if you object to any new Subprocessor. SUMMARY AI shall enter into contractual arrangements with each Subprocessor binding them to provide the same level of data protection and information security to that provided for herein.
 
    8. Upon request, provide you with SUMMARY AI’s privacy and security policies and other such information necessary to demonstrate compliance with the obligations set forth in this DPA and applicable Data Protection Laws.
 
@@ -202,7 +202,7 @@ SUMMARY AI will:
     
   Name: **LABHOUSE MOBILE, SL.**  
     
-  Address: Plaça Pau Vila, 1, Ciutat Vella, 08039 Barcelona, Spain  
+  Address: Plaça Pau Vila, 1, Ciutat Vella, 08003 Barcelona, Spain  
     
   Contact Person’s, position and contact details:  
 - *Data Protection Officer*  
@@ -292,7 +292,7 @@ SUMMARY AI will:
      
    2. **Physical** **Security**  
         
-      Physical components of the SUMMARY AI Network are housed in facilities (“Facilities”) controlled by an ISO 27001 certified company or in Facilities which meet or exceed all of the following physical security requirements:
+      Physical components of the SUMMARY AI Network are housed in facilities (“Facilities”) which meet or exceed all of the following physical security requirements:
 
      
 1) **Physical Access Controls.** Physical barrier controls are used to prevent unauthorized entrance to the Facilities both at the perimeter and at building access points. Passage through the physical barriers at the Facilities requires either electronic access control validation (e.g., card access systems, etc.) or validation by human security personnel (e.g., contract or in-house security guard service, receptionist, etc.). Employees and contractors are assigned photo-ID badges that must be worn while the employees and contractors are at any of the Facilities. Visitors are required to sign-in with designated personnel, must show appropriate identification, are assigned a visitor ID badge that must be worn while the visitor is at any of the Facilities, and are continually escorted by authorized employees or contractors while visiting the Facilities.  
@@ -317,7 +317,7 @@ SUMMARY AI will:
 
    
 
-      SUMMARY AI will maintain a Business Continuity and Disaster Recovery plan based on risk. Recovery plan are tested at least annually to guarantee that full recovery us possible to meet expected SLA’s.
+      SUMMARY AI will maintain a Business Continuity and Disaster Recovery plan based on risk.
 
    
 
@@ -325,6 +325,6 @@ SUMMARY AI will:
 
    
 
-      SUMMARY AI will have signed confidentiality agreements with the employees and contractors. For positions with access to personal information, backgrounds checks are also performed. Also, all employees and contractors will have a common way to report incidents approved by the organization and they will undergo at least an annual security awareness training.
+      SUMMARY AI will have signed confidentiality agreements with the employees and contractors.
 
    
