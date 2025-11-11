@@ -12,3 +12,92 @@
 html {
   scrollbar-gutter: stable;
 }
+
+
+/*
+ * CSS Counters for Legal-Style Numbering
+ */
+
+ .roman-list > ol > li::before {
+  content: counter(level1, lower-roman) "." !important;
+  font-weight: normal; /* Optional: make it non-bold */
+  font-style: italic; /* Optional: make it italic */
+}
+ .decimal-list > ol > li::before {
+  content: counter(level1) "." !important;
+  font-weight: normal; /* Optional: make it non-bold */
+  font-style: italic; /* Optional: make it italic */
+}
+
+
+
+/* 1. Turn off all default browser numbering for lists inside our wrapper.
+   We will create our own numbers from scratch. */
+   .legal-document ol {
+    list-style-type: none;
+    counter-reset: level1; /* Creates and resets the counter for level 1 */
+    padding-left: 2.5em;
+    margin: 0;
+  }
+  
+  .legal-document ol > li {
+    position: relative; /* Anchor for positioning the ::before pseudo-element */
+    margin-bottom: 0.5em;
+  }
+  
+  /* 2. Create the numbers for LEVEL 1 (1., 2.) */
+  .legal-document ol > li::before {
+    counter-increment: level1; /* Add 1 to the counter */
+    content: counter(level1) "."; /* Display "1." */
+  
+    /* Positioning */
+    position: absolute;
+    left: -2.5em; /* Pulls the number outside the text flow */
+    width: 2em;
+    text-align: right; /* Aligns '10.' correctly under '9.' */
+    font-weight: bold;
+  }
+  
+  /* --- Level 2 (1.1, 1.2) --- */
+  
+  /* 3. Reset the level 2 counter for each new sub-list */
+  .legal-document ol > li > ol {
+    counter-reset: level2;
+    margin-top: 0.5em;
+  }
+  
+  /* 4. Create the numbers for LEVEL 2 (1.1, 1.2) */
+  .legal-document ol > li > ol > li::before {
+    counter-increment: level2;
+    /* This is the magic: "counter(level1) . counter(level2)" */
+    content: counter(level1) "." counter(level2) "."; /* Display "1.1" */
+  
+    /* Positioning */
+    font-weight: normal; /* Reset bold from parent */
+    position: absolute;
+    left: -2.5em;
+    width: 2em;
+    text-align: right;
+  }
+  
+  /* --- Level 3 (i, ii) ---
+  
+  /* 5. Reset the level 3 counter for each new sub-list */
+  .legal-document ol > li > ol > li > ol {
+    counter-reset: level3;
+    margin-top: 0.5em;
+  }
+  
+  /* 6. Create the numbers for LEVEL 3 (i, ii) */
+  .legal-document ol > li > ol > li > ol > li::before {
+    counter-increment: level3;
+    /* Use 'lower-roman' as the style for this counter */
+    content: counter(level1) "." counter(level2) "."  counter(level3) ; /* Display "1.1" */
+  
+    /* Positioning */
+    font-style: italic; /* Nice touch for roman numerals */
+    position: absolute;
+    left: -2.5em;
+    width: 2em;
+    text-align: right;
+  } 

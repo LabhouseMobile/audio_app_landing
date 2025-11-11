@@ -1,4 +1,5 @@
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw"; // <-- 1. Import the plugin
 import remarkGfm from "remark-gfm";
 
 interface MarkdownDisplayProps {
@@ -14,6 +15,7 @@ export default function MarkdownDisplay({
     <div className={containerClassName}>
       <div className="prose prose-slate max-w-none">
         <ReactMarkdown
+          rehypePlugins={[rehypeRaw]}
           remarkPlugins={[remarkGfm]}
           components={{
             h1: ({ ...props }) => (

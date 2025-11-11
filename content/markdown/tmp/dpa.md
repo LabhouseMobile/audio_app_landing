@@ -104,13 +104,17 @@ In connection with the Agreement, Customer is the person that determines the pur
 7. **STANDARD CONTRACTUAL CLAUSES**
 
    1. SUMMARY AI will process Customer Data that originates in the European Economic Area in accordance with the standard contractual clauses adopted by the EU Commission on June 4, 2021 (“EU SCCs”) which are deemed entered into (and incorporated into this DPA by this reference) and completed as follows:
+      <div class="roman-list">
 
    
       1) Module Two (Controller to Processor) of the EU SCCs apply when Customer is a controller and SUMMARY AI is processing Customer Data as a processor.
 
       2) Module Three (Processor to Sub-Processor) of the EU SCCs apply when Customer is a processor and SUMMARY AI is processing Customer Data as a sub-processor.  
+      </div>
      
    2. For each module of the EU SCCs, where applicable, the following applies:
+
+      <div class="roman-list">
 
       1) The optional docking clause in Clause 7 does not apply.
 
@@ -140,7 +144,7 @@ In connection with the Agreement, Customer is the person that determines the pur
 
       8) **Exhibit B** to this DPA contains the information required in Annex II of the EU SCCs.  
  
-
+      </div>
 
    3. With respect to Customer Data originating from the United Kingdom, the parties will comply with the terms of Part 2: Mandatory Clauses of the Approved Addendum, being the template Addendum B.1.0 issued by the Information Commissioner’s Office and laid before Parliament in accordance with s119A of the Data Protection Act 2018 on 2 February 2022, as it is revised under Section 18 of those Mandatory Clauses (the “UK Addendum”). The parties also agree (i) that the information included in Part 1 of the UK Addendum is as set out in Annex I of Appendix A to this DPA and (ii) that either party may end the UK Addendum as set out in Section 19 of the UK Addendum.
 
@@ -180,6 +184,8 @@ In connection with the Agreement, Customer is the person that determines the pur
   Role (*controller/processor*): Processor
 
 ### B. **DESCRIPTION OF TRANSFER**  
+
+<div class="roman-list">
      
 1) **Categories of data subjects whose personal data is transferred**: 
 
@@ -228,7 +234,11 @@ In connection with the Agreement, Customer is the person that determines the pur
 
    The performance of the services described in the services agreement to which this DPA is attached.
 
+</div>
+
 ### C. **COMPETENT SUPERVISORY AUTHORITY**  
+
+<div class="roman-list">
      
 1) **Identify the competent supervisory authority/ies.**
 
@@ -239,6 +249,9 @@ In connection with the Agreement, Customer is the person that determines the pur
    
 
    The data protection authority of the UK is the UK Information Commissioner.
+
+</div>
+
 
 ## **EXHIBIT B**
 
@@ -261,7 +274,8 @@ In connection with the Agreement, Customer is the person that determines the pur
         
       Physical components of the SUMMARY AI Network are housed in facilities (“Facilities”) which meet or exceed all of the following physical security requirements:
 
-     
+      <div class="roman-list">
+
       1) **Physical Access Controls.** Physical barrier controls are used to prevent unauthorized entrance to the Facilities both at the perimeter and at building access points. Passage through the physical barriers at the Facilities requires either electronic access control validation (e.g., card access systems, etc.) or validation by human security personnel (e.g., contract or in-house security guard service, receptionist, etc.). Employees and contractors are assigned photo-ID badges that must be worn while the employees and contractors are at any of the Facilities. Visitors are required to sign-in with designated personnel, must show appropriate identification, are assigned a visitor ID badge that must be worn while the visitor is at any of the Facilities, and are continually escorted by authorized employees or contractors while visiting the Facilities.  
 
    
@@ -271,6 +285,8 @@ In connection with the Agreement, Customer is the person that determines the pur
    
 
       3) **Physical Security Protections.** All access points (except for main entry doors) are maintained in a locked state. Access points to the Facilities are monitored by video surveillance cameras designed to record all individuals accessing the Facilities. SUMMARY AI also maintains electronic intrusion detection systems designed to detect unauthorized access to the Facilities, including monitoring points of vulnerability (e.g., primary entry doors, emergency egress doors, roof hatches, dock bay doors, etc.) with door contacts, glass breakage devices, interior motion-detection, or other devices designed to detect individuals attempting to gain access to the Facilities. All physical access to the Facilities by employees and contractors is logged and routinely audited.    
+
+      </div>
      
    3. **Personal** **Data** **Security. Controls for the Protection of Personal Data.** 
 

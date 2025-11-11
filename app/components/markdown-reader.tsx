@@ -13,5 +13,9 @@ export default async function MarkdownReader({
   const filePath = path.join(process.cwd(), "content", "markdown", filename);
   const content = fs.readFileSync(filePath, "utf8");
 
-  return <MarkdownDisplay content={content} />;
+  return (
+    <div className="legal-document">
+      <MarkdownDisplay content={content} />
+    </div>
+  );
 }
