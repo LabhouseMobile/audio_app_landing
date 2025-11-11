@@ -1,7 +1,4 @@
-
-
-**SUMMARY AI**   
-**Data Processing Addendum**
+# Data Processing Addendum
 
 This Data Processing Addendum (“DPA”) governs SUMMARY AI’s processing of Customer Data you provide to SUMMARY AI through SUMMARY AI services for businesses (“Services”) under the terms of the SUMMARY AI Terms of Service, Privacy Policy, or other agreement between you and SUMMARY AI governing your use of the Services (the “Agreement”) and is hereby incorporated into the Agreement. If and to the extent language in this DPA conflicts with the Agreement, the conflicting terms in this DPA shall control.
 
@@ -9,17 +6,11 @@ SUMMARY AI and Customer each agree to comply with their respective obligations u
 
 In connection with the Agreement, Customer is the person that determines the purposes and means for which Customer Data (as defined below) is processed (a “**Data Controller**”), whereas SUMMARY AI processes Customer Data in accordance with the Data Controller’s instructions and on behalf of the Data Controller (as a “**Data Processor**”). “Data Controller” and “Data Processor” are intended to include equivalent concepts under other Data Protection Laws. For purposes of the Agreement and this DPA, “Customer Data” means personal data (or equivalent concepts, as defined by Data Protection Laws) that Customer provides to the Services that SUMMARY AI processes on behalf of Customer. SUMMARY AI will process Customer Data as your Data Processor to provide or maintain the Services and for the purposes set forth in this DPA, the Agreement and/or in any other applicable agreements between you and SUMMARY AI. SUMMARY AI acknowledges that you are disclosing personal data for the aforementioned limited and specific purposes.
 
-1. # **PROCESSING REQUIREMENTS**
+1. **PROCESSING REQUIREMENTS**
 
-# 
+   As a Data Processor, SUMMARY AI agrees to:
 
-As a Data Processor, SUMMARY AI agrees to:
-
-# 
-
-1. Process Customer Data (i) for the purpose of providing and supporting SUMMARY AI’s services (including to provide insights, reporting, analytics and platform abuse, trust and safety monitoring); (ii) to improve SUMMARY AI’s services (but only if and to the extent Customer expressly opts-in to improve the services); (iii) in compliance with the instructions received from Customer; and (iv) where the CCPA applies, in a manner that provides no less than the level of privacy protection required by the CCPA.
-
-   
+   1. Process Customer Data (i) for the purpose of providing and supporting SUMMARY AI’s services (including to provide insights, reporting, analytics and platform abuse, trust and safety monitoring); (ii) to improve SUMMARY AI’s services (but only if and to the extent Customer expressly opts-in to improve the services); (iii) in compliance with the instructions received from Customer; and (iv) where the CCPA applies, in a manner that provides no less than the level of privacy protection required by the CCPA.
 
    2. Promptly inform you in writing if it cannot comply with the requirements of this DPA.
 
@@ -43,13 +34,11 @@ As a Data Processor, SUMMARY AI agrees to:
 
    12. Where required by law, grant the Data Controller the rights to (i) take reasonable and appropriate steps to ensure that SUMMARY AI uses Customer Data in a manner consistent with Data Protection Laws and (ii) stop and remediate unauthorized use of Customer Data.
 
-2. # **NOTICE TO CUSTOMER**
+2. **NOTICE TO CUSTOMER**
 
-# 
+   SUMMARY AI will inform you if SUMMARY AI becomes aware of:
 
-SUMMARY AI will inform you if SUMMARY AI becomes aware of:
-
-1. Any legally binding request for disclosure of Customer Data by a law enforcement authority, unless SUMMARY AI is otherwise forbidden by law to inform you, for example to preserve the confidentiality of an investigation by law enforcement authorities.
+   1. Any legally binding request for disclosure of Customer Data by a law enforcement authority, unless SUMMARY AI is otherwise forbidden by law to inform you, for example to preserve the confidentiality of an investigation by law enforcement authorities.
 
    
 
@@ -59,13 +48,11 @@ SUMMARY AI will inform you if SUMMARY AI becomes aware of:
 
    3. Any complaint or request (in particular, requests for access to, rectification or blocking of Customer Data) received directly from your data subjects. SUMMARY AI will not respond to any such request without your prior written authorization.
 
-3. # **ASSISTANCE TO CUSTOMER**
+3. **ASSISTANCE TO CUSTOMER**
 
-# 
+   SUMMARY AI will provide reasonable assistance to Customer regarding:
 
-SUMMARY AI will provide reasonable assistance to Customer regarding:
-
-1. Any requests from your data subjects in respect of access to or the rectification, erasure, restriction, portability, objection, blocking or deletion of Customer Data that SUMMARY AI processes for you. In the event that a data subject sends such a request directly to SUMMARY AI, SUMMARY AI will promptly send such request to you.
+   1. Any requests from your data subjects in respect of access to or the rectification, erasure, restriction, portability, objection, blocking or deletion of Customer Data that SUMMARY AI processes for you. In the event that a data subject sends such a request directly to SUMMARY AI, SUMMARY AI will promptly send such request to you.
 
    
 
@@ -75,35 +62,22 @@ SUMMARY AI will provide reasonable assistance to Customer regarding:
 
    3. Where appropriate, the preparation of data protection impact assessments with respect to the processing of Customer Data by SUMMARY AI and, where necessary, carrying out consultations with any supervisory authority with jurisdiction over such processing.
 
-# 
-
-4. # **REQUIRED PROCESSING**
-
-# 
+4. **REQUIRED PROCESSING**
 
    1. If SUMMARY AI is required by Data Protection Laws to process any Customer Data for a reason other than in connection with the Agreement, SUMMARY AI will inform you of this requirement in advance of any processing, unless SUMMARY AI is legally prohibited from informing you of such processing.
 
-# 
 
-5. # **SECURITY**
+5. **SECURITY**
 
-# 
+   SUMMARY AI will:
 
-SUMMARY AI will:
-
-# 
-
-1. Maintain reasonable and appropriate organizational and technical security measures (including with respect to personnel, facilities, hardware and software, storage and networks, access controls, monitoring and logging, vulnerability and breach detection, incident response, and encryption) to protect against unauthorized or accidental access, loss, alteration, disclosure or destruction of Customer Data and to protect the rights of the subjects of that Customer Data.
-
-   
+   1. Maintain reasonable and appropriate organizational and technical security measures (including with respect to personnel, facilities, hardware and software, storage and networks, access controls, monitoring and logging, vulnerability and breach detection, incident response, and encryption) to protect against unauthorized or accidental access, loss, alteration, disclosure or destruction of Customer Data and to protect the rights of the subjects of that Customer Data.
 
    2. Take appropriate steps to confirm that SUMMARY AI personnel are protecting the security, privacy and confidentiality of Customer Data consistent with the requirements of this DPA.  
         
    3. Notify you of any Personal Data Breach by SUMMARY AI, its Subprocessors, or any other third parties acting on SUMMARY AI’s behalf without undue delay after SUMMARY AI becomes aware of such Personal Data Breach.
 
-6. # **OBLIGATIONS OF CUSTOMER**
-
-# 
+6. **OBLIGATIONS OF CUSTOMER**
 
    1. Customer represents, warrants and covenants that it has and shall maintain throughout the term all necessary rights, consents and authorizations to provide the Customer Data to SUMMARY AI and to authorize SUMMARY AI to use, disclose, retain and otherwise process that Customer Data as contemplated by this DPA, the Agreement and/or other processing instructions provided to SUMMARY AI.
 
@@ -127,61 +101,54 @@ SUMMARY AI will:
 
    6. Customer shall not take any action that would (i) render the provision of Customer Data to SUMMARY AI a “sale” under U.S. Privacy Laws or a “share” under the CCPA; or (ii) render SUMMARY AI not a “service provider” under the CCPA.
 
-7. # **STANDARD CONTRACTUAL CLAUSES**
+7. **STANDARD CONTRACTUAL CLAUSES**
 
    1. SUMMARY AI will process Customer Data that originates in the European Economic Area in accordance with the standard contractual clauses adopted by the EU Commission on June 4, 2021 (“EU SCCs”) which are deemed entered into (and incorporated into this DPA by this reference) and completed as follows:
 
    
+      1) Module Two (Controller to Processor) of the EU SCCs apply when Customer is a controller and SUMMARY AI is processing Customer Data as a processor.
 
-1) Module Two (Controller to Processor) of the EU SCCs apply when Customer is a controller and SUMMARY AI is processing Customer Data as a processor.
-
-   
-
-2) Module Three (Processor to Sub-Processor) of the EU SCCs apply when Customer is a processor and SUMMARY AI is processing Customer Data as a sub-processor.  
+      2) Module Three (Processor to Sub-Processor) of the EU SCCs apply when Customer is a processor and SUMMARY AI is processing Customer Data as a sub-processor.  
      
    2. For each module of the EU SCCs, where applicable, the following applies:
 
-   
+      1) The optional docking clause in Clause 7 does not apply.
 
-1) The optional docking clause in Clause 7 does not apply.
-
-   
-
-2) In Clause 9, Option 2 (general written authorization) applies, and the minimum time period for prior notice of sub-processor changes shall be as set forth in Section 1(g) of this DPA.
+      2) In Clause 9, Option 2 (general written authorization) applies, and the minimum time period for prior notice of sub-processor changes shall be as set forth in Section 1(g) of this DPA.
 
    
 
-3) In Clause 11, the optional language does not apply.
+      3) In Clause 11, the optional language does not apply.
 
    
 
-4) All square brackets in Clause 13 are hereby removed.
+      4) All square brackets in Clause 13 are hereby removed.
 
    
 
-5) In Clause 17 (Option 1), the EU SCCs will be governed by the EU member state where the data exporter is located.
+      5) In Clause 17 (Option 1), the EU SCCs will be governed by the EU member state where the data exporter is located.
 
    
 
-6) In Clause 18(b), disputes will be resolved before the courts of the EU member state where the data exporter is located.
+      6) In Clause 18(b), disputes will be resolved before the courts of the EU member state where the data exporter is located.
 
    
 
-7) **Exhibit A** to this DPA contains the information required in Annex I and Annex III of the EU SCCs.
+      7) **Exhibit A** to this DPA contains the information required in Annex I and Annex III of the EU SCCs.
 
    
 
-8) **Exhibit B** to this DPA contains the information required in Annex II of the EU SCCs.  
+      8) **Exhibit B** to this DPA contains the information required in Annex II of the EU SCCs.  
  
 
 
    3. With respect to Customer Data originating from the United Kingdom, the parties will comply with the terms of Part 2: Mandatory Clauses of the Approved Addendum, being the template Addendum B.1.0 issued by the Information Commissioner’s Office and laid before Parliament in accordance with s119A of the Data Protection Act 2018 on 2 February 2022, as it is revised under Section 18 of those Mandatory Clauses (the “UK Addendum”). The parties also agree (i) that the information included in Part 1 of the UK Addendum is as set out in Annex I of Appendix A to this DPA and (ii) that either party may end the UK Addendum as set out in Section 19 of the UK Addendum.
 
-# 
 
-8. # **TERM. DATA RETURN AND DELETION**
 
-# 
+8. **TERM. DATA RETURN AND DELETION**
+
+
 
    1. This DPA shall remain in effect as long as SUMMARY AI carries out Customer Data processing operations on your behalf or until the termination of the Agreement (and all Customer Data has been returned or deleted in accordance with this DPA). On the termination of the data processing services, upon your reasonable request, and in any case at least once every thirty (30) days, SUMMARY AI shall, and shall direct each Subprocessor to, return to you or delete the Customer Data, unless Data Protection Laws prevent SUMMARY AI from returning or destroying all or part of the Customer Data. For clarity, SUMMARY AI may continue to process information derived from Customer Data that has been aggregated or stored in a manner that does not identify individuals or customers to improve SUMMARY AI’s systems and services.
 
@@ -189,12 +156,11 @@ SUMMARY AI will:
 
    
 
-   **EXHIBIT A**
 
- 
+## **EXHIBIT A**
 
 
-1. **LIST OF PARTIES**  
+### A. LIST OF PARTIES
      
 - **Data exporter(s):** the Customer identified on the applicable Services registration documents  
     
@@ -205,6 +171,7 @@ SUMMARY AI will:
   Address: Plaça Pau Vila, 1, Ciutat Vella, 08003 Barcelona, Spain  
     
   Contact Person’s, position and contact details:  
+
 - *Data Protection Officer*  
 - [*dpo@labhouse.io*](mailto:dpo@labhouse.io)  
     
@@ -212,7 +179,7 @@ SUMMARY AI will:
 
   Role (*controller/processor*): Processor
 
-2. **DESCRIPTION OF TRANSFER**  
+### B. **DESCRIPTION OF TRANSFER**  
      
 1) **Categories of data subjects whose personal data is transferred**: 
 
@@ -261,7 +228,7 @@ SUMMARY AI will:
 
    The performance of the services described in the services agreement to which this DPA is attached.
 
-3. **COMPETENT SUPERVISORY AUTHORITY**  
+### C. **COMPETENT SUPERVISORY AUTHORITY**  
      
 1) **Identify the competent supervisory authority/ies.**
 
@@ -273,11 +240,11 @@ SUMMARY AI will:
 
    The data protection authority of the UK is the UK Information Commissioner.
 
-   **EXHIBIT A**
+## **EXHIBIT B**
 
    
 
-   **TECHNICAL AND ORGANISATIONAL MEASURES INCLUDING TECHNICAL AND ORGANISATIONAL MEASURES TO ENSURE THE SECURITY OF THE DATA**
+## **TECHNICAL AND ORGANISATIONAL MEASURES INCLUDING TECHNICAL AND ORGANISATIONAL MEASURES TO ENSURE THE SECURITY OF THE DATA**
 
 1. **Information** **Security** **Program** **(ISP)**  
      
@@ -295,15 +262,15 @@ SUMMARY AI will:
       Physical components of the SUMMARY AI Network are housed in facilities (“Facilities”) which meet or exceed all of the following physical security requirements:
 
      
-1) **Physical Access Controls.** Physical barrier controls are used to prevent unauthorized entrance to the Facilities both at the perimeter and at building access points. Passage through the physical barriers at the Facilities requires either electronic access control validation (e.g., card access systems, etc.) or validation by human security personnel (e.g., contract or in-house security guard service, receptionist, etc.). Employees and contractors are assigned photo-ID badges that must be worn while the employees and contractors are at any of the Facilities. Visitors are required to sign-in with designated personnel, must show appropriate identification, are assigned a visitor ID badge that must be worn while the visitor is at any of the Facilities, and are continually escorted by authorized employees or contractors while visiting the Facilities.  
+      1) **Physical Access Controls.** Physical barrier controls are used to prevent unauthorized entrance to the Facilities both at the perimeter and at building access points. Passage through the physical barriers at the Facilities requires either electronic access control validation (e.g., card access systems, etc.) or validation by human security personnel (e.g., contract or in-house security guard service, receptionist, etc.). Employees and contractors are assigned photo-ID badges that must be worn while the employees and contractors are at any of the Facilities. Visitors are required to sign-in with designated personnel, must show appropriate identification, are assigned a visitor ID badge that must be worn while the visitor is at any of the Facilities, and are continually escorted by authorized employees or contractors while visiting the Facilities.  
 
    
 
-2) 	**Limited Employee and Contractor Access.** SUMMARY AI provides access to the Facilities to those employees and contractors who have a legitimate business need for such access privileges. When an employee or contractor no longer has a business need for the access privileges assigned to him/her, the access privileges are promptly revoked, even if the employee or contractor continues to be an employee of SUMMARY AI or its affiliates.  
+      2) 	**Limited Employee and Contractor Access.** SUMMARY AI provides access to the Facilities to those employees and contractors who have a legitimate business need for such access privileges. When an employee or contractor no longer has a business need for the access privileges assigned to him/her, the access privileges are promptly revoked, even if the employee or contractor continues to be an employee of SUMMARY AI or its affiliates.  
 
    
 
-3) **Physical Security Protections.** All access points (except for main entry doors) are maintained in a locked state. Access points to the Facilities are monitored by video surveillance cameras designed to record all individuals accessing the Facilities. SUMMARY AI also maintains electronic intrusion detection systems designed to detect unauthorized access to the Facilities, including monitoring points of vulnerability (e.g., primary entry doors, emergency egress doors, roof hatches, dock bay doors, etc.) with door contacts, glass breakage devices, interior motion-detection, or other devices designed to detect individuals attempting to gain access to the Facilities. All physical access to the Facilities by employees and contractors is logged and routinely audited.    
+      3) **Physical Security Protections.** All access points (except for main entry doors) are maintained in a locked state. Access points to the Facilities are monitored by video surveillance cameras designed to record all individuals accessing the Facilities. SUMMARY AI also maintains electronic intrusion detection systems designed to detect unauthorized access to the Facilities, including monitoring points of vulnerability (e.g., primary entry doors, emergency egress doors, roof hatches, dock bay doors, etc.) with door contacts, glass breakage devices, interior motion-detection, or other devices designed to detect individuals attempting to gain access to the Facilities. All physical access to the Facilities by employees and contractors is logged and routinely audited.    
      
    3. **Personal** **Data** **Security. Controls for the Protection of Personal Data.** 
 
