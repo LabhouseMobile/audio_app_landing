@@ -199,11 +199,11 @@
 
    
 
-   3. **Customer Data:** the User grant to SUMMARY AI a non-exclusive, royalty-free, worldwide license to reproduce, distribute, and otherwise use and display the Customer Data and perform all acts with respect to the Customer Data as are necessary for SUMMARY AI to provide the Services to you. Customer is responsible for ensuring that Customer Data does not violate any policy or terms referenced in or incorporated into this Agreement or any applicable law.
+   3. **Customer Data:** the User grants to SUMMARY AI a non-exclusive, royalty-free, worldwide license to reproduce, distribute, and otherwise use and display the Customer Data and perform all acts with respect to the Customer Data as are necessary for SUMMARY AI to provide the Services to you. Customer is responsible for ensuring that Customer Data does not violate any policy or terms referenced in or incorporated into this Agreement or any applicable law.
 
 5. **PRIVACY POLICY AND SECURITY**
 
-   1. In the course of the use of the Services, User may provide SUMMARY AI with information of a personal nature (hereinafter, “**Personal Information**”). Our information collection and use policies with respect to the privacy of such Personal Information are set forth in the **SUMMARY AI Privacy Policy,** which will have to have accepted beforehand, will apply. 
+   1. In the course of the use of the Services, User may provide SUMMARY AI with information of a personal nature (hereinafter, “**Personal Information**”). Our information collection and use policies with respect to the privacy of such Personal Information are set forth in the **SUMMARY AI Privacy Policy,** which must be accepted beforehand, will apply. 
 
    
 
@@ -217,7 +217,7 @@
 
 6. **CONFIDENTIALITY**
 
-   1. We treat the content submitted in accordance with this Terns (hereinafter, “**User Information**”) as confidential. We will only use User Information to provide the services, and we will not disclose it to anyone other than our personnel, service providers, or affiliates who need to access it and who are required to protect its confidentiality. Confidentiality obligations will however not apply to User Information:
+   1. We treat the content submitted in accordance with this Terms (hereinafter, “**User Information**”) as confidential. We will only use User Information to provide the services, and we will not disclose it to anyone other than our personnel, service providers, or affiliates who need to access it and who are required to protect its confidentiality. Confidentiality obligations will however not apply to User Information:
 
    
 
@@ -237,7 +237,7 @@
 
    
 
-   2. Unless expressly granted by their corresponding rightsholders or by law, the User do not have any use or ownership rights upon the above-mentioned contents and creations other than for the use of the Platform and/or the Services under the terms and conditions described in these Terms of Use. 
+   2. Unless expressly granted by their corresponding rightsholders or by law, the User does not have any use or ownership rights upon the above-mentioned contents and creations other than for the use of the Platform and/or the Services under the terms and conditions described in these Terms of Use. 
 
    
 
@@ -249,7 +249,7 @@
 
    
 
-   2. The Licence for the use of the Services through the Platform is a non-transferable licence for the use of this Platform on any compatible device the User possesses or controls, in accordance with what is permitted in the regulations established in these Terms of Use. 
+   2. The License for the use of the Services through the Platform is a non-transferable licence for the use of this Platform on any compatible device the User possesses or controls, in accordance with what is permitted in the regulations established in these Terms of Use. 
 
    
 
@@ -317,7 +317,7 @@
 
     
 
-    2. Any failure to act by us with respect to a breach of this Terms by You or others does not constitute a waiver and will not limit our rights with respect to such breach or any subsequent breaches. This Terms are personal to you and may not be assigned or transferred for any reason whatsoever without our prior written consent and any action or conduct in violation of the foregoing will be void and without effect. We expressly reserve the right to assign the Services and to delegate any of its obligations hereunder.
+    2. Any failure to act by us with respect to a breach of these Terms by You or others does not constitute a waiver and will not limit our rights with respect to such breach or any subsequent breaches. These Terms are personal to you and may not be assigned or transferred for any reason whatsoever without our prior written consent and any action or conduct in violation of the foregoing will be void and without effect. We expressly reserve the right to assign the Services and to delegate any of its obligations hereunder.
 
     3. Any notices, including information that our Services may infringe any intellectual property, copyright, must be sent to **support@labhouse.io**
 

@@ -10,7 +10,7 @@ As used in this Privacy Policy,
 
 1) “**SUMMARY AI**”, "**we**," "**our**" and "**us**" means **LABHOUSE MOBILE, SL.,** and its affiliates and/or subsidiaries.   
      
-   LABHOUSE MOBILE, S.L. (SUMMARY AI), with Tax ID number B04968699 is located at Plaça Pau Vila, 1, Ciutat Vella, 08003 Barcelona, Spain, and our contact email is [dpo@labhouse.io](mailto:dpo@labhouse.io)   
+   LABHOUSE MOBILE, S.L. (SUMMARY AI), with Tax ID number B04968699 is located at Plaça Pau Vila, 1, Ciutat Vella, 08003 Barcelona, Spain, and our contact email is [dpo@labhouse.io](mailto:dpo@labhouse.io).   
      
 2) “**Controller**” for the purposes of data protection laws, including the GDPR and other applicable data protection laws in European Union member states, as well as other relevant provisions: means SUMMARY AI.
 
