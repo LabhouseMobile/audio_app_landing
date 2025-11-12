@@ -47,13 +47,10 @@ export default function Footer() {
               </div>
               <div className="flex flex-col gap-2 justify-center items-center mb-10 text-sm text-slate-700 hover:text-slate-900 md:items-start">
                 <Link href="/terms" className="link link-hover">
-                  Terms of services
+                  Terms of use
                 </Link>
                 <Link href="/privacy" className="link link-hover">
                   Privacy policy
-                </Link>
-                <Link href="/california-privacy" className="link link-hover">
-                  California Privacy Notice
                 </Link>
               </div>
             </div>

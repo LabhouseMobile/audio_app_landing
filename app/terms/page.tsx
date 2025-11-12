@@ -1,7 +1,7 @@
 import { Container } from "../components/container";
 import Footer from "../components/footer";
 import { Header } from "../components/header";
-import TermsOfServiceSection from "../components/terms-of-service";
+import MarkdownReader from "../components/markdown-reader";
 import { getSEOTags } from "../lib/seo";
 
 export const metadata = getSEOTags({
@@ -16,7 +16,7 @@ export default function TermsPage() {
     <Container>
       <Header />
       <main className="mt-12">
-        <TermsOfServiceSection />
+        <MarkdownReader filename="tos.md" />
       </main>
       <Footer />
     </Container>

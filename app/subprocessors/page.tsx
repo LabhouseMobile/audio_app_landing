@@ -19,7 +19,7 @@ export default function SubprocessorsPage() {
     <Container>
       <Header />
       <main className="mt-12">
-        <MarkdownReader filename="tmp/subprocessors.md" />
+        <MarkdownReader filename="subprocessors.md" />
       </main>
       <Footer />
     </Container>

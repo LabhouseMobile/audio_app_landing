@@ -1,226 +1,274 @@
-# Privacy Policy
+  
+# PRIVACY POLICY
 
-Last updated May 8, 2025 
+**SUMMARY AI** is committed to protecting and respecting your privacy. In this privacy policy ("**Privacy Policy**"), we explain how **SUMMARY AI** collects, uses, discloses and protects the Personal Information you submit to us, including, for example, when accessing and using **SUMMARY AI** mobile application and website https://summaryai.app/ (hereinafter “**Platform**”). 
 
----
+Our Privacy Policy has been drafted to comply with applicable data privacy laws, in particular, the EU General Data Protection Regulation (“GDPR”). If the GDPR does not apply to you, not all terms of this Privacy Policy may be relevant to you. 
 
-This privacy policy (“**Policy**”) informs you of our practices when handling your Personal Information through the Services of the app **Summary AI, operated by Labhuose**. In this Policy, “Labhouse”, “**we**” or “**us**” refers to **Labhouse Mobile S.L.**, a company registered in Spain. We are the data controller under the applicable privacy laws.
+As used in this Privacy Policy,
 
-For the purpose of this Policy, “**Personal** **Information**” means any information relating to an identified or identifiable individual. This includes Personal Information you provide or generate when you use: (a) Our Summary AI summarization app (the “**App**”); and (b), https://www.summaryai.app/, and any other dedicated Summary AI (the “**Website**”) (collectively, the “**Services**”). When you use the Services, you accept and understand that we collect, process, use, and store your Personal Information as described in this Policy.
+ <div class="roman-list">
 
-If you are a California resident, our [Privacy Notice for California Residents](https://summaryai.app/california-privacy) includes additional information about your rights and how we collect, use, and share information.
+   1) “**SUMMARY AI**”, "**we**," "**our**" and "**us**" means **LABHOUSE MOBILE, SL.,** and its affiliates and/or subsidiaries.   
+      
+      LABHOUSE MOBILE, S.L. (SUMMARY AI), with Tax ID number B04968699 is located at Plaça Pau Vila, 1, Ciutat Vella, 08003 Barcelona, Spain, and our contact email is [dpo@labhouse.io](mailto:dpo@labhouse.io).   
+      
+   2) “**Controller**” for the purposes of data protection laws, including the GDPR and other applicable data protection laws in European Union member states, as well as other relevant provisions: means SUMMARY AI.
 
-**If you do not agree with this Policy, you must not use any of the Services. If you change your mind in the future you must stop using the Services and you may exercise your rights concerning your Personal Information as set out in this Policy.**
+   3) “**Personal Information**” generally has the same meaning as personal data or personal identifiable information (PII). Personal Information is defined in the data privacy laws applicable in your country. It includes any information relating to an identified or identifiable natural person. This means any individual who can be identified directly or indirectly by reference to an identifier such as name, identification number, location data, online identifiers (for example, IP addresses – if they can be used to identify you) or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person. Put simply, this includes data which either by itself or with other data held by us or available to us, can be used to identify you. 
 
-### **1. INFORMATION WE COLLECT**
+   </div>
 
-We will collect and use the following Personal Information about you:
+SUMMARY AI is committed to the following key principles:
 
-**Information you provide to us**
+1. **LEGAL CAPACITY**
 
-- **Registration Information**. When you create an account on our Services, you will be asked to provide your name, email, and a password, you may voluntarily add a profile picture. For Pro or Business plans which are paid Services, our payment processing partner Stripe, Inc. may also collect your name, billing address, and payment information. Payment information is not shared with us and is maintained by Stripe.
-- **App Information**. When you use the Services, you may provide us with your audio recordings (“Audio Recordings”), and any text or videos that you upload or provide to us in the context of the Services.
-- **Communication Information**. When you contact us, you provide us with your phone number, email, and any other information you choose to provide over such communication, including information about your query.
+   1. **Minimum age.** To provide us with your personal data, you must be at least 18 years old and/or, where applicable, have sufficient legal capacity to use our Platform.
 
-**Information you provide us about others**
+   2. **Accuracy.** When you provide us with your data to use our services, you guarantee that the data and information provided is real, accurate, up-to-date, and belongs to you and not to third parties. 
 
-- If you choose to collaborate on a task with your co-workers or friends, or refer us to them, you provide us with the email address and contact information of your co-workers or friends.
-- If you provide an Audio Recording, this may contain the Personal Information of third parties. Before you do so, please make sure you have the necessary permissions from your co-workers, friends or other third parties before sharing Personal Information or referring them to us.
+      In addition, you must notify us of any changes to the data provided, and you are responsible for the truthfulness and accuracy of the data provided at all times. 
 
-**Information we automatically collect or is generated about you when use the Services**
+   3. **Age and Accuracy Control.** SUMMARY AI reserves the right to verify your age and identifying information at any time, if necessary, including by requesting official supporting documentation or an equivalent procedure, and, in the event of detected fraud or suspicion that you are under the indicated age, to delete, temporarily deactivate, and/or cancel your account.
 
-- **Usage Information**: When you use the Services, you generate information pertaining to your use, including timestamps, such as access, record, share, edit and delete events, app use information, screenshots/screen captures taken during the meeting, interactions with our team, and transaction records.
-- **Device Information**: We assign a unique user identifier (“**UUID**”) to each mobile device that accesses the Services. When you use our Services, you provide information such as your IP address, UUIDs, device IDs, web beacons and other device information (such as carrier type, whether you access our Service from a desktop or mobile platform, device model, brand, web browser and operating system).
-- **Cookies:** We use Cookies and other similar technologies (“**Cookies**”) to enhance your experience when using the Service. For more information about our Cookies policy, see **HOW WE USE COOKIES AND SIMILAR TECHNOLOGIES below.**‍**
-- **Location Information:** When you use the Services, we receive your approximate location information. For example, we infer your approximate location by using your IP address.
+2. **WE LIMIT HOW, AND WITH WHOM, WE SHARE YOUR PERSONAL INFORMATION.**
 
-**Information received from third parties.**
+   1. In general, SUMMARY AI will not disclose your data to third parties.
 
-- **Information we receive from third party platforms**: When you connect third party platforms, apps or providers (such as Google Calendar, Outlook Calendar or other calendar programs such as Zoom) to our Services, or when you register through a third party account (such as Google or Microsoft), we receive Personal Information that includes your username, email address, time, location, calendar information, contact information from such third parties and any information you choose to upload to such third party platforms (“**Platform Information**”).
-- **Information from platforms our Services relies on**: We receive transaction information from our payment processor Stripe.
-- **Other third parties.** We may receive additional information about you, such as demographic or interest attributes from third parties such as data or marketing partners and combine it with other information we have about you.
+   
 
-We also collect, and use aggregated data such as statistical or demographic data for our purposes. Aggregated data may be derived from your Personal Information but is not Personal Information as this data will not directly or indirectly reveal your identity. However, if we combine or connect aggregated data with your Personal Information so that it can directly or indirectly identify you, we will treat the combined data as Personal Information which will be used in accordance with this Policy.
+   2. However, in addition to the transfers that we specifically indicate in the section explaining the characteristics of the different operations (point 3), we inform you of the communications that we may make, in general, and that affect all of the above processing and its legal basis.
 
-### **2. HOW WE USE YOUR PERSONAL INFORMATION**
+      <div class="roman-list">
 
-We use the collected information for the following purposes:
 
-- **Set up your account.** We use your registration information, device information and information received from third parties (such as your username, email address) in order to set up an account for you to use our Services. We do so in accordance with our contractual and precontractual obligations to you in order to provide you with an account to use the Services.
-- **Provide you with the Services**. We use your audio recordings, usage information and platform information in order to provide you with the Services. In addition, we use your communication information to facilitate support (e.g. retrieval of a forgotten password). We do so in accordance with our contractual obligations to you in order to provide you with the Services.
-- **Improve and monitor the Services**. ****We use information we automatically collect or generate about you when you use the Services, as well as information about your device such as device manufacturer, model and operating system, and the amount of free space on your device, to analyze the use of and improve our Services.
-- **Communicate with you**. ****If you contact us, we will use your contact information to communicate with you and, if applicable, your usage information to support your use of the Services.
-- **Send you newsletters about product news or updates that may be of interest to you.** We will send you emails with news or updates pertaining to our Services. When doing so, we process your email address, name and may process your usage information. Your consent can be withdrawn at any time by following the unsubscribe mechanism at the bottom of each communication.
-- **Prevent fraud, defend Labhouse against legal claims or disputes, enforce our terms and to comply with our legal obligations.** It is in our legitimate interest to protect our interests by (1) monitoring the use of the Services to detect fraud or any other user behavior which prejudices the integrity of our Services, (2) taking steps to remedy aforementioned fraud and behavior, (3) defending ourselves against legal claims or disputes, and (4) enforcing our terms and policies. When doing so, we will process the Personal Information relevant in such a case, including information you provide us, information we automatically collect about you, and information which is provided to us by third parties.
-- **Providing and Improving the Service:** We use your recordings, transcripts, and other personal data to deliver the core functionality of Summary AI – i.e., to record audio/video, transcribe spoken content into text, generate summaries, and identify key action points. This includes sending your audio or video content securely to our external transcription and AI summarization providers and receiving the results back. We **only use your recordings and transcript content to provide you these services and for no other purpose**. In other words, we do *not* access or use the content of your recordings and transcripts for our own machine learning training, for advertising, or for any purpose unrelated to delivering the summary back to you. Your content remains private to you and those you choose to share it with. We also use your account and contact information to maintain your account, provide customer support, and communicate about service-related matters (such as billing, technical issues, or policy updates).
-- **Analytics and Product Improvement:** We use usage data (and **only** usage data, not your actual transcript content) to understand how our users interact with Summary AI and how our service is performing. This helps us diagnose technical problems, maintain security, and improve features and usability. For example, we analyze which features are used most or how long users spend on certain functions, in order to make informed decisions on improving our app. We also measure aggregate usage and trends to inform our business strategies and marketing effectiveness. *Marketing optimization:* Your usage patterns may be used internally to plan and optimize our marketing and user education efforts (for instance, to highlight under-used features or to design tutorials), but this does **not** involve sharing your personal information with outside advertisers. Any analytics or advertising measurement we perform is done using aggregated data or with the help of third-party analytics services as described below.
-- **Marketing Communications:** With your account information, we may send you informational or promotional content about new features, updates, and offers for Summary AI, consistent with your subscription. We will do so in accordance with applicable laws – for example, if required, we will only send you marketing emails with your consent, and you will have the opportunity to opt-out of such emails at any time by using the unsubscribe link or contacting us. (Transactional or service-related communications, such as important account or billing notices, are not considered marketing and will be sent as needed to fulfill our contract with you.)
-- **Legal Compliance and Protection:** We may use or disclose information as necessary to comply with applicable laws, regulations, legal processes, or enforceable governmental requests. This includes using data to respond to subpoenas or court orders, to enforce our Terms of Service or other agreements, to detect or investigate fraud or security issues, and to protect the rights, property, or safety of Summary AI, our users, or the public as required by law.
+      1) **Providers of services** essential to the performance of the service we offer you (e.g., computer hosting companies or commercial communication delivery platforms). Notwithstanding the foregoing, these entities have signed the corresponding confidentiality agreements and will only process your data in accordance with our instructions, and may not use it for their own purposes or for purposes other than the service they provide to us.  
+         
+      2) **Public bodies**. We may disclose to the competent public authorities any data and other information in our possession or accessible through our systems when there is a legal obligation to do so, as well as when required, for example, when the purpose is to prevent or prosecute abuse of services or fraudulent activities through our Platform. In these cases, the personal data you provide us with will be retained and made available to the administrative or judicial authorities.  
+         
+      3) **In the event of a corporate transaction**: In the event of a merger, acquisition, sale of all or part of its assets, or any other type of corporate transaction involving a third party, we may share, disclose, or transfer user data to the successor entity (even during the pre-transaction phase).  
+         
+      4) **To third parties after aggregation or anonymization**: We may disclose or use aggregated or anonymized data (i.e., data that cannot be linked to an identified or identifiable natural person) for any purpose.  
+         
+      5) **To third parties with the user's consent or other legitimate basis**: In the event that we wish to share data with third parties outside the scope of this Privacy Policy, we will, in all cases, request your consent or inform you of the same and its legitimate basis.
 
-We will not collect additional categories of personal data or use your data for materially different purposes without updating this Privacy Policy and, if necessary, obtaining your consent.
+      </div>
 
-### **3. HOW WE USE COOKIES AND SIMILAR TECHNOLOGIES**
+3. **PURPOSE AND LEGAL BASIS OF THE PROCESSING**
 
-We and our third party partners use Cookies, pixel tags, and similar technologies to collect information about your browsing activities and to distinguish you from other users of our Services in order to aid your experience and measure and improve our advertising effectiveness.
+     
 
-Cookies are small files of letters and numbers that we store on your browser or on your device. They contain information that is transferred to your device.
+      | Personal Information | Purpose | Legal Basis |
+      | :---- | :---- | :---- |
+      | We collect your **identification data** (first and last name) and email address. **Other information you voluntarily include in the communications** **you send us** (i.e. through our section “*support*”). We may request additional information if necessary to fulfill your request or requirement. |  To create and support your profile when you register for our service. To answer your requests. For instance, (i) if you choose to register to receive information about our products and services, (ii) if you contact our support or customer service, we will use your Personal Information in order to respond. |  Processing is necessary for the purposes of our legitimate interests, i.e. to attend to your request for information, purchase of products/services or if you contact our customer service. |
+      | **Audio Data information** resulting from: recording calendar meetings, recording face to face meetings, or importing pre-recorded audios. | The Personal Information is used to provide our services through the Platform. For instance, when you use our cutting-edge AI Note Taker, offering seamless recording, transcription, and summarization of your audio content. You can record meetings and phone calls, import podcasts, videos, and more.  | The processing is necessary for the performance of a contract to which you are a party or in order to take steps, at the request of you, to provide our services. |
+      | **Calendar meetings information** details like: the subject of your meetings, the emails of the guests to those meetings. | The Personal Information is used to provide our services through the Platform. For instance we may use the subject of the meeting to name the transcription, or the participants information to send summary reports. | The processing is necessary for the performance of a contract to which you are a party or in order to take steps, at the request of you, to provide our services. |
+      | **Personal Notes and memos** | To provide our Services | The processing is necessary for the performance of a contract to which you are a party or in order to take steps, at the request of you, to provide our services. |
+      | **Generated Data,** output of audio recordings to generate Summaries, transcripts and texts, created through AI models. Translations of your Summaries or Transcripts, Speakers names. Voice Generation from summaries. Metadata related to AI interactions (e.g., length of calls, length of transcription). | To provide our Services | The processing is necessary for the performance of a contract to which you are a party or in order to take steps, at the request of you, to provide our services. |
+      | **Usage data**.  We collect and log internet or other electronic information on how you access and use our Service. For example, the act of creating an invoice or sharing an invoice | To administer our service and to improve the features and usability of the Service. To provide account support. To suggest features, products, and services that can enhance your use of our Service. | The processing is necessary for the performance of a contract to which you are a party or in order to take steps, at the request of you, to provide our services. |
+      | **Device Information:** such as IP address, geographic location, operating system information, referral source, pages viewed and navigation paths on the website,  device permissions, hardware information, browser type and version, identifiers and others. | Localization & customization of the user experience for each specific device and location. To inform our product development.Marketing efforts and attribution. Tracking of errors and Incident management. | The processing is necessary for the performance of a contract to which you are a party or in order to take steps, at the request of you, to provide our services |
+      | Name, address, e-mail address and other contact information | To periodically contact you to inform you of new products and/or services we provide or that we consider to be of interest to you. | Your consent |
+      | Application data, including your name, address, CV, birthdate | Processing is required to enable us to administer the recruiting process, including the set-up of an electronic job applicant HR file, managing your application, organizing interviews. We may retain your Personal Information following your unsuccessful application so that we may contact you in case of future job vacancies. Your data may also be shared with other SUMMARY AI group companies to consider your application for other job openings.  | Primarily, the processing is necessary to take steps for entering into a contract with you. We also have a legitimate interest to (i) store your data for a period of up to 6 years following the conclusion of an unsuccessful application and/or (ii) to share it with the SUMMARY AI group of entities and/or (iii) to retain and use your data as far as necessary for the establishment, exercise or defense of legal claims. |
+      | All of the above | For compliance with legal and regulatory requirements and corporate governance obligations. | Processing is necessary for compliance with legal obligations to which we are subject. |
 
-We use Cookies to collect information about your browsing activities and to distinguish you from other users of our Services in order to aid your experience.
+                                                                                                                                          
+      Where you wish to provide us with Personal Information about another person, including colleagues, participants in the meetings and phone calls, podcasts, videos, etc, or the persons you act on behalf of, you must ensure that you have their prior permission to do this. You must also share with them a copy of this Privacy Policy as well as any other relevant privacy statements (see above) before you ask them for this permission.
 
-We use the following types of Cookies and similar technologies:
+      We collect Personal Information for the purposes described above when you use our Platform and from public sources.
 
-- **Strictly necessary Cookies:** Some Cookies are strictly necessary to make our Services available to you; for example, to provide login functionality, user authentication and security. We cannot provide you with the Services without this type of Cookie.
-- **Functional Cookies**: These are used to recognize you when you return to our Website. This enables us to personalize our content for you and remember your preferences (for example, your choice of language).
-- **Analytical, performance, or advertising Cookies:** We also use Cookies and similar technologies for analytics purposes in order to operate, maintain, and improve our Services and measure and improve our advertising effectiveness. We use third party analytics providers, including Google Analytics and Amplitude, to help us understand how users engage with us. We also use third party advertising partners, including Facebook, to deliver ads to you on other sites. Google Analytics uses first-party Cookies to track user interactions which helps show how users use our Service and Website. This information is used to compile reports and to help us improve our Service and Website. Such reports disclose Website trends without identifying individual visitors. You can opt out of Google Analytics by going to https://tools.google.com/dlpage/gaoptout or via Google’s Ads settings.
+4. **DATA PROCESSING AGREEMENT**
 
-You can block Cookies by setting your internet browser to block some or all or Cookies. However, if you use your browser settings to block all Cookies (including strictly necessary Cookies) you may not be able to use our Services.
+   1. **Data for which you are the “Data Controller”. Data Processing Agreement**
 
-**4. WITH WHOM WE SHARE YOUR PERSONAL INFORMATION**
+   
 
-Third party services are not owned or controlled by Labhouse and third parties may have their own policies and practices for collection, use and sharing of information. Please refer to third party privacy and security policies for more information before using such services. Third parties include vendors and service providers we rely on the provision of the Services. We share your Personal Information with selected third parties, including:
+   To provide our Services, we may process (i) collected data from your calendar as well as the subject of your meetings, the emails of the guests to those meetings, (ii) the audio resulting from recording calendar meetings, recording face to face meetings, or importing pre-recorded audios, (iii) generated data (summaries, transcripts and generated texts, created through AI models), and (iv) metadata related to AI interactions (e.g., length of calls, length of transcription).
 
-- **Other users** who see your Personal Information (such as your username and email) and any other information you choose to share with them through the Services.
-- **Cloud service providers** who we rely on for compute and data storage, including Firebase, based in the United States.**‍**
-- **Platform support providers** who help us manage and monitor the Services, including Mixpannel, which is based in the U.S. and provides user event data for our Services.
-- **Summarization and transcription providers** who transcribe and summarize recordings, including Open AI and Replicate.
-- **Mobile advertising tracking providers** who help us measure our advertising effectiveness, including AppsFlyer which is based in Israel.**‍**
-- **Analytics providers** who provide analytics, segmentation and mobile measurement services and help us understand our user base. We work with a number of analytics providers, including Google LLC, which is based in the U.S. You can learn about Google’s practices by going to https://www.google.com/policies/privacy/partners/, and opt-out of them by downloading the Google Analytics opt-out browser add-on, available at https://tools.google.com/dlpage/gaoptout.**‍**
-- ‍**Payment processors**, such as Stripe. These payment processors are responsible for the processing of your Personal Information, and may use your Personal Information for their own purposes in accordance with their privacy policies. More information is available here: https://stripe.com/gb/privacy. **‍**
-- **Law enforcement agencies, public authorities or other judicial bodies and organizations.** We disclose Personal Information if we are legally required to do so, or if we have a good faith belief that such use is reasonably necessary to comply with a legal obligation, process or request; enforce our terms of service and other agreements, policies, and standards, including investigation of any potential violation thereof; detect, prevent or otherwise address security, fraud or technical issues; or protect the rights, property or safety of us, our users, a third party or the public as required or permitted by law (including exchanging information with other companies and organizations for the purposes of fraud protection). **‍**
-- **Change of corporate ownership.** If we are involved in a merger, acquisition, bankruptcy, reorganization, partnership, asset sale or other transaction, we may disclose your Personal Information as part of that transaction.
+   
 
-### **5. HOW LONG WE STORE YOUR INFORMATION**
+   If the data you collect when using our Services contains Personal Information from third parties, you will be considered the personal data “Controller”, and you will need to obtain the prior consent of the data subjects when the applicable regulations require such consent. In such cases, SUMMARY AI will act as “Data Processor”, according to the Data Processing Agreement (DPA) that sets out the subject-matter and duration of the processing, the nature and purpose of the processing, the type of personal data and categories of data subjects and the obligations and rights of the Controller.
 
-Summary AI stores all Personal Information for as long as necessary to fulfill the purposes set out in this Policy, or for as long as we are required to do so by law or in order to comply with a regulatory obligation. When deleting Personal Information, we will take measures to render such Personal Information irrecoverable or irreproducible, and the electronic files which contain Personal Information will be permanently deleted.
+   
 
-### **6. YOUR RIGHTS**
+   The standard Data Processing Agreement can be found on our website at [summaryai.app/dpa](https://summaryai.app/dpa).
 
-In certain circumstances you have the following rights in relation to your Personal Information that we hold.
+5. **WE KEEP YOUR PERSONAL INFORMATION FOR AS LONG AS IT IS NECESSARY TO DO SO TO FULFIL THE PURPOSES FOR WHICH IT WAS COLLECTED AS DESCRIBED ABOVE.**
 
-- **Access**. You have the right to access the Personal Information we hold about you, and to receive an explanation of how we use it and who we share it with.
-- **Correction**. You have the right to correct any Personal Information we hold about you that is inaccurate or incomplete.
-- **Erasure**. You have the right to request for your Personal Information to be erased or deleted.
-- **Object to processing**. You have the right to object to our processing of your Personal Information where we are relying on a legitimate interest or if we are processing your Personal Information for direct marketing purposes.
-- **Restrict processing**. You have a right in certain circumstances to stop us from processing your Personal Information other than for storage purposes.
-- **Portability**. You have the right to receive, in a structured, commonly used and machine-readable format, Personal Information that you have provided to us if we process it on the basis of our contract with you, or with your consent, or to request that we transfer such Personal Information to a third party.
-- **Withdraw consent**. You have the right to withdraw any consent you previously applied to us. We will apply your preferences going forward, and this will not affect the lawfulness of processing before your consent was given.
+   1. The criteria we use to determine data retention periods for Personal Information includes the following: 
 
-Please note that, prior to any response to the exercise of such rights, we will require you to verify your identity. In addition, we may require additional information (for example, why you believe the information we hold about you is inaccurate or incomplete) and may have valid legal reasons to refuse your request. We will inform you if that is the case. For more information on how to exercise your rights, or to exercise your rights, please email [help@labhouse.io](mailto:help@labhouse.io).
+      <div class="roman-list">
 
-If you are a California resident, California law affords you certain rights regarding our collection and use of your personal information. To learn more about your California privacy rights, please visit our Privacy Notice for California Residents.
 
-**7. Data Privacy Framework Principles**
+      1) **Retention in case of queries:** we will retain it for a reasonable period after the relationship between us has ceased in case of queries from you.
 
-Labhouse complies with the EU-U.S. Data Privacy Framework  (EU-U.S. DPF), the UK Extension to the EU-U.S. DPF, and the Swiss-U.S. Data Privacy Framework (“Swiss-U.S. DPF”) as set forth by the U.S. Department of Commerce. Summary AI has certified to the U.S. Department of Commerce that it adheres to the EU-U.S. DPF Principles with respect to the processing of personal data received from the European Union in reliance on the EU-U.S. DPF and from the United Kingdom (and Gibraltar) in reliance on the UK Extension to the EU-U.S. DPF. Summary AI has certified to the U.S. Department of Commerce that it adheres to the Swiss-U.S. DPF Principles with respect to the processing of personal data received from Switzerland in reliance on the Swiss-U.S. DPF. If there is any conflict between the terms in this privacy policy and the EU-U.S. DPF Principles and/or the Swiss-U.S. DPF  Principles, the Principles shall govern. To learn more about the Data Privacy Framework  program, and to view our certification, please visit https://www.dataprivacyframework.gov/.
+         
 
-For more information on how we comply with the DPF Principles, please see **APPENDIX: Summary AI Data Privacy Framework Principles Notice**.
+      2) **Retention in case of contracting our products/services or contacting our customer service**: we will retain it for the time necessary to deliver our product/service to you according to the contract conditions, as well as to attend any of your questions.  
+         
+      3) **Retention in case of claims:** we will retain it for the period in which you might legally bring claims against us**.**  
+         
+      4) **Retention in accordance with legal and regulatory requirements:** we will consider whether we need to retain it because of a legal or regulatory requirement, e.g. to comply with tax or fiscal duties.  
+         
+      5) **Retention in case of job applications:** if you applied for a job offering with SUMMARY AI and have not been successful, your application data will be retained in our talent pool for a limited period as defined in Principle 3\.
 
-### **8. CHILDREN**
+      </div>
 
-The Service and Website are not targeted at children, and we do not knowingly collect Personal Information from children under the age of 13. If you learn that a child has provided us with Personal Information in violation of this Policy, please contact us as indicated below.
+6. **INTERNATIONAL TRANSFERS**
 
-### **9. CONTACT & COMPLAINTS**
+   1. SUMMARY AI operates globally, therefore your personal information may be transferred and accessed from around the world from countries where SUMMARY AI affiliates and subsidiaries are located and where our processors operate
 
-For inquiries or complaints regarding this Policy, please first contact us at [help@labhouse.io](mailto:support@labhouse.io) and we will endeavor to deal with your complaint as soon as possible. This is without prejudice to your right to launch a claim with a data protection authority.
+   2. The data will be transferred for the time required to fulfill the purpose for which it is processed. It can be shared with our service providers and SUMMARY AI affiliates for the purposes listed in Principle 3\. In such cases, SUMMARY AI is the controller of the data, and the service providers are processors or joint controllers, as the case may be.
 
-If you believe we have infringed your rights, you may lodge a complaint with the Agencia Española de Protección de Datos ([www.aepd.es](http://www.aepd.es/)) or with your local supervisory authority.”
+   3. We may transfer Personal Information to the following categories of recipients: 
 
-### **10. DATA SECURITY**
+      | Recipient Category | Countries | Purpose of Transfer | Data Types Transferred |
+      | :---- | ----- | ----- | ----- |
+      | Cloud Service Provider (Google Cloud) | USA | Storage, Analytics, Security | Device Info, User Info |
+      | Customer Support (Intercom) | USA | Customer service and technical support | Device Info, User Info |
+      | Subscription Processor (RevenueCat) | USA | Subscription Management | Device Info, User Id, User Email |
+      | Payment Processors (Stripe) | USA | Processing of subscriptions | User Id, User Email |
+      | Analytics (Appsflyer, Mixpanel, Google Analytics, Smartlook) | USA, Czech Republic     | User analytics | Device Info, User Info |
+      | Marketing Campaigns (MailChimp) | USA | Email marketing and account alerts | User email |
+      | Internal Communications (Gmail, Slack) | USA | Internal Communications | User Info, Device Info |
+      | Feedback (Tally) | Belgium | Usability Research / Feedback / Forms | User Info, Device Info |
+      | Transcription Services (Gladia, Soniox, Replicate) | USA, France | Creation of transcripts | Audio Recording |
+      | Summary Services (Gemini, OpenAI) | USA | Creation of summaries | Transcripts |
+      | Audio Recording (Recall) | USA | Record online meetings | Audio and video recording |
 
-Labhouse maintains and implements physical, administrative, and technical safeguards to protect the confidentiality, integrity, and availability of personal information. However, the transfer of Personal Information through the internet will carry its own inherent risks and we do not guarantee the security of your data transmitted through the internet. You make any such transfer at your own risk.
+      Where personal data is transferred to service providers located outside your country of residence, SUMMARY AI applies appropriate safeguards, such as:
+      <div class="roman-list">
 
-The Website and Service may provide features or links to websites and services provided by third parties. Any information you provide on Apps, third-party websites or services is provided directly to the operators of such websites or services and is subject to their policies governing privacy and security, even if accessed via our Website or in connection with our Service.
+      1) The European Commission’s Standard Contractual Clauses (SCCs), or
 
-### **11. CROSS-BORDER DATA TRANSFERS**
+      2) Equivalent contractual mechanisms recognized by the competent authority in the recipient country.
 
-We may transfer your personal information to countries other than the country in which the data was originally collected for the purposes described in this Privacy Notice. For example, if you are located outside of the United States, we may transfer your personal information to the United States. The countries to which we transfer personal information may not have the same data protection laws as the country in which you initially provided the information. When we transfer personal information across borders, we consider a variety of requirements that may apply to such transfers.
+      </div>
 
-Specifically, we may transfer personal information from the European Economic Area to:
+      These measures ensure a level of protection consistent with that required by the GDPR.
 
-- Countries that the European Commissions has deemed to adequately safeguard personal information,
-- Pursuant to the recipient's compliance with standard contractual clauses (also known as Model Clauses), or Binding Corporate Rules,
-- Pursuant to the consent of the individual to whom the personal information pertains, or
-- As otherwise permitted by applicable EEA requirements.
+   4. Depending on where you are located, we implement the appropriate safeguards when transferring Personal Information to these countries.
 
-### **12. CHANGES**
+   
 
-Where required, we will update this Policy from time to time. When we do so, we will make it available on this page and indicate the date of the latest revision. Please check this page frequently to see any updates or changes to this Policy.
+   5. **Information for individuals in the European Economic Area (“EEA”) and the United Kingdom (“UK”)**
 
-### **13. ABOUT US**
+   
 
-If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
+      SUMMARY AI may transfer personal information from the EEA or the UK to the United States (‘US’) and other countries.
 
-**Labhouse Mobile S.L. (Summary AI)**
+      
 
-Labhouse
+      When SUMMARY AI engages in such transfers of personal information, it relies on:  
 
-[Plaça de Pau Vila, 1 Barcelona, 08003 Spain](https://www.google.com/maps/search/Plac%CC%A7a+de+Pau+Vila,+1+Barcelona,+08003+Spain?entry=gmail&source=g)
+      
 
-[help@labhouse.io](mailto:help@labhouse.io)
+      - Adequacy Decisions, as adopted by the **European Commission**, based on Article 45 of Regulation (EU) 2016/679 (GDPR) – for more information, and to access the full list of countries deemed adequate to date, please visit [How EU determines if a non-EU country has an adequate level of data protection](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions).   
+         
+      - Adequacy Decisions, as adopted by the **UK Secretary of State**, based on Article 45 of the UK GDPR and Section 17A of the Data Protection Act 2018 \- for more information, and to access the full list of countries deemed adequate to date, please visit [UK GDPR guidance and resources](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/).   
+         
+      - The EC’s Standard Contractual Clauses (“SCCs”) and the UK Information Commissioner’s Office’s International Data Transfer Addendum (“IDTA”), as applicable, supplemented by additional security measures as recommended by the European Data Protection Board. The EC’s and the UK’s Information Commissioner’s Office ("ICO”) have determined that the SCCs and IDTA may provide sufficient safeguards to protect personal data transferred outside the EEA and the UK. For more information, please visit [SCC for data transfers between EU and non-EU countries](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-%20%C2%A0%20%C2%A0%20%C2%A0%20%C2%A0contractual-clauses-scc_en) and [UK GDPR guidance and resources](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/). 
 
-We will be happy to answer your questions and address any issues to the best of our ability. Your privacy is important to us, and we welcome your feedback.
+      SUMMARY AI performs transfer impact assessments (“**TIA**”) and continually monitors the circumstances surrounding such transfers to ensure that these maintain, in practice, a level of protection that is essentially equivalent to the one guaranteed by the EEA and UK data protection laws.
 
----
+   6. **Information for individuals from the European Union, UK, Gibraltar and Switzerland: EU-US Data Privacy Framework**
 
-# **APPENDIX**
+      As part of our commitment to maintaining high data protection standards when transferring personal information between the US and European Economic Area (“**EEA”**)/UK/Gibraltar/Switzerland, we participate in the EU-US Data Privacy Framework (‘EU-US DPF’) and the UK Extension to the EU-US DPF, and the Swiss-US Data Privacy Framework (“**Swiss-US DPF**”).
 
-# **Summary AI Data Privacy Framework Principles**
 
-Effective September 1, 2024
+      SUMMARY AI and all our affiliates comply with the EU-US Data Privacy Framework (EU-US DPF) and the UK Extension to the EU-US DPF, and the Swiss-US Data Privacy Framework (Swiss-US DPF) as set forth by the US Department of Commerce.
 
-Summary AI has created this Data Privacy Framework Principles Notice (“Notice”) to describe our standards and procedures for handling Personal Information in accordance with the Data Privacy Framework (“DPF”) Principles.
 
-This Notice supplements our Policy. Unless specifically defined in this Notice, the terms in this Notice have the same meaning as in our Policy. In case of conflict between the Policy and this Notice, this Notice prevails. In case of conflict between this Notice and the Principles, the Principles will govern.
+      In compliance with the EU-US DPF and the UK Extension to the EU-US. DPF, and the Swiss-US DPF, SUMMARY AI commits to resolve complaints about your privacy and our collection or use of your personal information transferred to the United States pursuant to the EU/SWISS DPF Principles.  European Union, UK, Gibraltar and Swiss individuals with DPF inquiries or complaints should first contact SUMMARY AI Data Protection Officer dpo@labhouse.io. We will investigate and attempt to resolve any complaints or disputes regarding processing of personal information within 45 days of receiving your privacy complaint.
 
-‍**How we obtain Personal Information**
 
-We obtain and Process Personal Information from the European Union (“**EU**”), United Kingdom (“**UK**”) (and Gibraltar), or Switzerland in different capacities:
+      Accountability for Onward Transfers. We acknowledge our responsibility for the processing of personal information received and subsequently transferred to our third parties, agents, and service providers. SUMMARY AI remains liable under the DPF Principles if a third party, agent, or service provider processes personal information covered by this Notice in a manner inconsistent with the DPF Principles, except where SUMMARY AI can demonstrate that we are not responsible for the event giving rise to the damages.
 
-- As a data controller, we collect and Process EU, UK and Swiss Personal Information directly from individuals, either via our publicly available website https://www.summaryai.app/, or through our mobile applications, or in connection with our customer relationships.
-- Where we provide our Services in connection with an enterprise agreement, we may obtain and process EU, UK, and Swiss Personal Information on behalf of and at the instructions of our enterprise customers. In that context, such customers are the data controllers and we encourage you to read their privacy policies.
+   7. **Information for individuals in California (CCPA/CPRA)**
 
-Summary AI commits to subject to the EU-U.S. DPF Principles, the UK Extension to the EU-U.S. DPF, and the Swiss-U.S. DPF Principles (collectively, the “**DPF Principles**”), all Personal Information received from the EU, the UK (and Gibraltar), or Switzerland in reliance on the DPF Principles (which includes both types of activities).
+      If you reside in California, the following rights apply under the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA):
 
-**Data Privacy Framework Principles**
 
-**1. Notice.** Our Policy in combination with this Notice describes our privacy practices. When providing our Services as a Data Processor, our customers determine the categories of Personal Information we Process and the purposes of the processing. Accordingly, our customers are responsible for providing notice to individuals. Please see our customers’ privacy policies for more information.
+      - Right to Know the categories of personal information collected, the purpose of collection, and the categories of third parties with whom it is shared.  
+         
+      - Right to Request Deletion of personal information, subject to legal or operational retention obligations.  
+         
+      - Right to Opt-Out of the sale or sharing of personal information.  
+         
+         SUMMARY AI does not sell or share personal data for monetary value, but we provide this right for transparency.  
+         
+      - Right to Non-Discrimination for exercising any privacy rights.  
+         
+      You may exercise these rights by contacting dpo@labhouse.io and including “CCPA Request” in the subject line.  
+    
+   8. **Information for individuals in Canada (PIPEDA)**
 
-**2. Data Integrity and Purpose Limitation.** Any Personal Information we receive may be processed by Summary AI for the purposes indicated in our Policy or as otherwise notified to you. We will not process Personal Information in a way that is incompatible with these purposes unless subsequently authorized by you.
+      
+      If you reside in Canada, please note that SUMMARY AI complies with the Personal Information Protection and Electronic Documents Act (PIPEDA).
 
-We take reasonable steps to limit the collection and usage of Personal Information to that which is relevant for the purposes for which it was collected, and to ensure that such Personal Information is reliable, accurate, complete and current. Individuals are encouraged to keep their Personal Information with Summary AI up to date and may contact Summary AI as indicated below or in the Policy to request that their Personal Information be updated or corrected.
 
-We will adhere to the DPF Principles for as long as we retain the Personal Information collected under DPF Principles.
+      Canadian users have the right to access and correct personal data and to withdraw consent where processing is based on consent.
 
-When providing our Services as a data processor, we process and retain Personal Information as necessary to provide our Services as permitted in our agreements, or as required or permitted under applicable law.
 
-**3. Accountability for Onward Transfer of Personal Information. Summary AI** may transfer Personal Information as described in the Policy. When providing our Services as a data processor, we disclose Personal Information as provided in our agreement with customers.
+      Complaints may be submitted to the Office of the Privacy Commissioner of Canada (OPC) at [www.priv.gc.ca](http://www.priv.gc.ca).
 
-We remain responsible for the processing of Personal Information received under the DPF Principles and subsequently transferred to a third party acting as an agent if the agent Processes such Personal Information in a manner inconsistent with the DPF Principles, unless we prove that we are not responsible for the event giving rise to the damage.
 
-**4. Security. Summary AI** takes reasonable and appropriate precautions, taking into account the risks involved in the Processing and the nature of the Personal Information, to help protect Personal Information from loss, misuse and unauthorized access, disclosure, alteration and destruction.
+   9. **Information for individuals in Australia (APPs)**
 
-**5. Access and Choice.** If we intend to use your Personal Information for a purpose that is materially different from the purposes for which it was originally collected or subsequently authorized, or if we intend to disclose it to a third party acting as a Data Controller not previously identified, we will offer you the opportunity to opt out of such uses and/or disclosures where it involves non-sensitive information or opt in where sensitive information is involved.
+      
+      If you reside in Australia, SUMMARY AI ensures that personal data is processed in line with the Australian Privacy Principles (APPs) established under the Privacy Act 1988\.
 
-Where appropriate, you have the right to access to the Personal Information we maintain about you and to correct, amend or delete that information when it is inaccurate or has been processed in violation of the DPF Principles by sending a written request as indicated in “Contact Us” below. We will review your request in accordance with the DPF Principles, and may limit or deny access to Personal Information as permitted by the DPF Principles.
 
-When providing our Services as a Data Processor, we only Process and disclose the Personal Information as specified in our agreements. Our customers control how Personal Information is disclosed to us and Processed, and how it can be modified. Accordingly, if you want to request access, or to limit use or disclosure of your Personal Information, please contact the company to whom you submitted your Personal Information and that uses our Services. If you provide us with the name of the company to whom you provided your Personal Information and who is our customer, we will refer your request to that customer and support them in responding to your request.
+      These frameworks provide rights equivalent to those already described in this Policy (access, rectification, erasure, limitation, objection).
 
-**6. Recourse, Enforcement and Liability.** We conduct an annual self-assessment of our practices regarding Personal Information intended to verify that the assertions we make about our practices are true and that such practices have been implemented as represented.
+7. **B2B COMMERCIAL LEVEL**
 
-If you have any questions or concerns, we encourage you to first write to us as indicated below. We will investigate and attempt to resolve complaints and disputes regarding use and disclosure of Personal Information in accordance with the DPF Principles.
+   1. Our Platform, services and events are aimed solely at B2B commercial level. If you are a consumer or intend to use the platform for non-commercial purposes, please do not attempt to register for the services or events or send any personal information about yourself to us. If you believe we have mistakenly or unintentionally collected personal information without appropriate consent, please contact us at support@labhouse.io and we will take steps to delete their personal information from our systems.
 
-For residual complaints not fully or partially resolved by other means, you may be able to invoke binding arbitration as detailed in the DPF Principles available [here](https://www.dataprivacyframework.gov/s/article/How-to-Submit-a-Complaint-Relating-to-a-Participating-Organization-s-Compliance-with-the-DPF-Principles-dpf).
+8. **GIVE US YOUR FEEDBACK**
 
-**Changes to this Notice**
+   1. Our goal is to protect your privacy. To comment or help us improve, please contact us via email ([dpo@labhouse.io](mailto:dpo@labhouse.io)). You may also contact us via written letter at SUMMARY AI’s address (*Labhouse Mobile, SL., Plaça Pau Vila, 1, Ciutat Vella, 08003 Barcelona, Spain*). We may ask you to provide a copy of your proof of identity.
 
-This Notice may be amended consistent with the requirements of the DPF Principles. When we update this Notice, we will also revise the “Last updated” date at the top of this document. Any changes to this Notice will become effective when we post the revised version on our website.
+   2. If you consider that we are in breach of our obligations under data protection laws, you may lodge a complaint with the competent Data Protection Authority, which may be the supervisory authority in your country of residence, place of work or of an alleged infringement of data protection laws.
 
----
+9. **CHANGES TO THIS PRIVACY POLICY**
 
-**Labhouse Mobile S.L. (Summary AI)**
+   1. This privacy policy may be modified from time to time to comply with applicable laws or to conform to our current business practices. We will post any changes to this on our Platform and, where required by law, will notify you via your contact email. When notifying such changes to you, we will also explain what the likely impact of those changes on you will be, if any. We encourage you to revisit the Privacy Statement that is posted on our Platform from time to time to check for updates.
 
-Labhouse
+10. **ADDITIONAL INFORMATION WE WANT YOU TO KNOW:**
 
-[Plaça de Pau Vila, 1 Barcelona, 08003 Spain](https://www.google.com/maps/search/Plac%CC%A7a+de+Pau+Vila,+1+Barcelona,+08003+Spain?entry=gmail&source=g)
+    1. **Provision of Personal Information / Automated decision making.** Please note that the Personal Information we collect from you is necessary to provide the services and our Platform to you. Failure to provide such data may not enable us to provide our services to you or make our Platform accessible. We do not use automatic decision-making or profiling of individuals.
 
-[help@labhouse.io](mailto:help@labhouse.io)
+    
+
+    2. **Your Rights.** You have various rights under data privacy laws in your country. These may include (as relevant): 
+
+    
+
+         - Right to request access to the Personal Information we hold about you.  
+            
+         - Right to rectification including to require us to correct inaccurate Personal Information.  
+            
+         - Right to request restriction of processing concerning you or to object to processing of your Personal Information.  
+            
+         - Right to request the erasure of your Personal Information where it is no longer necessary for us to retain it.   
+            
+         - Right to data portability including to obtain Personal Information in a commonly used machine-readable format in certain circumstances such as where our processing of it is based on a consent.  
+            
+         - Right to object to automated decision-making including profiling (if any) that has a legal or significant effect on you as an individual.  
+            
+         - Right to withdraw your consent to any processing for which you have previously given that consent.  
+    
+      3. **Marketing Information.** With your consent, where relevant, we will keep your name, address and contact details (including telephone numbers and email addresses) in our databases and may from time to time use that information to make you aware of our related products and services as well as updates on developments in our industry sector generally which may be of interest to you. We may contact you in writing, by telephone or email for this. If at any time you decide that you do not want your contact details used for these purposes, you may object or revoke your consent for receiving marketing communications by following the instructions in the relevant marketing communication (e.g., clicking on the “Unsubscribe” button) or by contacting us (see “Give Us Your Feedback” above).
+
+
+      4. **Security Statement.** We take reasonable precautions to protect your information. In particular, we implemented appropriate technical and organizational measures designed to ensure a level of security appropriate to the risk, including as appropriate: (a) pseudonymization (such as where data is separated from direct identifiers so that linkage to an identity is not possible without additional information that is held separately) and encryption, (b) protecting the ongoing confidentiality, integrity, availability and resilience of systems and services used to process your Personal Information, (c) providing the ability to restore the availability and access to Personal Information in a timely manner in the event of a physical or technical incident; and (d) maintaining a process for regularly testing, assessing and evaluating the effectiveness of technical and organizational security measures. When you submit information to us through our Platform, your information is protected both online and offline. All data transferred to/from the SUMMARY AI internal network, from/to an external entity, is encrypted to industry standards. Please keep in mind that messages you send to us by Internet e-mail may not be secure. We maintain appropriate physical, electronic and procedural safeguards to ensure the security, integrity and privacy of your personal information within our company. Only those employees who may require your information to perform a specific job are granted access to your organization’s identifiable information. Furthermore, all employees are kept up-to-date on our security and privacy practices.
+
+
+      5. **Our Use of Cookies and Analytic Tools.** SUMMARY AI may use “cookies” or other tracking and tracing tools as further described in our Cookie Policy.
+
+
+         Depending on the country in which you are located, you may be asked to provide your consent for our use of Cookies (except for strictly necessary Cookies). In addition, you have the following choices concerning the use of Cookies.
+
+
+      6. **Third Party Websites.** Our Platform may contain links to third-party websites. If you follow these links, you will exit our Platform. This privacy policy does not apply to websites of third parties. SUMMARY AI cannot accept liability for the use of your Personal Information by these third parties. Your use of these websites is at your own risk. For more information on how these third parties treat your Personal Information, please check their privacy policy (if available).
+

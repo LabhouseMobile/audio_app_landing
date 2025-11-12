@@ -19,7 +19,7 @@ export default function DataProcessingPage() {
     <Container>
       <Header />
       <main className="mt-12">
-        <MarkdownReader filename="tmp/dpa.md" />
+        <MarkdownReader filename="dpa.md" />
       </main>
       <Footer />
     </Container>

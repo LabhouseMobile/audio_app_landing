@@ -1,7 +1,7 @@
 import { Container } from "../components/container";
 import Footer from "../components/footer";
 import { Header } from "../components/header";
-import PrivacySection from "../components/privacy";
+import MarkdownReader from "../components/markdown-reader";
 import { getSEOTags } from "../lib/seo";
 
 export const metadata = getSEOTags({
@@ -16,7 +16,7 @@ export default function PrivacyPage() {
     <Container>
       <Header />
       <main className="mt-12">
-        <PrivacySection />
+        <MarkdownReader filename="privacy.md" />
       </main>
       <Footer />
     </Container>
