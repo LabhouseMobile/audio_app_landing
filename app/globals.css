@@ -23,11 +23,6 @@ html {
   font-weight: normal; /* Optional: make it non-bold */
   font-style: italic; /* Optional: make it italic */
 }
- .decimal-list > ol > li::before {
-  content: counter(level1) "." !important;
-  font-weight: normal; /* Optional: make it non-bold */
-  font-style: italic; /* Optional: make it italic */
-}
 
 
 
@@ -101,3 +96,27 @@ html {
     width: 2em;
     text-align: right;
   } 
+
+  @media (max-width: 600px) {
+
+    /* Reduce the main padding for all list levels.
+      We'll use 1.8em as the new indent.
+    */
+    .legal-document ol {
+      padding-left: 1.2em;
+    }
+  
+    /* Adjust the number's position to fit the new padding.
+      We'll make the number's box 1.3em wide, leaving the same 0.5em gap
+      (1.8em padding - 1.3em width = 0.5em gap).
+    */
+    .legal-document ol > li::before,
+    .legal-document ol > li > ol > li::before,
+    .legal-document ol > li > ol > li > ol > li::before,
+    .legal-document ol > li > ol > li > ol > li > ol > li::before { /* Added Level 4 */
+      
+      left: -2em;   /* This MUST match the new padding-left */
+      width: 1.3em;   /* This is the new width for the number */
+    }
+  
+  }

@@ -20,13 +20,13 @@ export default function MarkdownDisplay({
           components={{
             h1: ({ ...props }) => (
               <h1
-                className="text-3xl font-bold mt-28 mb-8 text-center"
+                className="text-3xl font-bold mt-12 md:mt-28 mb-8 text-center"
                 {...props}
               />
             ),
             h2: ({ ...props }) => (
               <h2
-                className="text-2xl font-bold mt-24 mb-3 text-center"
+                className="text-2xl font-bold mt-12 md:mt-24 mb-3 text-center"
                 {...props}
               />
             ),
@@ -41,10 +41,10 @@ export default function MarkdownDisplay({
               />
             ),
             ul: ({ ...props }) => (
-              <ul className="list-disc pl-6 my-4" {...props} />
+              <ul className="list-disc pl-0 md:pl-6 my-4" {...props} />
             ),
             ol: ({ ...props }) => (
-              <ol className="list-decimal pl-6 my-4" {...props} />
+              <ol className="list-decimal pl-0 md:pl-6 my-4" {...props} />
             ),
             li: ({ ...props }) => <li className="mb-1" {...props} />,
             blockquote: ({ ...props }) => (
