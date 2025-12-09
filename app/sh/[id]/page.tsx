@@ -8,6 +8,7 @@ import {
   Transcription,
 } from "@/app/lib/firebase/recording/@types";
 import { transcriptService } from "@/app/lib/firebase/recording/transcript_service";
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import Tabs from "./Tabs";
 
@@ -34,6 +35,23 @@ function formatDateWithDuration(
   return `${dayOfWeek}, ${month} ${day}, ${time} ${
     isEmptyDuration ? "" : `(${durationText})`
   }`;
+}
+
+function getButtonText() {
+  const headersList = headers();
+  const userAgent = headersList.get("user-agent") || "";
+  console.log("[DEVICE] User-Agent:", userAgent);
+
+  const isAndroid = /android/i.test(userAgent);
+  const isIOS = /iphone|ipad|ipod/i.test(userAgent);
+
+  if (isAndroid) {
+    return  "Download for Android";
+  } else if (isIOS) {
+    return "Download for iPhone";
+  } else {
+    return "Download App";
+  }
 }
 
 type Props = {
@@ -184,6 +202,8 @@ export default async function ViewPage({ params }: Props) {
       pdfFile,
     } = data;
 
+    const buttonText = getButtonText();
+
     const endTime = Date.now();
     console.log(`[PERF] ViewPage completed in ${endTime - startTime}ms`);
 
@@ -191,7 +211,7 @@ export default async function ViewPage({ params }: Props) {
       <>
         <HeaderBanner
           includeCTA={true}
-          buttonText="Download for iPhone"
+          buttonText={buttonText}
           buttonUrl="https://link.summaryai.app/iatfqj"
         />
         <main className="max-w-3xl mx-auto py-10 px-4 overflow-x-hidden">
