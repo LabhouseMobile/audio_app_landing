@@ -3,7 +3,10 @@ import { Transcription } from "./@types";
 import { batchingService } from "./batching_service";
 
 class TranscriptService {
-  async get(userId: string, recordingId: string): Promise<Transcription> {
+  async get(
+    userId: string,
+    recordingId: string
+  ): Promise<Transcription | undefined> {
     const collection = this.getUserRecordingDocument(
       userId,
       recordingId
@@ -19,7 +22,7 @@ class TranscriptService {
 
       // If there are still no transcripts available at all
       if (querySnapshot.empty) {
-        throw new Error("No transcripts found.");
+        return undefined;
       }
     }
 

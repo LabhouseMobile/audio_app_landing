@@ -1,6 +1,10 @@
 "use client";
 
-import { PdfFile, Summary, Transcription } from "@/app/lib/firebase/recording/@types";
+import {
+  PdfFile,
+  Summary,
+  Transcription,
+} from "@/app/lib/firebase/recording/@types";
 import clsx from "clsx";
 import { useState } from "react";
 import PdfViewer from "./PdfViewer";
@@ -11,7 +15,7 @@ type Tab = "summary" | "transcript" | "pdf";
 
 type Props = {
   summary: Summary;
-  transcript: Transcription;
+  transcript?: Transcription;
   recordingId: string;
   userId: string;
   pdfFile?: PdfFile;
@@ -33,7 +37,9 @@ export default function Tabs({
     availableTabs.push("transcript");
   }
 
-  const currentTab = availableTabs.includes(activeTab) ? activeTab : availableTabs[0];
+  const currentTab = availableTabs.includes(activeTab)
+    ? activeTab
+    : availableTabs[0];
 
   const renderTabContent = () => {
     switch (currentTab) {
@@ -43,11 +49,13 @@ export default function Tabs({
             summary={summary}
             recordingId={recordingId}
             userId={userId}
-            speakers={transcript.speakers}
+            speakers={transcript?.speakers || {}}
           />
         );
       case "transcript":
-        return <TranscriptViewer transcription={transcript} />;
+        return transcript ? (
+          <TranscriptViewer transcription={transcript} />
+        ) : null;
       case "pdf":
         return pdfFile ? <PdfViewer pdfFile={pdfFile} /> : null;
       default:

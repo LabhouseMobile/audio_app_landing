@@ -78,7 +78,7 @@ type RecordingData = {
   audioFile?: AudioFile;
   youtubeFile?: YoutubeFile;
   pdfFile?: PdfFile;
-  transcript: Transcription;
+  transcript?: Transcription;
 };
 
 export async function generateMetadata({ params }: Props) {
