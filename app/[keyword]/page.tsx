@@ -14,8 +14,8 @@ export const generateMetadata = ({
   params: { keyword: string };
 }) => {
   return getSEOTags({
-    title: `Quillminds for ${params.keyword}`,
-    description: `Quillminds helps with ${params.keyword}. Create lesson plans, quizzes, and more.`,
+    title: `Summary AI for ${params.keyword}`,
+    description: `Summary AI helps with ${params.keyword}.`,
     canonicalUrlRelative: `/${params.keyword}`,
   });
 };
