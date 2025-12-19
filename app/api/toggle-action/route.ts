@@ -1,14 +1,37 @@
 import admin from "@/app/lib/firebase/firebase-admin";
-import { ActionItem } from "@/app/lib/firebase/recording/@types";
+import { ActionItem, PublicLink } from "@/app/lib/firebase/recording/@types";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const { recordingId, actionItemId, checked, userId } = body;
+    const { shareId, actionItemId, checked } = body;
+
+    if (!shareId || !actionItemId || typeof checked !== "boolean") {
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
 
     const db = admin.firestore();
+
+    // Look up userId and recordingId from the public link
+    const publicLinkDoc = await db
+      .collection("public_links")
+      .doc(shareId)
+      .get();
+    const publicLinkData = publicLinkDoc.data() as PublicLink | undefined;
+
+    if (!publicLinkData) {
+      return NextResponse.json(
+        { error: "Invalid share link" },
+        { status: 404 }
+      );
+    }
+
+    const { userId, recordingId } = publicLinkData;
 
     const docRef = db
       .collection("users")

@@ -6,15 +6,13 @@ import ActionItemView from "./ActionItem";
 
 interface SummaryViewerProps {
   summary: Summary;
-  recordingId: string;
-  userId: string;
+  shareId: string;
   speakers: Record<string, string>;
 }
 
 export default function SummaryViewer({
   summary,
-  recordingId,
-  userId,
+  shareId,
   speakers,
 }: SummaryViewerProps) {
   const actionItems = summary.actionItems ?? [];
@@ -25,8 +23,7 @@ export default function SummaryViewer({
           <ActionItemView
             key={item.id}
             item={item}
-            recordingId={recordingId}
-            userId={userId}
+            shareId={shareId}
             speakers={speakers}
           />
         ))}

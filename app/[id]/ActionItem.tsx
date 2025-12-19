@@ -7,20 +7,18 @@ import useSWR, { mutate } from "swr";
 
 interface ActionItemProps {
   item: ActionItem;
-  recordingId: string;
-  userId: string;
+  shareId: string;
   speakers: Record<string, string>;
 }
 
 export default function ActionItemView({
   item,
-  recordingId,
-  userId,
+  shareId,
   speakers,
 }: ActionItemProps) {
   const [isPending] = useTransition();
   const { data: isDone = item.isDone } = useSWR(
-    `recording-${recordingId}-action-${item.id}`,
+    `share-${shareId}-action-${item.id}`,
     null,
     { fallbackData: item.isDone }
   );
@@ -28,13 +26,12 @@ export default function ActionItemView({
   const toggle = async () => {
     const newValue = !isDone;
 
-    mutate(`recording-${recordingId}-action-${item.id}`, newValue, false); // optimistic
+    mutate(`share-${shareId}-action-${item.id}`, newValue, false); // optimistic
 
     const requestBody = {
-      recordingId,
+      shareId,
       actionItemId: item.id,
       checked: newValue,
-      userId,
     };
 
     const response = await fetch(`/api/toggle-action`, {
@@ -50,7 +47,7 @@ export default function ActionItemView({
       console.error("API Error:", errorData);
     }
 
-    mutate(`recording-${recordingId}-action-${item.id}`);
+    mutate(`share-${shareId}-action-${item.id}`);
   };
 
   return (

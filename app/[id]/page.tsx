@@ -186,16 +186,7 @@ export default async function ViewPage({ params }: Props) {
       });
     }
 
-    const {
-      summary,
-      title,
-      emoji,
-      createdAt,
-      transcript,
-      userId,
-      recordingId,
-      pdfFile,
-    } = data;
+    const { summary, title, emoji, createdAt, transcript, pdfFile } = data;
 
     const buttonText = getButtonText();
 
@@ -227,8 +218,7 @@ export default async function ViewPage({ params }: Props) {
           <Tabs
             summary={summary}
             transcript={transcript}
-            recordingId={recordingId}
-            userId={userId}
+            shareId={shareId}
             pdfFile={pdfFile}
           />
         </main>

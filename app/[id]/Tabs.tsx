@@ -16,18 +16,11 @@ type Tab = "summary" | "transcript" | "pdf";
 type Props = {
   summary: Summary;
   transcript?: Transcription;
-  recordingId: string;
-  userId: string;
+  shareId: string;
   pdfFile?: PdfFile;
 };
 
-export default function Tabs({
-  summary,
-  transcript,
-  recordingId,
-  userId,
-  pdfFile,
-}: Props) {
+export default function Tabs({ summary, transcript, shareId, pdfFile }: Props) {
   const [activeTab, setActiveTab] = useState<Tab>("summary");
 
   const availableTabs: Tab[] = ["summary"];
@@ -47,8 +40,7 @@ export default function Tabs({
         return (
           <SummaryViewer
             summary={summary}
-            recordingId={recordingId}
-            userId={userId}
+            shareId={shareId}
             speakers={transcript?.speakers || {}}
           />
         );
