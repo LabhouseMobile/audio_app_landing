@@ -4,18 +4,19 @@ import { NextResponse } from "next/server";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Don't redirect /sh/* routes
-  if (pathname.startsWith("/sh")) {
-    return NextResponse.next();
+  // Redirect /sh/<id> to /<id> for backwards compatibility
+  if (pathname.startsWith("/sh/")) {
+    const id = pathname.replace("/sh/", "");
+    return NextResponse.redirect(new URL(`/${id}`, request.url), {
+      status: 301,
+    });
   }
 
-  // Redirect all other routes to summaryai.app
-  return NextResponse.redirect(`https://summaryai.app${pathname}`, {
-    status: 301,
-  });
+  // Allow all other routes to pass through (they'll be handled by [id] dynamic route)
+  return NextResponse.next();
 }
 
 export const config = {
-  // Match all routes except static files and Next.js internals
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\..*).*)"],
+  // Match /sh/* routes for redirect, all other routes pass through
+  matcher: ["/sh/:path*"],
 };

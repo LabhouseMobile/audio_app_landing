@@ -1,5 +1,4 @@
 import { Button } from "./components/button";
-import Footer from "./components/footer";
 import HeaderBanner from "./components/header-banner";
 
 export default function NotFound() {
@@ -25,8 +24,6 @@ export default function NotFound() {
           </Button>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

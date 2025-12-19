@@ -46,7 +46,7 @@ function getButtonText() {
   const isIOS = /iphone|ipad|ipod/i.test(userAgent);
 
   if (isAndroid) {
-    return  "Download for Android";
+    return "Download for Android";
   } else if (isIOS) {
     return "Download for iPhone";
   } else {
@@ -119,7 +119,7 @@ export async function generateMetadata({ params }: Props) {
     },
     metadataBase: new URL("https://summaryai.app"),
     alternates: {
-      canonical: `/sh/${shareId}`,
+      canonical: `/${shareId}`,
     },
     openGraph: {
       title: title,

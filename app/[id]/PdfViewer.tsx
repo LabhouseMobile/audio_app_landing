@@ -55,4 +55,4 @@ export default function PdfViewer({ pdfFile }: Props) {
       />
     </div>
   );
-} 
+}
