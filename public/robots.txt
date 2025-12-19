@@ -1,0 +1,13 @@
+# robots.txt for Summary AI
+# Disallow crawling of the entire site
+
+User-agent: *
+Disallow: /
+
+# Allow access to static assets
+Allow: /logo-512.png
+Allow: /logo-1024.png
+Allow: /.well-known/
+
+# Sitemap (if you add one in the future)
+# Sitemap: https://summaryai.app/sitemap.xml

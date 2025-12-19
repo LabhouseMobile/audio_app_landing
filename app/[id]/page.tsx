@@ -99,17 +99,15 @@ export async function generateMetadata({ params }: Props) {
 
   const metadata = {
     title: title,
-    keywords: [
-      title,
-      "audio recording",
-      "transcript",
-      "meeting notes",
-      "voice memo",
-      "speech to text",
-      "summary ai",
-      "summary ai note taker",
-      "summary ai note taker app",
-    ],
+    // Prevent search engines from indexing user-generated content
+    robots: {
+      index: false,
+      follow: false,
+      googleBot: {
+        index: false,
+        follow: false,
+      },
+    },
     creator: "Summary AI",
     publisher: "Summary AI",
     formatDetection: {
@@ -118,16 +116,13 @@ export async function generateMetadata({ params }: Props) {
       telephone: false,
     },
     metadataBase: new URL("https://summaryai.app"),
-    alternates: {
-      canonical: `/${shareId}`,
-    },
     openGraph: {
       title: title,
       type: "article",
       publishedTime: createdAt.toDate().toLocaleDateString(),
       images: [
         {
-          url: "/logo-512.png", // Your app's logo or a default image
+          url: "/logo-512.png",
           width: 1200,
           height: 630,
           alt: "Summary AI",
@@ -138,9 +133,9 @@ export async function generateMetadata({ params }: Props) {
     twitter: {
       card: "summary_large_image",
       title: title,
-      images: ["/logo.png"], // Your app's logo or a default image
-      creator: "@Summary AI", // Replace with your Twitter handle
-      site: "@Summary AI Note Taker", // Replace with your Twitter handle
+      images: ["/logo.png"],
+      creator: "@Summary AI",
+      site: "@Summary AI Note Taker",
     },
   };
 
