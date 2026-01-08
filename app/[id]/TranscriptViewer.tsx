@@ -67,18 +67,15 @@ const getSegmentsBySentences = (
   );
 
   for (const seg of nonEmptySegments) {
-    // Skip empty segments
-    if (seg.text.trim().length === 0) continue;
-
     const processedSeg: TranscriptionSegment<number> = removeSpeakers
       ? { ...seg, speaker: "" }
       : seg;
 
     // Check for long segments and split if needed
-    const wordCount = processedSeg.text.split(" ").length;
+    const wordCount = processedSeg.text.trim().split(/\s+/).filter(Boolean).length;
     if (wordCount > maxWordsPerSegment) {
       // Split segment into smaller chunks by words
-      const words = processedSeg.text.split(" ");
+      const words = processedSeg.text.trim().split(/\s+/).filter(Boolean);
       const splitSegments: TranscriptionSegment<number>[] = words.map(
         (word) => ({
           ...processedSeg,
@@ -149,9 +146,6 @@ const getSegmentsBySpeakersAndSentences = (
   );
 
   for (const seg of nonEmptySegments) {
-    // Skip empty segments
-    if (seg.text.trim().length === 0) continue;
-
     if (currentSpeaker.length === 0) {
       currentSpeaker.push({ ...seg, text: seg.text.trim() });
       continue;
