@@ -10,11 +10,11 @@ type Props = {
 export default function PdfViewer({ pdfFile }: Props) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [useGoogleViewer, setUseGoogleViewer] = useState(false);
+  const [useDirectViewer, setUseDirectViewer] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
 
-  // Generate Google PDF viewer URL as fallback
+  // Generate Google PDF viewer URL as primary viewer
   const googleViewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfFile.pdfPath)}&embedded=true`;
 
   const clearLoadingTimeout = () => {
@@ -31,17 +31,25 @@ export default function PdfViewer({ pdfFile }: Props) {
   };
 
   const handleError = () => {
-    console.error("[PdfViewer] Failed to load PDF:", pdfFile.pdfPath);
-    clearLoadingTimeout();
-    setIsLoading(false);
-    setHasError(true);
+    if (!useDirectViewer) {
+      // If Google viewer failed, try direct PDF viewer as fallback
+      console.log("[PdfViewer] Google viewer failed, trying direct PDF viewer as fallback");
+      setUseDirectViewer(true);
+      setIsLoading(true);
+    } else {
+      // Direct viewer also failed, show error
+      console.error("[PdfViewer] Failed to load PDF:", pdfFile.pdfPath);
+      clearLoadingTimeout();
+      setIsLoading(false);
+      setHasError(true);
+    }
   };
 
   // Effect to reset when PDF path changes
   useEffect(() => {
     setIsLoading(true);
     setHasError(false);
-    setUseGoogleViewer(false);
+    setUseDirectViewer(false);
   }, [pdfFile.pdfPath]);
 
   // Effect to handle timeout and fallback
@@ -49,7 +57,7 @@ export default function PdfViewer({ pdfFile }: Props) {
     if (hasError) return;
 
     timeoutRef.current = setTimeout(() => {
-      if (!useGoogleViewer && iframeRef.current) {
+      if (!useDirectViewer && iframeRef.current) {
         try {
           const iframe = iframeRef.current;
           if (iframe.contentDocument) {
@@ -57,25 +65,20 @@ export default function PdfViewer({ pdfFile }: Props) {
             const errorText = body?.textContent?.toLowerCase() || "";
             const bodyHTML = body?.innerHTML?.toLowerCase() || "";
             
-          
-            if (errorText.includes("error") || errorText.includes("forbidden") || errorText.includes("access denied")) {
-              console.error("[PdfViewer] Error detected in iframe:", body?.textContent);
-              setHasError(true);
-              return;
-            }
-            
-            // If the PDF didn't load, try the Google viewer as fallback
-            if (!bodyHTML.includes("pdf") && !body?.querySelector("embed") && !body?.querySelector("object")) {
-              console.log("[PdfViewer] Trying Google viewer as fallback");
-              setUseGoogleViewer(true);
-              setIsLoading(false);
+            // If Google viewer failed, try direct PDF viewer as fallback
+            if (errorText.includes("error") || errorText.includes("forbidden") || errorText.includes("access denied") || 
+                (!bodyHTML.includes("pdf") && !body?.querySelector("embed") && !body?.querySelector("object"))) {
+              console.log("[PdfViewer] Google viewer failed, trying direct PDF viewer as fallback");
+              setUseDirectViewer(true);
+              setIsLoading(true);
               return;
             }
           }
         } catch {
-          // If CORS is blocked or other error occurs, try the Google viewer as fallback
-          setUseGoogleViewer(true);
-          setIsLoading(false);
+          // If CORS is blocked or other error occurs, try direct PDF viewer as fallback
+          console.log("[PdfViewer] Error accessing iframe, trying direct PDF viewer as fallback");
+          setUseDirectViewer(true);
+          setIsLoading(true);
           return;
         }
       }
@@ -89,7 +92,7 @@ export default function PdfViewer({ pdfFile }: Props) {
         clearTimeout(timeoutRef.current);
       }
     };
-  }, [pdfFile.pdfPath, useGoogleViewer, hasError]);
+  }, [pdfFile.pdfPath, useDirectViewer, hasError]);
 
   if (hasError) {
     return (
@@ -118,7 +121,7 @@ export default function PdfViewer({ pdfFile }: Props) {
       )}
       <iframe
         ref={iframeRef}
-        src={useGoogleViewer ? googleViewerUrl : pdfFile.pdfPath}
+        src={useDirectViewer ? pdfFile.pdfPath : googleViewerUrl}
         className="w-full h-full border-0"
         title="PDF Document"
         onLoad={handleLoad}
