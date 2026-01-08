@@ -41,6 +41,43 @@ const formatTime = (seconds: number): string => {
     .padStart(2, "0")}`;
 };
 
+// Detect if a text segment ends with sentence-ending punctuation
+const isSentenceEnd = (text: string): boolean => {
+  const trimmedText = text.trim();
+  if (!trimmedText) return false;
+
+  const lowerTrimmed = trimmedText.toLowerCase();
+  // Matches one or more sentence-like punctuation marks at the end, optionally
+  // followed by closing quotes or brackets, e.g.: "word.", "word...", "word?!", etc
+  const looksLikeSentencePunctuation = /[.?!…]+["')\]]*$/.test(trimmedText);
+
+  if (!looksLikeSentencePunctuation) {
+    return false;
+  }
+
+  // Check for common abbreviations that shouldn't be treated as sentence endings
+  const commonAbbreviations = [
+    "mr.",
+    "mrs.",
+    "ms.",
+    "dr.",
+    "prof.",
+    "sr.",
+    "jr.",
+    "st.",
+    "vs.",
+    "etc.",
+    "e.g.",
+    "i.e.",
+  ];
+
+  const isAbbreviation = commonAbbreviations.some((abbr) =>
+    lowerTrimmed.endsWith(abbr)
+  );
+
+  return !isAbbreviation;
+};
+
 // Group segments by sentences
 const getSegmentsBySentences = (
   segments: TranscriptionSegment<number>[],
@@ -61,10 +98,13 @@ const getSegmentsBySentences = (
   let currentNumOfSentences = numOfSentences;
   let currentSegment: TranscriptionSegment<number>[] = [];
 
-  // Filter out empty segments
-  const nonEmptySegments = segments.filter(
-    (segment) => segment.text.trim().length > 0
-  );
+  // Filter out empty segments and trim text
+  const nonEmptySegments = segments
+    .map((segment) => ({
+      ...segment,
+      text: segment.text.trim(),
+    }))
+    .filter((segment) => segment.text.length > 0);
 
   for (const seg of nonEmptySegments) {
     const processedSeg: TranscriptionSegment<number> = removeSpeakers
@@ -72,14 +112,14 @@ const getSegmentsBySentences = (
       : seg;
 
     // Check for long segments and split if needed
-    const wordCount = processedSeg.text.trim().split(/\s+/).filter(Boolean).length;
+    const words = processedSeg.text.split(/\s+/).filter(Boolean);
+    const wordCount = words.length;
     if (wordCount > maxWordsPerSegment) {
       // Split segment into smaller chunks by words
-      const words = processedSeg.text.trim().split(/\s+/).filter(Boolean);
       const splitSegments: TranscriptionSegment<number>[] = words.map(
         (word) => ({
           ...processedSeg,
-          text: word.trim(),
+          text: word,
         })
       );
 
@@ -97,22 +137,14 @@ const getSegmentsBySentences = (
 
     // Start a new group if current is empty
     if (currentSegment.length === 0) {
-      currentSegment.push({
-        ...processedSeg,
-        text: processedSeg.text.trim(),
-      });
+      currentSegment.push(processedSeg);
       continue;
     }
 
     currentSegment.push(processedSeg);
 
     // Check for sentence-ending punctuation
-    const trimmedText = processedSeg.text.trim();
-    if (
-      trimmedText.endsWith(".") ||
-      trimmedText.endsWith("?") ||
-      trimmedText.endsWith("!")
-    ) {
+    if (isSentenceEnd(processedSeg.text)) {
       currentNumOfSentences--;
     }
 
@@ -141,13 +173,17 @@ const getSegmentsBySpeakersAndSentences = (
 ): TranscriptionSegment<number>[][] => {
   const result: TranscriptionSegment<number>[][] = [];
   let currentSpeaker: TranscriptionSegment<number>[] = [];
-  const nonEmptySegments = segments.filter(
-    (segment) => segment.text.trim().length > 0
-  );
+  // Filter out empty segments and trim text
+  const nonEmptySegments = segments
+    .map((segment) => ({
+      ...segment,
+      text: segment.text.trim(),
+    }))
+    .filter((segment) => segment.text.length > 0);
 
   for (const seg of nonEmptySegments) {
     if (currentSpeaker.length === 0) {
-      currentSpeaker.push({ ...seg, text: seg.text.trim() });
+      currentSpeaker.push(seg);
       continue;
     } else if (currentSpeaker[0].speaker === seg.speaker) {
       currentSpeaker.push(seg);
@@ -156,7 +192,7 @@ const getSegmentsBySpeakersAndSentences = (
 
     // Different speaker: apply sentence segmentation to current speaker group
     result.push(...getSegmentsBySentences(currentSpeaker, 2));
-    currentSpeaker = [{ ...seg, text: seg.text.trim() }];
+    currentSpeaker = [seg];
   }
 
   // Apply sentence segmentation to remaining speaker segments
