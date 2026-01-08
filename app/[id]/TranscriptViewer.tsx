@@ -95,7 +95,7 @@ const getSegmentsBySentences = (
   } = options;
 
   const result: TranscriptionSegment<number>[][] = [];
-  let currentNumOfSentences = numOfSentences;
+  let remainingSentencesInGroup = numOfSentences;
   let currentSegment: TranscriptionSegment<number>[] = [];
 
   // Filter out empty segments and trim text
@@ -145,17 +145,17 @@ const getSegmentsBySentences = (
 
     // Check for sentence-ending punctuation
     if (isSentenceEnd(processedSeg.text)) {
-      currentNumOfSentences--;
+      remainingSentencesInGroup--;
     }
 
     // Finalize group when sentence or fallback limit is met
     if (
-      currentNumOfSentences <= 0 ||
+      remainingSentencesInGroup <= 0 ||
       currentSegment.length >= maxSegmentsPerGroup
     ) {
       result.push(currentSegment);
       currentSegment = [];
-      currentNumOfSentences = numOfSentences;
+      remainingSentencesInGroup = numOfSentences;
     }
   }
 
