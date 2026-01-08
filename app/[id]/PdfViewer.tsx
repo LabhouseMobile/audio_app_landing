@@ -3,6 +3,8 @@
 import { PdfFile } from "@/app/lib/firebase/recording/@types";
 import { useEffect, useRef, useState } from "react";
 
+const GOOGLE_VIEWER_TIMEOUT_MS = 8000;
+
 type Props = {
   pdfFile: PdfFile;
 };
@@ -22,6 +24,26 @@ export default function PdfViewer({ pdfFile }: Props) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+  };
+
+  const isGoogleViewerFailed = (
+    errorText: string,
+    bodyHTML: string,
+    body: HTMLElement | null
+  ): boolean => {
+    // Check for explicit error messages
+    const hasErrorText =
+      errorText.includes("error") ||
+      errorText.includes("forbidden") ||
+      errorText.includes("access denied");
+
+    // Check if PDF content is missing (no PDF text, embed, or object elements)
+    const hasNoPdfContent =
+      !bodyHTML.includes("pdf") &&
+      !body?.querySelector("embed") &&
+      !body?.querySelector("object");
+
+    return hasErrorText || hasNoPdfContent;
   };
 
   const handleLoad = () => {
@@ -56,6 +78,9 @@ export default function PdfViewer({ pdfFile }: Props) {
   useEffect(() => {
     if (hasError) return;
 
+    // Clear any existing timeout before setting a new one
+    clearLoadingTimeout();
+
     timeoutRef.current = setTimeout(() => {
       if (!useDirectViewer && iframeRef.current) {
         try {
@@ -66,8 +91,7 @@ export default function PdfViewer({ pdfFile }: Props) {
             const bodyHTML = body?.innerHTML?.toLowerCase() || "";
             
             // If Google viewer failed, try direct PDF viewer as fallback
-            if (errorText.includes("error") || errorText.includes("forbidden") || errorText.includes("access denied") || 
-                (!bodyHTML.includes("pdf") && !body?.querySelector("embed") && !body?.querySelector("object"))) {
+            if (isGoogleViewerFailed(errorText, bodyHTML, body)) {
               console.log("[PdfViewer] Google viewer failed, trying direct PDF viewer as fallback");
               setUseDirectViewer(true);
               setIsLoading(true);
@@ -84,13 +108,12 @@ export default function PdfViewer({ pdfFile }: Props) {
       }
 
       setIsLoading(false);
+      setHasError(true);
       timeoutRef.current = null;
-    }, 8000);
+    }, GOOGLE_VIEWER_TIMEOUT_MS);
 
     return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      clearLoadingTimeout();
     };
   }, [pdfFile.pdfPath, useDirectViewer, hasError]);
 
