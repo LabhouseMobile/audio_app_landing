@@ -68,14 +68,14 @@ export default function PdfViewer({ pdfFile }: Props) {
             if (!bodyHTML.includes("pdf") && !body?.querySelector("embed") && !body?.querySelector("object")) {
               console.log("[PdfViewer] Trying Google viewer as fallback");
               setUseGoogleViewer(true);
-              setIsLoading(true);
+              setIsLoading(false);
               return;
             }
           }
         } catch {
           // If CORS is blocked or other error occurs, try the Google viewer as fallback
           setUseGoogleViewer(true);
-          setIsLoading(true);
+          setIsLoading(false);
           return;
         }
       }
