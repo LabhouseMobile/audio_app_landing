@@ -41,48 +41,172 @@ const formatTime = (seconds: number): string => {
     .padStart(2, "0")}`;
 };
 
-// Group consecutive segments by speaker
-const groupConsecutiveSegmentsBySpeaker = (
-  segments: TranscriptionSegment<number>[]
-): Array<{ speakerId: string; segments: TranscriptionSegment<number>[] }> => {
-  const groups: Array<{
-    speakerId: string;
-    segments: TranscriptionSegment<number>[];
-  }> = [];
+// Detect if a text segment ends with sentence-ending punctuation
+const isSentenceEnd = (text: string): boolean => {
+  const trimmedText = text.trim();
+  if (!trimmedText) return false;
 
-  if (segments.length === 0) return groups;
+  const lowerTrimmed = trimmedText.toLowerCase();
+  // Matches one or more sentence-like punctuation marks at the end, optionally
+  // followed by closing quotes or brackets, e.g.: "word.", "word...", "word?!", etc
+  const looksLikeSentencePunctuation = /[.?!…]+["')\]]*$/.test(trimmedText);
 
-  let currentGroup = {
-    speakerId: segments[0].speaker,
-    segments: [segments[0]],
-  };
+  if (!looksLikeSentencePunctuation) {
+    return false;
+  }
 
-  for (let i = 1; i < segments.length; i++) {
-    const segment = segments[i];
+  // Check for common abbreviations that shouldn't be treated as sentence endings
+  const commonAbbreviations = [
+    "mr.",
+    "mrs.",
+    "ms.",
+    "dr.",
+    "prof.",
+    "sr.",
+    "jr.",
+    "st.",
+    "vs.",
+    "etc.",
+    "e.g.",
+    "i.e.",
+  ];
 
-    if (segment.speaker === currentGroup.speakerId) {
-      // Same speaker, add to current group
-      currentGroup.segments.push(segment);
-    } else {
-      // Different speaker, save current group and start new one
-      groups.push(currentGroup);
-      currentGroup = {
-        speakerId: segment.speaker,
-        segments: [segment],
-      };
+  const isAbbreviation = commonAbbreviations.some((abbr) =>
+    lowerTrimmed.endsWith(abbr)
+  );
+
+  return !isAbbreviation;
+};
+
+// Group segments by sentences
+const getSegmentsBySentences = (
+  segments: TranscriptionSegment<number>[],
+  numOfSentences: number = 1,
+  options: {
+    removeSpeakers?: boolean;
+    maxSegmentsPerGroup?: number;
+    maxWordsPerSegment?: number;
+  } = {}
+): TranscriptionSegment<number>[][] => {
+  const {
+    removeSpeakers = false,
+    maxSegmentsPerGroup = 60,
+    maxWordsPerSegment = 50,
+  } = options;
+
+  const result: TranscriptionSegment<number>[][] = [];
+  let remainingSentencesInGroup = numOfSentences;
+  let currentSegment: TranscriptionSegment<number>[] = [];
+
+  // Filter out empty segments and trim text
+  const nonEmptySegments = segments
+    .map((segment) => ({
+      ...segment,
+      text: segment.text.trim(),
+    }))
+    .filter((segment) => segment.text.length > 0);
+
+  for (const seg of nonEmptySegments) {
+    const processedSeg: TranscriptionSegment<number> = removeSpeakers
+      ? { ...seg, speaker: "" }
+      : seg;
+
+    // Check for long segments and split if needed
+    const words = processedSeg.text.split(/\s+/).filter(Boolean);
+    const wordCount = words.length;
+    if (wordCount > maxWordsPerSegment) {
+      // Split segment into smaller chunks by words
+      const splitSegments: TranscriptionSegment<number>[] = words.map(
+        (word) => ({
+          ...processedSeg,
+          text: word,
+        })
+      );
+
+      // Recurse with the split segments
+      const recursiveResult = getSegmentsBySentences(
+        splitSegments,
+        1,
+        options
+      );
+
+      // Add recursive results to final result
+      result.push(...recursiveResult);
+      continue;
+    }
+
+    // Start a new group if current is empty
+    if (currentSegment.length === 0) {
+      currentSegment.push(processedSeg);
+      continue;
+    }
+
+    currentSegment.push(processedSeg);
+
+    // Check for sentence-ending punctuation
+    if (isSentenceEnd(processedSeg.text)) {
+      remainingSentencesInGroup--;
+    }
+
+    // Finalize group when sentence or fallback limit is met
+    if (
+      remainingSentencesInGroup <= 0 ||
+      currentSegment.length >= maxSegmentsPerGroup
+    ) {
+      result.push(currentSegment);
+      currentSegment = [];
+      remainingSentencesInGroup = numOfSentences;
     }
   }
 
-  // Add the last group
-  groups.push(currentGroup);
+  // Add any remaining segments
+  if (currentSegment.length > 0) {
+    result.push(currentSegment);
+  }
 
-  return groups;
+  return result;
+};
+
+// Group segments by speakers first, then apply sentence segmentation
+const getSegmentsBySpeakersAndSentences = (
+  segments: TranscriptionSegment<number>[]
+): TranscriptionSegment<number>[][] => {
+  const result: TranscriptionSegment<number>[][] = [];
+  let currentSpeaker: TranscriptionSegment<number>[] = [];
+  // Filter out empty segments and trim text
+  const nonEmptySegments = segments
+    .map((segment) => ({
+      ...segment,
+      text: segment.text.trim(),
+    }))
+    .filter((segment) => segment.text.length > 0);
+
+  for (const seg of nonEmptySegments) {
+    if (currentSpeaker.length === 0) {
+      currentSpeaker.push(seg);
+      continue;
+    } else if (currentSpeaker[0].speaker === seg.speaker) {
+      currentSpeaker.push(seg);
+      continue;
+    }
+
+    // Different speaker: apply sentence segmentation to current speaker group
+    result.push(...getSegmentsBySentences(currentSpeaker, 2));
+    currentSpeaker = [seg];
+  }
+
+  // Apply sentence segmentation to remaining speaker segments
+  if (currentSpeaker.length > 0) {
+    result.push(...getSegmentsBySentences(currentSpeaker, 2));
+  }
+
+  return result;
 };
 
 export default function TranscriptViewer({
   transcription,
 }: TranscriptViewerProps) {
-  const groupedSegments = groupConsecutiveSegmentsBySpeaker(
+  const groupedSegments = getSegmentsBySpeakersAndSentences(
     transcription.segments
   );
 
@@ -90,19 +214,23 @@ export default function TranscriptViewer({
     <div className="max-w-4xl mx-auto mt-6 space-y-6">
       <div className="space-y-4">
         {groupedSegments.map((group, index) => {
+          const firstSegment = group[0];
+          const speakerId = firstSegment.speaker;
           const speakerName =
-            transcription.speakers[group.speakerId] || group.speakerId;
-          const speakerColor = getSpeakerColor(
-            group.speakerId,
-            transcription.speakers
-          );
-          const startTime = formatTime(group.segments[0].start);
-          const combinedText = group.segments
+            speakerId && transcription.speakers[speakerId]
+              ? transcription.speakers[speakerId]
+              : speakerId || "";
+          const speakerColor = speakerId
+            ? getSpeakerColor(speakerId, transcription.speakers)
+            : "text-gray-600";
+
+          const startTime = formatTime(firstSegment.start);
+          const combinedText = group
             .map((segment) => segment.text)
             .join(" ");
 
           return (
-            <div key={`${group.speakerId}-${index}`} className="py-2">
+            <div key={`group-${index}`} className="py-2">
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-sm font-mono text-gray-500 bg-gray-100 px-2 py-1 rounded">
                   {startTime}
