@@ -119,7 +119,7 @@ export default function PdfViewer({ pdfFile }: Props) {
 
   if (hasError) {
     return (
-      <div className="w-full h-[600px] border border-gray-200 rounded-lg flex items-center justify-center bg-gray-50">
+      <div className="w-full min-h-[600px] h-[80vh] border border-gray-200 rounded-lg flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <p className="text-gray-500 mb-2">Failed to load PDF</p>
           <a
@@ -136,7 +136,7 @@ export default function PdfViewer({ pdfFile }: Props) {
   }
 
   return (
-    <div className="w-full h-[600px] border border-gray-200 rounded-lg overflow-hidden relative">
+    <div className="w-full min-h-[600px] h-[80vh] border border-gray-200 rounded-lg overflow-hidden relative">
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-50 z-10">
           <div className="text-gray-500">Loading PDF...</div>
