@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^2.1.8",
     "@opentelemetry/api": "^1.9.0",
+    "@pdf-viewer/react": "^1.16.0",
     "clsx": "^2.1.1",
     "firebase-admin": "^13.4.0",
     "framer-motion": "^11.9.0",

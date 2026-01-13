@@ -7,7 +7,7 @@ import {
 } from "@/app/lib/firebase/recording/@types";
 import clsx from "clsx";
 import { useState } from "react";
-import PdfViewer from "./PdfViewer";
+import AppPdfViewer from "./AppPdfViewer";
 import SummaryViewer from "./SummaryViewer";
 import TranscriptViewer from "./TranscriptViewer";
 
@@ -49,7 +49,8 @@ export default function Tabs({ summary, transcript, shareId, pdfFile }: Props) {
           <TranscriptViewer transcription={transcript} />
         ) : null;
       case "pdf":
-        return pdfFile ? <PdfViewer pdfFile={pdfFile} /> : null;
+        // TODO(yago): Remove PdfViewer and use AppPdfViewer instead
+        return pdfFile ? <AppPdfViewer pdfFile={pdfFile} /> : null;
       default:
         return null;
     }

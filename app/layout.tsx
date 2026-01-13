@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import LazyAppProviders from "./components/LazyAppProviders";
 import "./globals.css";
 import { getSEOTags } from "./lib/seo";
 
@@ -30,7 +31,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/* TODO(yago): Add license key to the environment variables */}
+        <LazyAppProviders licenseKey={process.env.NEXT_PUBLIC_PDF_VIEWER_LICENSE_KEY || "YOUR_LICENSE_KEY"}>
+          {children}
+        </LazyAppProviders>
       </body>
     </html>
   );
