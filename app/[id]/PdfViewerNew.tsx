@@ -18,12 +18,6 @@ const Page = dynamic(
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-const options = {
-  cMapUrl: '/cmaps/',
-  standardFontDataUrl: '/standard_fonts/',
-  wasmUrl: '/wasm/',
-};
-
 const resizeObserverOptions = {};
 
 const maxWidth = 800;
@@ -230,7 +224,6 @@ export default function PdfViewerNew({ pdfFile }: Props) {
               )}
               <Document
                 file={proxyUrl}
-                options={options}
                 onLoadStart={onDocumentLoadStart}
                 onLoadSuccess={onDocumentLoadSuccess}
                 onLoadError={onDocumentLoadError}
