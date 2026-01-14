@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+.next/
+out/
+dist/
+
+# Minified third-party files
+public/pdf.worker.min.mjs
+
+# Other
+*.min.js
+*.min.mjs
+
