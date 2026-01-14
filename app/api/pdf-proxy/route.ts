@@ -12,8 +12,20 @@ export async function GET(req: NextRequest) {
       );
     }
 
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(pdfUrl);
+    } catch {
+      return NextResponse.json(
+        { error: "Invalid PDF source" },
+        { status: 400 }
+      );
+    }
+
+    console.log("Parsed URL:", parsedUrl);
+
     // Validate that the URL is from Firebase Storage (security check)
-    if (!pdfUrl.includes("firebasestorage.googleapis.com")) {
+    if (parsedUrl.hostname !== "firebasestorage.googleapis.com") {
       return NextResponse.json(
         { error: "Invalid PDF source" },
         { status: 400 }
@@ -44,8 +56,6 @@ export async function GET(req: NextRequest) {
         "Content-Type": "application/pdf",
         "Content-Disposition": "inline; filename=document.pdf",
         "Cache-Control": "public, max-age=3600, s-maxage=3600",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET",
       },
     });
   } catch (error) {
