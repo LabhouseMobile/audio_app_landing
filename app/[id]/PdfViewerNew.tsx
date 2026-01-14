@@ -45,7 +45,6 @@ export default function PdfViewerNew({ pdfFile }: Props) {
       return `/api/pdf-proxy?url=${encodeURIComponent(pdfFile.pdfPath)}`;
     }
     const url = `${window.location.origin}/api/pdf-proxy?url=${encodeURIComponent(pdfFile.pdfPath)}`;
-    console.log('PDF proxy URL:', url);
     return url;
   }, [pdfFile.pdfPath]);
 
@@ -94,7 +93,6 @@ export default function PdfViewerNew({ pdfFile }: Props) {
     if (typeof window !== 'undefined') {
       import('react-pdf').then((mod) => {
         mod.pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs';
-        console.log('PDF.js worker configured:', mod.pdfjs.GlobalWorkerOptions.workerSrc);
         setWorkerReady(true);
       }).catch((err) => {
         console.error('Failed to configure PDF.js worker:', err);

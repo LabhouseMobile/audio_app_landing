@@ -22,8 +22,6 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    console.log("Parsed URL:", parsedUrl);
-
     // Validate that the URL is from Firebase Storage (security check)
     if (parsedUrl.hostname !== "firebasestorage.googleapis.com") {
       return NextResponse.json(
