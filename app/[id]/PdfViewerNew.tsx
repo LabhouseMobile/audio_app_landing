@@ -24,6 +24,7 @@ const maxWidth = 800;
 const MIN_SCALE = 0.5;
 const MAX_SCALE = 3.0;
 const SCALE_STEP = 0.25;
+const A4_ASPECT_RATIO = Math.sqrt(2);
 
 type Props = {
   pdfFile: PdfFile;
@@ -235,7 +236,7 @@ export default function PdfViewerNew({ pdfFile }: Props) {
                     width: '100%'
                   }}
                 >
-                  {Array.from(new Array(numPages), (_el, index) => {
+                  {Array.from(new Array(numPages), (_, index) => {
                     const pageNum = index + 1;
                     return (
                       <div
@@ -249,7 +250,7 @@ export default function PdfViewerNew({ pdfFile }: Props) {
                           width={pageWidth}
                           renderTextLayer={true}
                           renderAnnotationLayer={true}
-                          loading={<div style={{ width: pageWidth, height: pageWidth * 1.414 }} />}
+                          loading={<div style={{ width: pageWidth, height: pageWidth * A4_ASPECT_RATIO }} />}
                         />
                       </div>
                     );
