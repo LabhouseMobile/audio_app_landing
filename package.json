@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^2.1.8",
     "@opentelemetry/api": "^1.9.0",
+    "@wojtekmaj/react-hooks": "^2.0.4",
     "clsx": "^2.1.1",
     "firebase-admin": "^13.4.0",
     "framer-motion": "^11.9.0",
@@ -21,6 +22,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^10.1.0",
+    "react-pdf": "^10.3.0",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "swr": "^2.3.4"

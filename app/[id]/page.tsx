@@ -37,8 +37,8 @@ function formatDateWithDuration(
   }`;
 }
 
-function getButtonText() {
-  const headersList = headers();
+async function getButtonText() {
+  const headersList = await headers();
   const userAgent = headersList.get("user-agent") || "";
   console.log("[DEVICE] User-Agent:", userAgent);
 
@@ -55,7 +55,7 @@ function getButtonText() {
 }
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 type AudioFile = {
@@ -83,9 +83,10 @@ type RecordingData = {
 
 export async function generateMetadata({ params }: Props) {
   const startTime = Date.now();
-  console.log(`[PERF] generateMetadata started for shareId: ${params.id}`);
+  const { id } = await params;
+  console.log(`[PERF] generateMetadata started for shareId: ${id}`);
 
-  const shareId = params.id;
+  const shareId = id;
   const publicLink = await admin
     .firestore()
     .collection("public_links")
@@ -147,9 +148,10 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function ViewPage({ params }: Props) {
   const startTime = Date.now();
-  console.log(`[PERF] ViewPage started for shareId: ${params.id}`);
+  const { id } = await params;
+  console.log(`[PERF] ViewPage started for shareId: ${id}`);
 
-  const shareId = params.id;
+  const shareId = id;
 
   try {
     const data = await getRecordingData(shareId);
@@ -188,7 +190,7 @@ export default async function ViewPage({ params }: Props) {
 
     const { summary, title, emoji, createdAt, transcript, pdfFile } = data;
 
-    const buttonText = getButtonText();
+    const buttonText = await getButtonText();
 
     const endTime = Date.now();
     console.log(`[PERF] ViewPage completed in ${endTime - startTime}ms`);
