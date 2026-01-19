@@ -49,7 +49,7 @@ export default function Tabs({ summary, transcript, shareId, pdfFile }: Props) {
           <TranscriptViewer transcription={transcript} />
         ) : null;
       case "pdf":
-        return pdfFile ? <PdfViewerNew pdfFile={pdfFile} /> : null;
+        return pdfFile ? <PdfViewerNew pdfFile={pdfFile} shareId={shareId} /> : null;
       default:
         return null;
     }

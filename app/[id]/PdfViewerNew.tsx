@@ -28,9 +28,10 @@ const A4_ASPECT_RATIO = Math.sqrt(2);
 
 type Props = {
   pdfFile: PdfFile;
+  shareId: string;
 };
 
-export default function PdfViewerNew({ pdfFile }: Props) {
+export default function PdfViewerNew({ pdfFile, shareId }: Props) {
   const [numPages, setNumPages] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [scale, setScale] = useState<number>(1.0);
@@ -85,8 +86,16 @@ export default function PdfViewerNew({ pdfFile }: Props) {
     setScale((prev) => Math.max(prev - SCALE_STEP, MIN_SCALE));
   };
 
-  const handleOpenInNewTab = () => {
-    window.open(pdfFile.pdfPath, '_blank', 'noopener,noreferrer');
+  const handleOpenInNewTab = async () => {
+    try {
+      const res = await fetch(`/api/pdf-download?shareId=${encodeURIComponent(shareId)}`);
+      if (!res.ok) throw new Error('Failed to load PDF');
+      const blob = await res.blob();
+      const blobUrl = URL.createObjectURL(blob);
+      window.open(blobUrl, '_blank', 'noopener,noreferrer');
+    } catch (e) {
+      console.error('Download PDF error:', e);
+    }
   };
 
   useEffect(() => {
