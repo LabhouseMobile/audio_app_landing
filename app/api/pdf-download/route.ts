@@ -20,6 +20,11 @@ export async function GET(req: NextRequest) {
     const db = admin.firestore();
 
     const publicLinkDoc = await db.collection("public_links").doc(shareId).get();
+
+    if (!publicLinkDoc.exists) {
+        return NextResponse.json({ error: "Not found" }, { status: 404 });
+    }
+    
     const userId = publicLinkDoc.data()?.userId;
     const recordingId = publicLinkDoc.data()?.recordingId;
 
