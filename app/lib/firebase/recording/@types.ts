@@ -27,6 +27,20 @@ export interface Summary {
   actionItems: ActionItem[];
 }
 
+export interface EnabledSections {
+  kpis: boolean;
+  actionItems: boolean;
+}
+
+export interface SummaryCustomization {
+  length: string | null;
+  style: string | null;
+  enabledSections: EnabledSections | null;
+  language: string | null;
+  description: string | null;
+  template: string | null;
+}
+
 export interface ActionItem {
   id: string;
   title: string;

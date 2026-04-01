@@ -3,6 +3,7 @@
 import {
   PdfFile,
   Summary,
+  SummaryCustomization,
   Transcription,
 } from "@/app/lib/firebase/recording/@types";
 import clsx from "clsx";
@@ -15,12 +16,13 @@ type Tab = "summary" | "transcript" | "pdf";
 
 type Props = {
   summary: Summary;
+  summaryCustomization?: SummaryCustomization;
   transcript?: Transcription;
   shareId: string;
   pdfFile?: PdfFile;
 };
 
-export default function Tabs({ summary, transcript, shareId, pdfFile }: Props) {
+export default function Tabs({ summary, summaryCustomization, transcript, shareId, pdfFile }: Props) {
   const [activeTab, setActiveTab] = useState<Tab>("summary");
 
   const availableTabs: Tab[] = ["summary"];
@@ -40,6 +42,7 @@ export default function Tabs({ summary, transcript, shareId, pdfFile }: Props) {
         return (
           <SummaryViewer
             summary={summary}
+            summaryCustomization={summaryCustomization}
             shareId={shareId}
             speakers={transcript?.speakers || {}}
           />

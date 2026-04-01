@@ -5,6 +5,7 @@ import {
   PdfFile,
   PublicLink,
   Summary,
+  SummaryCustomization,
   Transcription,
 } from "@/app/lib/firebase/recording/@types";
 import { transcriptService } from "@/app/lib/firebase/recording/transcript_service";
@@ -71,6 +72,7 @@ type RecordingData = {
   userId: string;
   recordingId: string;
   summary: Summary;
+  summaryCustomization?: SummaryCustomization;
   speakers: Record<string, string>;
   title: string;
   emoji: string;
@@ -188,7 +190,7 @@ export default async function ViewPage({ params }: Props) {
       });
     }
 
-    const { summary, title, emoji, createdAt, transcript, pdfFile } = data;
+    const { summary, summaryCustomization, title, emoji, createdAt, transcript, pdfFile } = data;
 
     const buttonText = await getButtonText();
 
@@ -219,6 +221,7 @@ export default async function ViewPage({ params }: Props) {
           </div>
           <Tabs
             summary={summary}
+            summaryCustomization={summaryCustomization}
             transcript={transcript}
             shareId={shareId}
             pdfFile={pdfFile}
