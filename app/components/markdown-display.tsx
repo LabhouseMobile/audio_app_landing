@@ -20,13 +20,13 @@ export default function MarkdownDisplay({
           components={{
             h1: ({ ...props }) => (
               <h1
-                className="text-3xl font-bold mt-12 md:mt-28 mb-8 text-center"
+                className="text-3xl font-bold mt-12 md:mt-28 mb-8"
                 {...props}
               />
             ),
             h2: ({ ...props }) => (
               <h2
-                className="text-2xl font-bold mt-12 md:mt-24 mb-3 text-center"
+                className="text-2xl font-bold mt-12 md:mt-24 mb-3"
                 {...props}
               />
             ),
