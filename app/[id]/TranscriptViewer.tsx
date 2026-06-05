@@ -6,6 +6,7 @@ import {
 } from "@/app/lib/firebase/recording/@types";
 
 interface TranscriptViewerProps {
+  speakers: Record<string, string>;
   transcription: Transcription;
 }
 
@@ -204,6 +205,7 @@ const getSegmentsBySpeakersAndSentences = (
 };
 
 export default function TranscriptViewer({
+  speakers,
   transcription,
 }: TranscriptViewerProps) {
   const groupedSegments = getSegmentsBySpeakersAndSentences(
@@ -217,11 +219,11 @@ export default function TranscriptViewer({
           const firstSegment = group[0];
           const speakerId = firstSegment.speaker;
           const speakerName =
-            speakerId && transcription.speakers[speakerId]
-              ? transcription.speakers[speakerId]
+            speakerId && speakers[speakerId]
+              ? speakers[speakerId]
               : speakerId || "";
           const speakerColor = speakerId
-            ? getSpeakerColor(speakerId, transcription.speakers)
+            ? getSpeakerColor(speakerId, speakers)
             : "text-gray-600";
 
           const startTime = formatTime(firstSegment.start);

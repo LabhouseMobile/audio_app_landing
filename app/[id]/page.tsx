@@ -68,12 +68,25 @@ type YoutubeFile = AudioFile & {
   videoUrl: string;
 };
 
+/** A single speaker identified against a user's voice profile. */
+export interface IdentifiedSpeaker {
+  speakerId: string | null;
+  identifiedAt?: string;
+  matchScore?: number | null;
+}
+
+/** Speakers identified by the voice-matching pipeline, stored on the recording. */
+export interface IdentifiedSpeakers {
+  self?: IdentifiedSpeaker;
+}
+
 type RecordingData = {
   userId: string;
   recordingId: string;
   summary: Summary;
   summaryCustomization?: SummaryCustomization;
   speakers: Record<string, string>;
+  identifiedSpeakers?: IdentifiedSpeakers;
   title: string;
   emoji: string;
   createdAt: string;
@@ -81,6 +94,15 @@ type RecordingData = {
   youtubeFile?: YoutubeFile;
   pdfFile?: PdfFile;
   transcript?: Transcription;
+};
+
+type UserVoiceData = {
+  speakerId: string;
+  userName: string;
+};
+
+type UserData = {
+  voiceSample?: UserVoiceData;
 };
 
 export async function generateMetadata({ params }: Props) {
@@ -190,12 +212,15 @@ export default async function ViewPage({ params }: Props) {
       });
     }
 
-    const { summary, summaryCustomization, title, emoji, createdAt, transcript, pdfFile } = data;
+    const { summary, speakers, identifiedSpeakers, summaryCustomization, title, emoji, createdAt, transcript, pdfFile } = data;
 
     const buttonText = await getButtonText();
 
     const endTime = Date.now();
     console.log(`[PERF] ViewPage completed in ${endTime - startTime}ms`);
+
+    const userVoiceData = await getUserVoiceData(data.userId);
+    const finalSpeakers = getSpeakers(speakers, transcript?.speakers ?? {}, identifiedSpeakers?.self?.speakerId ?? null, userVoiceData?.userName ?? null);
 
     return (
       <>
@@ -221,6 +246,7 @@ export default async function ViewPage({ params }: Props) {
           </div>
           <Tabs
             summary={summary}
+            speakers={finalSpeakers}
             summaryCustomization={summaryCustomization}
             transcript={transcript}
             shareId={shareId}
@@ -233,6 +259,14 @@ export default async function ViewPage({ params }: Props) {
     console.error("Error fetching shared recording:", error);
     return notFound();
   }
+}
+
+function getSpeakers(speakers: Record<string, string>, transcriptSpeakers: Record<string, string>, selfSpeakerId: string | null, selfSpeakerName: string | null): Record<string, string> {
+  const finalSpeakers = speakers ?? transcriptSpeakers;
+  if (selfSpeakerId && selfSpeakerName) {
+    finalSpeakers[selfSpeakerId] = selfSpeakerName;
+  }
+  return finalSpeakers;
 }
 
 async function getRecordingData(id: string): Promise<RecordingData | null> {
@@ -340,4 +374,11 @@ async function getRecordingData(id: string): Promise<RecordingData | null> {
     console.error("Failed to fetch recording:", e);
     return null;
   }
+}
+
+async function getUserVoiceData(userId: string): Promise<UserVoiceData | null> {
+  const db = admin.firestore();
+  const userDoc = await db.collection("users").doc(userId).get();
+  const userData = userDoc.data() as UserData;
+  return userData?.voiceSample ?? null;
 }
