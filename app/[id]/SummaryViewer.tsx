@@ -1,21 +1,25 @@
 "use client";
 
 import MarkdownDisplay from "@/app/components/markdown-display";
-import { Summary } from "@/app/lib/firebase/recording/@types";
+import { Summary, SummaryCustomization } from "@/app/lib/firebase/recording/@types";
 import ActionItemView from "./ActionItem";
 
 interface SummaryViewerProps {
   summary: Summary;
+  summaryCustomization?: SummaryCustomization;
   shareId: string;
   speakers: Record<string, string>;
 }
 
 export default function SummaryViewer({
   summary,
+  summaryCustomization,
   shareId,
   speakers,
 }: SummaryViewerProps) {
-  const actionItems = summary.actionItems ?? [];
+  const actionItemsEnabled =
+    summaryCustomization?.enabledSections?.actionItems !== false;
+  const actionItems = actionItemsEnabled ? (summary.actionItems ?? []) : [];
   return (
     <>
       <div className="space-y-6 mt-6">
