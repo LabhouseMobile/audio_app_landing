@@ -53,7 +53,7 @@ export default function Tabs({ summary, speakers, summaryCustomization, transcri
           <TranscriptViewer speakers={speakers} transcription={transcript} />
         ) : null;
       case "pdf":
-        return pdfFile ? <PdfViewerNew pdfFile={pdfFile} /> : null;
+        return pdfFile ? <PdfViewerNew pdfFile={pdfFile} shareId={shareId} /> : null;
       default:
         return null;
     }
