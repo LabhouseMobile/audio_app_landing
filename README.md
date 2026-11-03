@@ -40,6 +40,18 @@ To test the app on real Android and iPhone devices, you can do it by Local Netwo
    - You should see "Download for Android" on Android devices
    - You should see "Download for iPhone" on iOS devices
 
+## 🧪 Tests
+
+```bash
+npm test
+```
+
+Runs the `node:test` unit tests (`app/**/*.test.mjs`). Needs Node 22.23.4 or newer, the same range as `engines` in `package.json`.
+
+## 📄 PDF proxy
+
+`/api/pdf-proxy?url=…` streams shared PDFs from Firebase Storage so the viewer avoids CORS. It only fetches download URLs in our own buckets (`app/lib/pdf-proxy/source-url.ts`), does not follow redirects, and refuses any compressed response. It uses `node:https` instead of `fetch()` so the response body is never decompressed.
+
 ## 🛠 Tech Stack
 
 - [Next.js](https://nextjs.org/)
