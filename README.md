@@ -46,7 +46,7 @@ To test the app on real Android and iPhone devices, you can do it by Local Netwo
 npm test
 ```
 
-Runs the `node:test` unit tests (`app/**/*.test.mjs`). Needs Node 22.23.4 or newer, the same range as `engines` in `package.json`.
+Runs the `node:test` unit tests (`app/**/*.test.mjs`). Needs Node 22.23.4 or newer within 22.x, the same range as `engines` in `package.json` (`^22.23.4`).
 
 ## 📄 PDF proxy
 
