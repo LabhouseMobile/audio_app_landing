@@ -10,20 +10,24 @@
 // This file has no imports so `node --experimental-strip-types --test` can
 // load it directly (see source-url.test.mjs).
 
-export const ALLOWED_PDF_BUCKETS: ReadonlySet<string> = new Set([
+export const ALLOWED_PDF_BUCKETS: readonly string[] = [
   "audiolabhouse.appspot.com",
   "audiodevlabhouse.firebasestorage.app",
-]);
+];
 
 const STORAGE_HOST = "firebasestorage.googleapis.com";
 
 // The object path is URL-encoded by getDownloadURL, so it never contains a
 // literal "/".
-const DOWNLOAD_PATH = /^\/v0\/b\/([^/]+)\/o\/[^/]+$/;
+const DOWNLOAD_PATH = /^\/v0\/b\/([^/]+)\/o\/([^/]+)$/;
 
 /**
- * Returns the parsed URL when `raw` is a download URL for an object in one of
- * ALLOWED_PDF_BUCKETS, otherwise null.
+ * Returns the URL to fetch when `raw` is a download URL for an object in one
+ * of ALLOWED_PDF_BUCKETS, otherwise null.
+ *
+ * The returned URL is rebuilt rather than passed through: its origin is a
+ * literal, its bucket comes from ALLOWED_PDF_BUCKETS, and only the encoded
+ * object name and the `alt`/`token` query parameters come from `raw`.
  */
 export function parsePdfSourceUrl(raw: string | null): URL | null {
   if (!raw) return null;
@@ -42,7 +46,16 @@ export function parsePdfSourceUrl(raw: string | null): URL | null {
 
   // url.pathname is already normalized, so "../" segments can't hop buckets.
   const match = DOWNLOAD_PATH.exec(url.pathname);
-  if (!match || !ALLOWED_PDF_BUCKETS.has(match[1])) return null;
+  if (!match) return null;
+  const bucket = ALLOWED_PDF_BUCKETS.find((b) => b === match[1]);
+  if (!bucket) return null;
 
-  return url;
+  const source = new URL(
+    `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/${match[2]}`
+  );
+  for (const name of ["alt", "token"]) {
+    const value = url.searchParams.get(name);
+    if (value !== null) source.searchParams.set(name, value);
+  }
+  return source;
 }

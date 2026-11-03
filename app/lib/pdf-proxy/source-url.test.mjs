@@ -67,3 +67,24 @@ test("rejects other schemes, hosts, ports and userinfo", () => {
     assert.equal(parsePdfSourceUrl(raw), null, raw);
   }
 });
+
+test("rebuilds the URL, keeping only the object name, alt and token", () => {
+  const parsed = parsePdfSourceUrl(
+    `${PROD}&foo=bar#frag`.replace("token=abc", "token=a%2Fb")
+  );
+  assert.equal(parsed?.origin, "https://firebasestorage.googleapis.com");
+  assert.equal(
+    parsed?.pathname,
+    "/v0/b/audiolabhouse.appspot.com/o/users%2Fu1%2Fpdfs%2Fdoc.pdf"
+  );
+  assert.equal(parsed?.searchParams.get("alt"), "media");
+  assert.equal(parsed?.searchParams.get("token"), "a/b");
+  assert.equal(parsed?.searchParams.has("foo"), false);
+  assert.equal(parsed?.hash, "");
+});
+
+test("keeps public objects without a token", () => {
+  const raw =
+    "https://firebasestorage.googleapis.com/v0/b/audiolabhouse.appspot.com/o/branding%2Flogo.pdf?alt=media";
+  assert.equal(parsePdfSourceUrl(raw)?.href, raw);
+});
