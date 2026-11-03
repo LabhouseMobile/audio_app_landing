@@ -25,9 +25,11 @@ const DOWNLOAD_PATH = /^\/v0\/b\/([^/]+)\/o\/([^/]+)$/;
  * Returns the URL to fetch when `raw` is a download URL for an object in one
  * of ALLOWED_PDF_BUCKETS, otherwise null.
  *
- * The returned URL is rebuilt rather than passed through: its origin is a
- * literal, its bucket comes from ALLOWED_PDF_BUCKETS, and only the encoded
- * object name and the `alt`/`token` query parameters come from `raw`.
+ * The returned URL is rebuilt rather than passed through: its origin and
+ * `alt=media` are literals, its bucket comes from ALLOWED_PDF_BUCKETS, and the
+ * only parts taken from `raw` (object name and `token`) are re-encoded with
+ * encodeURIComponent. CodeQL's request-forgery query recognizes exactly that
+ * shape as safe; it can't follow the checks above.
  */
 export function parsePdfSourceUrl(raw: string | null): URL | null {
   if (!raw) return null;
@@ -50,12 +52,20 @@ export function parsePdfSourceUrl(raw: string | null): URL | null {
   const bucket = ALLOWED_PDF_BUCKETS.find((b) => b === match[1]);
   if (!bucket) return null;
 
-  const source = new URL(
-    `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/${match[2]}`
-  );
-  for (const name of ["alt", "token"]) {
-    const value = url.searchParams.get(name);
-    if (value !== null) source.searchParams.set(name, value);
+  let objectName: string;
+  try {
+    objectName = decodeURIComponent(match[2]);
+  } catch {
+    return null;
   }
-  return source;
+
+  const token = url.searchParams.get("token");
+  const query =
+    token === null
+      ? "alt=media"
+      : `alt=media&token=${encodeURIComponent(token)}`;
+
+  return new URL(
+    `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/${encodeURIComponent(objectName)}?${query}`
+  );
 }
