@@ -1,21 +1,23 @@
 // lib/firebase-admin.ts
 import * as admin from "firebase-admin";
 
-if (!admin.apps.length) {
-  const projectId = process.env.FIREBASE_PROJECT_ID;
-  const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
-  const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, "\n");
+import { resolveAdminInit } from "./admin-init";
 
-  if (!projectId || !clientEmail || !privateKey) {
-    admin.initializeApp();
-  } else {
+if (!admin.apps.length) {
+  const init = resolveAdminInit(process.env);
+
+  if (init.kind === "serviceAccountKey") {
     admin.initializeApp({
       credential: admin.credential.cert({
-        projectId,
-        clientEmail,
-        privateKey,
+        projectId: init.projectId,
+        clientEmail: init.clientEmail,
+        privateKey: init.privateKey,
       }),
     });
+  } else if (init.projectId) {
+    admin.initializeApp({ projectId: init.projectId });
+  } else {
+    admin.initializeApp();
   }
 }
 
