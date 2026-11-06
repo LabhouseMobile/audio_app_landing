@@ -1,54 +1,97 @@
+import type { IncomingMessage } from "node:http";
+import { get } from "node:https";
 import { NextRequest, NextResponse } from "next/server";
+import { parsePdfSourceUrl } from "@/app/lib/pdf-proxy/source-url";
+
+// node:https needs the Node.js runtime, not Edge.
+export const runtime = "nodejs";
+
+const UPSTREAM_TIMEOUT_MS = 20_000;
+const MAX_PDF_BYTES = 100 * 1024 * 1024;
+
+// The upstream request goes through node:https rather than fetch() on purpose:
+// fetch() transparently decompresses gzip/deflate/br responses, while
+// node:https hands over the raw bytes. Any signed-in user can upload an object
+// with arbitrary Content-Encoding metadata into our own bucket, so the response
+// body is attacker-controlled even when the URL is ours. This route never
+// decodes it, and refuses any response that isn't sent as identity.
+function requestUpstream(url: URL): Promise<IncomingMessage> {
+  return new Promise((resolve, reject) => {
+    const req = get(
+      url,
+      {
+        headers: { Accept: "application/pdf" },
+        timeout: UPSTREAM_TIMEOUT_MS,
+      },
+      resolve
+    );
+    req.on("timeout", () => req.destroy(new Error("Upstream timed out")));
+    req.on("error", reject);
+  });
+}
+
+// Resolves to null when the body exceeds MAX_PDF_BYTES.
+async function readBody(res: IncomingMessage): Promise<ArrayBuffer | null> {
+  const chunks: Buffer[] = [];
+  let total = 0;
+  for await (const chunk of res) {
+    total += chunk.length;
+    if (total > MAX_PDF_BYTES) {
+      res.destroy();
+      return null;
+    }
+    chunks.push(chunk);
+  }
+  const body = new Uint8Array(total);
+  let offset = 0;
+  for (const chunk of chunks) {
+    body.set(chunk, offset);
+    offset += chunk.length;
+  }
+  return body.buffer;
+}
+
+function jsonError(error: string, status: number) {
+  return NextResponse.json({ error }, { status });
+}
 
 export async function GET(req: NextRequest) {
+  const source = parsePdfSourceUrl(req.nextUrl.searchParams.get("url"));
+  if (!source) {
+    return jsonError("Invalid PDF source", 400);
+  }
+
   try {
-    const searchParams = req.nextUrl.searchParams;
-    const pdfUrl = searchParams.get("url");
+    const upstream = await requestUpstream(source);
+    const status = upstream.statusCode ?? 502;
 
-    if (!pdfUrl) {
-      return NextResponse.json(
-        { error: "Missing PDF URL parameter" },
-        { status: 400 }
+    // Redirects are not followed: an allowed URL must not lead elsewhere.
+    if (status !== 200) {
+      upstream.destroy();
+      return jsonError(
+        "Failed to fetch PDF",
+        status >= 400 && status < 500 ? status : 502
       );
     }
 
-    let parsedUrl: URL;
-    try {
-      parsedUrl = new URL(pdfUrl);
-    } catch {
-      return NextResponse.json(
-        { error: "Invalid PDF source" },
-        { status: 400 }
-      );
+    const encoding = upstream.headers["content-encoding"]?.trim().toLowerCase();
+    if (encoding && encoding !== "identity") {
+      upstream.destroy();
+      return jsonError("Unsupported PDF encoding", 502);
     }
 
-    // Validate that the URL is from Firebase Storage (security check)
-    if (parsedUrl.hostname !== "firebasestorage.googleapis.com") {
-      return NextResponse.json(
-        { error: "Invalid PDF source" },
-        { status: 400 }
-      );
+    const declaredLength = Number(upstream.headers["content-length"]);
+    if (declaredLength > MAX_PDF_BYTES) {
+      upstream.destroy();
+      return jsonError("PDF too large", 502);
     }
 
-    // Fetch the PDF from Firebase Storage (server-side, no CORS issues)
-    const response = await fetch(pdfUrl, {
-      headers: {
-        Accept: "application/pdf",
-      },
-    });
-
-    if (!response.ok) {
-      return NextResponse.json(
-        { error: "Failed to fetch PDF" },
-        { status: response.status }
-      );
+    const pdf = await readBody(upstream);
+    if (!pdf) {
+      return jsonError("PDF too large", 502);
     }
 
-    // Get the PDF as a buffer
-    const pdfBuffer = await response.arrayBuffer();
-
-    // Return the PDF with proper headers
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(pdf, {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",
@@ -57,13 +100,11 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
-    console.error("Error in PDF proxy API:", error);
-    return NextResponse.json(
-      {
-        error: "Internal server error",
-        details: error instanceof Error ? error.message : "Unknown error",
-      },
-      { status: 500 }
+    // The source URL carries a download token, so it is not logged.
+    console.error(
+      "Error in PDF proxy API:",
+      error instanceof Error ? error.message : error
     );
+    return jsonError("Internal server error", 500);
   }
 }

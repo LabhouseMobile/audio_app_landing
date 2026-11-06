@@ -40,6 +40,27 @@ To test the app on real Android and iPhone devices, you can do it by Local Netwo
    - You should see "Download for Android" on Android devices
    - You should see "Download for iPhone" on iOS devices
 
+## 🧪 Tests
+
+```bash
+npm test
+```
+
+Runs the `node:test` unit tests (`app/**/*.test.mjs`). Needs a patched Node: 22.23.4+ within 22.x or 24.22.1+ within 24.x, the same range as `engines` in `package.json`.
+
+## 📄 PDF proxy
+
+`/api/pdf-proxy?url=…` streams shared PDFs from Firebase Storage so the viewer avoids CORS. It only fetches download URLs in our own buckets (`app/lib/pdf-proxy/source-url.ts`), does not follow redirects, and refuses any compressed response. It uses `node:https` instead of `fetch()` so the response body is never decompressed.
+
+## 🔑 Firebase credentials
+
+`app/lib/firebase/admin-init.ts` decides how `firebase-admin` authenticates:
+
+- `FIREBASE_PROJECT_ID`, `FIREBASE_CLIENT_EMAIL` and `FIREBASE_PRIVATE_KEY` all set: that service account key.
+- Otherwise: the Cloud Run runtime service account. `FIREBASE_PROJECT_ID`, if set, picks the Firebase project; if not, it's the GCP project the service runs in.
+
+The prod service sets none of them. The dev service runs in the prod GCP project, so it must set `FIREBASE_PROJECT_ID=audiodevlabhouse`, or it would read prod Firestore.
+
 ## 🛠 Tech Stack
 
 - [Next.js](https://nextjs.org/)
